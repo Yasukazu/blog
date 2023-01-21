@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo trial</title>
+  
+  <subtitle>Webpage technical Blog</subtitle>
+  <link href="https://www.yskz.xyz/blog/atom.xml" rel="self"/>
+  
+  <link href="https://www.yskz.xyz/blog/"/>
+  <updated>2023-01-21T05:32:31.555Z</updated>
+  <id>https://www.yskz.xyz/blog/</id>
+  
+  <author>
+    <name>Y-M</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo Usage</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/21/hexo-usage/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/21/hexo-usage/</id>
+    <published>2023-01-21T05:32:31.555Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo config url and public_dir and document-root settings</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/15/Hexo-config-somehow/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/15/Hexo-config-somehow/</id>
+    <published>2023-01-15T08:43:00.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’"><a href="#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’" class="headerlink" title="Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’"></a>Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’</h1><h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><p>A typical usecase is <code>www.example.com/blog</code>.<br>So, about <code>_config.yml</code>, last path of <code>url</code> and <code>public_dir</code> must be the same. </p><h2 id="How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS"><a href="#How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS" class="headerlink" title="How to set the hexo-generated website with ‘document root’ in a VPS"></a>How to set the hexo-generated website with ‘document root’ in a VPS</h2><ol><li>In the same directory where document root exists, clone the hexo website repository.(repository name as <code>hexo-blog</code>)</li><li>Make a symbolic link of <code>hexo-blog/blog</code> into the document root as <code>blog</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[DocumentRoot]$ <span class="built_in">ln</span> -s hexo-blog/blog /blog</span><br></pre></td></tr></table></figure><ol start="3"><li>Make a symbolic link of <code>hexo-blog/blog/index.html</code> into the document root as <code>index.html</code></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’&quot;&gt;&lt;a href=&quot;#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Installed &#39;generator-hexo-theme&#39;</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/12/Installed-generator-hexo-theme-1/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/12/Installed-generator-hexo-theme-1/</id>
+    <published>2023-01-12T16:43:21.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Changed-to-a-simple-blog-template"><a href="#Changed-to-a-simple-blog-template" class="headerlink" title="Changed to a simple blog template"></a>Changed to a simple blog template</h1><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p><a href="https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit">https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Changed-to-a-simple-blog-template&quot;&gt;&lt;a href=&quot;#Changed-to-a-simple-blog-template&quot; class=&quot;headerlink&quot; title=&quot;Changed to a simple blog t</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Installed &#39;generator-hexo-theme&#39;</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/12/Installed-generator-hexo-theme/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/12/Installed-generator-hexo-theme/</id>
+    <published>2023-01-12T16:42:00.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Run Hexo &#39;npx&#39; in Gitpod</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/11/Run-Hexo-npx/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/11/Run-Hexo-npx/</id>
+    <published>2023-01-11T22:08:40.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>In <em>Gitpod</em>, after workspace reboot, installed <em>hexo</em> command is unavailable.<br>Countermeasure: use <code>npx</code> command as <code>npx hexo new post title</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;In &lt;em&gt;Gitpod&lt;/em&gt;, after workspace reboot, installed &lt;em&gt;hexo&lt;/em&gt; command is unavailable.&lt;br&gt;Countermeasure: use &lt;code&gt;npx&lt;/code&gt; comma</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>install Hexo to another PC</title>
+    <link href="https://www.yskz.xyz/blog/2022/12/01/install-Hexo-to-another-PC/"/>
+    <id>https://www.yskz.xyz/blog/2022/12/01/install-Hexo-to-another-PC/</id>
+    <published>2022-12-01T01:05:53.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<dl>  <dt>nodejs</dt>  <dd>JavaScript as a command</dd> </dl><ol><li>nodejs install to Windows OS:</li></ol><ul><li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li></ul><ol start="2"><li><p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p></li><li><p>Install <em>Hexo</em></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure> <aside>`-g` option is to let any user to use the *hexo* command.</aside></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;dl&gt;
+  &lt;dt&gt;nodejs&lt;/dt&gt;
+  &lt;dd&gt;JavaScript as a command&lt;/dd&gt; 
+&lt;/dl&gt;
+
+&lt;ol&gt;
+&lt;li&gt;nodejs install to Windows OS:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and ex</summary>
+      
+    
+    
+    
+    
+    <category term="Windows, node, install" scheme="https://www.yskz.xyz/blog/tags/Windows-node-install/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ts-doc wiki</title>
+    <link href="https://www.yskz.xyz/blog/2022/11/30/ts-doc-wiki/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/30/ts-doc-wiki/</id>
+    <published>2022-11-30T06:36:52.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is rather about how to use <em>Hexo</em> static blog site genarator.</p><h2 id="Easy-way-to-open-the-new-post-just-created"><a href="#Easy-way-to-open-the-new-post-just-created" class="headerlink" title="Easy way to open the new post just created"></a>Easy way to open the new post just created</h2><p>Inside VS Code terminal, <code>hexo new &quot;title&quot;</code> creates a new post. Then, last output line shows an URL of the new post source file. Just move over the URL then [open with code] link appears. Clicking it, you can edit then new post with VS Code.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This is rather about how to use &lt;em&gt;Hexo&lt;/em&gt; static blog site genarator.&lt;/p&gt;
+&lt;h2 id=&quot;Easy-way-to-open-the-new-post-just-created&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ts-doc(Technical Document) event-example.js nav-shrink button 新設</title>
+    <link href="https://www.yskz.xyz/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</id>
+    <published>2022-11-29T06:39:55.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="初期値の設定-CSSで定義されている変数の読み込み"><a href="#初期値の設定-CSSで定義されている変数の読み込み" class="headerlink" title="初期値の設定(CSSで定義されている変数の読み込み)"></a>初期値の設定(CSSで定義されている変数の読み込み)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cbody = <span class="title function_">getComputedStyle</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;body&#x27;</span>));</span><br><span class="line"><span class="keyword">const</span> nav_h = cbody.<span class="title function_">getPropertyValue</span>(<span class="string">&quot;--nav-h&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> nav_h_2 = cbody.<span class="title function_">getPropertyValue</span>(<span class="string">&quot;--nav-h-2&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> nav_w = cbody.<span class="title function_">getPropertyValue</span>(<span class="string">&quot;--nav-w&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> nav_w_2 = cbody.<span class="title function_">getPropertyValue</span>(<span class="string">&quot;--nav-w-2&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> nav_expand_button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;button#nav-expand&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> nav_shrink_button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;button#nav-shrink&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> pc_media = <span class="string">&quot;(min-width: 540px)&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> dbody = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;body&#x27;</span>).<span class="property">style</span>;</span><br></pre></td></tr></table></figure><h2 id="拡大ボタン関数"><a href="#拡大ボタン関数" class="headerlink" title="拡大ボタン関数"></a>拡大ボタン関数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nav_expand_button.<span class="property">onclick</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> isPC = <span class="variable language_">window</span>.<span class="title function_">matchMedia</span>(pc_media).<span class="property">matches</span>;</span><br><span class="line">  <span class="keyword">const</span> dst = <span class="string">&quot;--nav-&quot;</span> + (isPC ? <span class="string">&#x27;w&#x27;</span> : <span class="string">&#x27;h&#x27;</span>);</span><br><span class="line">  <span class="keyword">const</span> src_val = isPC ? nav_w : nav_h;</span><br><span class="line">  dbody.<span class="title function_">setProperty</span>(dst, src_val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="縮小ボタン関数"><a href="#縮小ボタン関数" class="headerlink" title="縮小ボタン関数"></a>縮小ボタン関数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nav_shrink_button.<span class="property">onclick</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> isPC = <span class="variable language_">window</span>.<span class="title function_">matchMedia</span>(pc_media).<span class="property">matches</span>;</span><br><span class="line">  <span class="keyword">const</span> dst = <span class="string">&quot;--nav-&quot;</span> + (isPC ? <span class="string">&#x27;w&#x27;</span> : <span class="string">&#x27;h&#x27;</span>);</span><br><span class="line">  <span class="keyword">const</span> src_val = isPC ? nav_w_2 : nav_h_2;</span><br><span class="line">  dbody.<span class="title function_">setProperty</span>(dst, src_val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>(TODO:):現状では、拡大&#x2F;縮小ボタンが押されるたびに規定値への書き込みを行っているが、 状態を記憶しておいて、すでに縮小しているのなら即リターンすれば無駄な計算資源を使わなくて済む。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;初期値の設定-CSSで定義されている変数の読み込み&quot;&gt;&lt;a href=&quot;#初期値の設定-CSSで定義されている変数の読み込み&quot; class=&quot;headerlink&quot; title=&quot;初期値の設定(CSSで定義されている変数の読み込み)&quot;&gt;&lt;/a&gt;初期値の設定(CSS</summary>
+      
+    
+    
+    
+    
+    <category term="js HTML nav" scheme="https://www.yskz.xyz/blog/tags/js-HTML-nav/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2nd post</title>
+    <link href="https://www.yskz.xyz/blog/2022/11/29/2nd-post/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/29/2nd-post/</id>
+    <published>2022-11-29T02:23:48.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is the 2nd blog.</p><h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2><p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 2nd post</span><br><span class="line">date: 2022-11-29 10:41:48</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p><p>Then, update the remote Git:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;update&#x27;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2><ul><li>Search in Hexo folder ‘timezone’</li><li>Fix ‘-0000’ as ‘<em>CountryName</em>‘</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This is the 2nd blog.&lt;/p&gt;
+&lt;h2 id=&quot;How-to-edit-the-new-source-document-created-by-hexo-new-command&quot;&gt;&lt;a href=&quot;#How-to-edit-the-new-source-d</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My new 1</title>
+    <link href="https://www.yskz.xyz/blog/2022/11/28/My-new-1/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/28/My-new-1/</id>
+    <published>2022-11-28T04:46:53.000Z</published>
+    <updated>2023-01-21T05:32:31.555Z</updated>
+    
+    <content type="html"><![CDATA[<p>My 1st Hexo blog post.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;My 1st Hexo blog post.&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
