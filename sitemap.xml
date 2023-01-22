@@ -94,7 +94,7 @@
 
   <url>
     <loc>https://yasukazu.github.io/blog</loc>
-    <lastmod>2023-01-21</lastmod>
+    <lastmod>2023-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,14 +102,14 @@
   
   <url>
     <loc>https://yasukazu.github.io/blog/tags/Windows-node-install/</loc>
-    <lastmod>2023-01-21</lastmod>
+    <lastmod>2023-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yasukazu.github.io/blog/tags/js-HTML-nav/</loc>
-    <lastmod>2023-01-21</lastmod>
+    <lastmod>2023-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
