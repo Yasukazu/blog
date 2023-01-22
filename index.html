@@ -30,7 +30,7 @@
             </ul>
         </header>
         <div class="barba-container">
-            <main class="container">
+            <main class="container" id="google_translate_element">
                 <ul class="home post-list">
                     <li class="post-list-item">
                         <article class="post-block">
@@ -145,7 +145,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function () {
             Barba.Pjax.start()
-        })</script>
+        })
+    </script>
+    <script>function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
