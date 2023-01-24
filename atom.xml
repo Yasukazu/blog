@@ -6,7 +6,7 @@
   <link href="https://www.yskz.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://www.yskz.xyz/blog/"/>
-  <updated>2023-01-24T07:08:02.370Z</updated>
+  <updated>2023-01-24T16:54:11.859Z</updated>
   <id>https://www.yskz.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Set &#39;blog&#39; submodule as GitHub Pages</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/25/Set-blog-submodule-as-GitHub-Pages/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/25/Set-blog-submodule-as-GitHub-Pages/</id>
+    <published>2023-01-24T16:49:10.000Z</published>
+    <updated>2023-01-24T16:54:11.859Z</updated>
+    
+    <content type="html"><![CDATA[<p>Since main branch of ‘blog’ submodule is ‘dev’, it matches to use GitHub Pages <em>‘Deploy from branch’</em>.<br>Now it is public in <em>Internet</em> as a web page at <a href="https://yasukazu.github.io/blog/">https://yasukazu.github.io/blog/</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Since main branch of ‘blog’ submodule is ‘dev’, it matches to use GitHub Pages &lt;em&gt;‘Deploy from branch’&lt;/em&gt;.&lt;br&gt;Now it is public in &lt;em&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="GitHub-Pages" scheme="https://www.yskz.xyz/blog/tags/GitHub-Pages/"/>
+    
+  </entry>
   
   <entry>
     <title>Switched to my fork of &#39;hexo-theme-starter&#39;</title>
