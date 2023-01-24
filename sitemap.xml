@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/24/Switched-to-hexo-theme-starter/</loc>
+    
+    <lastmod>2023-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yskz.xyz/blog/2023/01/22/public-dir-docs-url-hexo-blog/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/17/fix-timezone-again/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/17/fix-timezone-again/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/17/try-to-fix-timezone-for-date-diff/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2022/11/29/2nd-post/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/17/try-to-fix-timezone-for-date-diff/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/15/Hexo-config-somehow/</loc>
+    <loc>https://www.yskz.xyz/blog/2022/11/29/2nd-post/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme-1/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/15/Hexo-config-somehow/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -74,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2022/11/28/My-new-1/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme-1/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -83,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/12/Run-Hexo-npx/</loc>
+    <loc>https://www.yskz.xyz/blog/2022/11/28/My-new-1/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -92,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2023/01/22/hexo-usage/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/12/Run-Hexo-npx/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -101,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2022/12/01/install-Hexo-to-another-PC/</loc>
+    <loc>https://www.yskz.xyz/blog/2023/01/22/hexo-usage/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -110,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</loc>
+    <loc>https://www.yskz.xyz/blog/2022/12/01/install-Hexo-to-another-PC/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -119,7 +128,16 @@
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/2022/11/30/ts-doc-wiki/</loc>
+    <loc>https://www.yskz.xyz/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</loc>
+    
+    <lastmod>2023-01-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yskz.xyz/blog/2022/11/30/ts-doc-wiki/</loc>
     
     <lastmod>2023-01-22</lastmod>
     
@@ -129,23 +147,37 @@
   
 
   <url>
-    <loc>https://yasukazu.github.io/blog</loc>
-    <lastmod>2023-01-22</lastmod>
+    <loc>https://www.yskz.xyz/blog</loc>
+    <lastmod>2023-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://yasukazu.github.io/blog/tags/Windows-node-install/</loc>
-    <lastmod>2023-01-22</lastmod>
+    <loc>https://www.yskz.xyz/blog/tags/Windows-node-install/</loc>
+    <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yasukazu.github.io/blog/tags/js-HTML-nav/</loc>
-    <lastmod>2023-01-22</lastmod>
+    <loc>https://www.yskz.xyz/blog/tags/js-HTML-nav/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yskz.xyz/blog/tags/GitHub-url-public-dir/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yskz.xyz/blog/tags/starter-theme/</loc>
+    <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

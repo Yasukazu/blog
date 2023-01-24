@@ -3,11 +3,11 @@
   <title>Hexo trial</title>
   
   <subtitle>Webpage technical Blog</subtitle>
-  <link href="https://yasukazu.github.io/blog/atom.xml" rel="self"/>
+  <link href="https://www.yskz.xyz/blog/atom.xml" rel="self"/>
   
-  <link href="https://yasukazu.github.io/blog/"/>
-  <updated>2023-01-22T10:53:35.897Z</updated>
-  <id>https://yasukazu.github.io/blog/</id>
+  <link href="https://www.yskz.xyz/blog/"/>
+  <updated>2023-01-24T07:08:02.370Z</updated>
+  <id>https://www.yskz.xyz/blog/</id>
   
   <author>
     <name>Y-M</name>
@@ -17,9 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Switched to my fork of &#39;hexo-theme-starter&#39;</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/24/Switched-to-hexo-theme-starter/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/24/Switched-to-hexo-theme-starter/</id>
+    <published>2023-01-24T06:30:44.000Z</published>
+    <updated>2023-01-24T07:08:02.370Z</updated>
+    
+    <content type="html"><![CDATA[<p>Felt to change my Hexo theme because current theme seemed too complicated to modify.</p><p><em>starter</em> theme looked simpler than current one.</p><p>At first, it had no style sheet.  So I tried to add a style sheet following the same way of the previous theme.</p><ul><li>Added <code>source/css/theme.css</code> file</li><li>Added a stylesheet as <code>href=url_for(&#39;css/theme.css&#39;)</code> in <code>layout/_include/head.pug</code></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Felt to change my Hexo theme because current theme seemed too complicated to modify.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;starter&lt;/em&gt; theme looked simpler than cu</summary>
+      
+    
+    
+    
+    
+    <category term="starter-theme" scheme="https://www.yskz.xyz/blog/tags/starter-theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>public_dir:docs;url:.../hexo-blog</title>
+    <link href="https://www.yskz.xyz/blog/2023/01/22/public-dir-docs-url-hexo-blog/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/22/public-dir-docs-url-hexo-blog/</id>
+    <published>2023-01-22T13:38:17.000Z</published>
+    <updated>2023-01-22T14:06:26.578Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Edited-config-yml-を編集した"><a href="#Edited-config-yml-を編集した" class="headerlink" title="Edited _config.yml を編集した"></a>Edited <code>_config.yml</code> を編集した</h1><ul><li>Set <code>public_dir</code> name as <code>docs</code> to make it the root directory of GitHub Pages.</li><li>Set <code>url</code> to ends with <code>hexo-blog</code> : the same as GitHub repository name.</li></ul><h2 id="Countermeasure-to-preview-with-Live-Server"><a href="#Countermeasure-to-preview-with-Live-Server" class="headerlink" title="Countermeasure to preview with Live Server:"></a>Countermeasure to preview with Live Server:</h2><ul><li>Made a symbolic link as named <code>hexo-blog</code> to point <code>docs</code> directory.</li></ul><h2 id="Unable-to-add-docs-directory-recursively"><a href="#Unable-to-add-docs-directory-recursively" class="headerlink" title="Unable to add docs directory recursively"></a>Unable to add <code>docs</code> directory recursively</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Edited-config-yml-を編集した&quot;&gt;&lt;a href=&quot;#Edited-config-yml-を編集した&quot; class=&quot;headerlink&quot; title=&quot;Edited _config.yml を編集した&quot;&gt;&lt;/a&gt;Edited &lt;code&gt;_co</summary>
+      
+    
+    
+    
+    
+    <category term="GitHub, url, public_dir" scheme="https://www.yskz.xyz/blog/tags/GitHub-url-public-dir/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Installed _hexo-blog_ to my VPS</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/22/Installed-hexo-blog-to-my-VPS/</id>
     <published>2023-01-22T10:53:08.000Z</published>
     <updated>2023-01-22T10:53:35.897Z</updated>
     
@@ -39,8 +84,8 @@
   
   <entry>
     <title>Hexo Usage</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/22/hexo-usage/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/22/hexo-usage/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/22/hexo-usage/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/22/hexo-usage/</id>
     <published>2023-01-22T02:34:01.584Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -59,8 +104,8 @@
   
   <entry>
     <title>fix timezone again</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/17/fix-timezone-again/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/17/fix-timezone-again/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/17/fix-timezone-again/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/17/fix-timezone-again/</id>
     <published>2023-01-17T00:30:24.000Z</published>
     <updated>2023-01-22T10:50:21.281Z</updated>
     
@@ -72,8 +117,8 @@
   
   <entry>
     <title>日付がずれるのでtimezoneを修正してみる</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/17/try-to-fix-timezone-for-date-diff/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/17/try-to-fix-timezone-for-date-diff/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/17/try-to-fix-timezone-for-date-diff/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/17/try-to-fix-timezone-for-date-diff/</id>
     <published>2023-01-16T23:54:52.000Z</published>
     <updated>2023-01-22T10:50:21.281Z</updated>
     
@@ -92,8 +137,8 @@
   
   <entry>
     <title>rsyncの sshオプションで blogを zip圧縮した ファイルを　ブログ用サーバーに転送した</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/17/rsync-ssh-transfer-blog-zip-file/</id>
     <published>2023-01-16T21:41:11.000Z</published>
     <updated>2023-01-22T10:50:21.281Z</updated>
     
@@ -112,8 +157,8 @@
   
   <entry>
     <title>Hexo config url and public_dir and document-root settings</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/15/Hexo-config-somehow/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/15/Hexo-config-somehow/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/15/Hexo-config-somehow/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/15/Hexo-config-somehow/</id>
     <published>2023-01-15T08:43:00.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -132,8 +177,8 @@
   
   <entry>
     <title>Installed &#39;generator-hexo-theme&#39;</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme-1/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme-1/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme-1/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme-1/</id>
     <published>2023-01-12T16:43:21.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -152,8 +197,8 @@
   
   <entry>
     <title>Installed &#39;generator-hexo-theme&#39;</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/13/Installed-generator-hexo-theme/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/13/Installed-generator-hexo-theme/</id>
     <published>2023-01-12T16:42:00.000Z</published>
     <updated>2023-01-22T10:50:21.281Z</updated>
     
@@ -165,8 +210,8 @@
   
   <entry>
     <title>Run Hexo &#39;npx&#39; in Gitpod</title>
-    <link href="https://yasukazu.github.io/blog/2023/01/12/Run-Hexo-npx/"/>
-    <id>https://yasukazu.github.io/blog/2023/01/12/Run-Hexo-npx/</id>
+    <link href="https://www.yskz.xyz/blog/2023/01/12/Run-Hexo-npx/"/>
+    <id>https://www.yskz.xyz/blog/2023/01/12/Run-Hexo-npx/</id>
     <published>2023-01-11T22:08:40.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -185,8 +230,8 @@
   
   <entry>
     <title>install Hexo to another PC</title>
-    <link href="https://yasukazu.github.io/blog/2022/12/01/install-Hexo-to-another-PC/"/>
-    <id>https://yasukazu.github.io/blog/2022/12/01/install-Hexo-to-another-PC/</id>
+    <link href="https://www.yskz.xyz/blog/2022/12/01/install-Hexo-to-another-PC/"/>
+    <id>https://www.yskz.xyz/blog/2022/12/01/install-Hexo-to-another-PC/</id>
     <published>2022-12-01T01:05:53.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -210,14 +255,14 @@
     
     
     
-    <category term="Windows, node, install" scheme="https://yasukazu.github.io/blog/tags/Windows-node-install/"/>
+    <category term="Windows, node, install" scheme="https://www.yskz.xyz/blog/tags/Windows-node-install/"/>
     
   </entry>
   
   <entry>
     <title>ts-doc wiki</title>
-    <link href="https://yasukazu.github.io/blog/2022/11/30/ts-doc-wiki/"/>
-    <id>https://yasukazu.github.io/blog/2022/11/30/ts-doc-wiki/</id>
+    <link href="https://www.yskz.xyz/blog/2022/11/30/ts-doc-wiki/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/30/ts-doc-wiki/</id>
     <published>2022-11-30T06:36:52.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -237,8 +282,8 @@
   
   <entry>
     <title>ts-doc(Technical Document) event-example.js nav-shrink button 新設</title>
-    <link href="https://yasukazu.github.io/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/"/>
-    <id>https://yasukazu.github.io/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</id>
+    <link href="https://www.yskz.xyz/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</id>
     <published>2022-11-29T06:39:55.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -253,14 +298,14 @@
     
     
     
-    <category term="js HTML nav" scheme="https://yasukazu.github.io/blog/tags/js-HTML-nav/"/>
+    <category term="js HTML nav" scheme="https://www.yskz.xyz/blog/tags/js-HTML-nav/"/>
     
   </entry>
   
   <entry>
     <title>2nd post</title>
-    <link href="https://yasukazu.github.io/blog/2022/11/29/2nd-post/"/>
-    <id>https://yasukazu.github.io/blog/2022/11/29/2nd-post/</id>
+    <link href="https://www.yskz.xyz/blog/2022/11/29/2nd-post/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/29/2nd-post/</id>
     <published>2022-11-29T02:23:48.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
@@ -280,8 +325,8 @@
   
   <entry>
     <title>My new 1</title>
-    <link href="https://yasukazu.github.io/blog/2022/11/28/My-new-1/"/>
-    <id>https://yasukazu.github.io/blog/2022/11/28/My-new-1/</id>
+    <link href="https://www.yskz.xyz/blog/2022/11/28/My-new-1/"/>
+    <id>https://www.yskz.xyz/blog/2022/11/28/My-new-1/</id>
     <published>2022-11-28T04:46:53.000Z</published>
     <updated>2023-01-22T02:34:01.584Z</updated>
     
