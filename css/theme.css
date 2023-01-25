@@ -5,3 +5,7 @@ header {
 footer {
     background-color: #1aa;
 }
+
+body {
+    padding: 0.5em;
+}
