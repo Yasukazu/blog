@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yskz.xyz/blog/2023/01/25/Installed-Google-Translate-in-index-html/</loc>
+    
+    <lastmod>2023-01-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.yskz.xyz/blog/2023/01/25/Set-blog-submodule-as-GitHub-Pages/</loc>
     
     <lastmod>2023-01-24</lastmod>
@@ -157,7 +166,7 @@
 
   <url>
     <loc>https://www.yskz.xyz/blog</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,35 +174,42 @@
   
   <url>
     <loc>https://www.yskz.xyz/blog/tags/Windows-node-install/</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.yskz.xyz/blog/tags/js-HTML-nav/</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.yskz.xyz/blog/tags/GitHub-url-public-dir/</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.yskz.xyz/blog/tags/starter-theme/</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.yskz.xyz/blog/tags/GitHub-Pages/</loc>
-    <lastmod>2023-01-24</lastmod>
+    <lastmod>2023-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yskz.xyz/blog/tags/google-translate/</loc>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
