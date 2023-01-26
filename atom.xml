@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-01-25T09:16:12.000Z</updated>
+  <updated>2023-01-26T06:39:01.302Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS: Pad each [header,main,footer], Color brighter &#39;header&#39; background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</title>
+    <link href="https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/"/>
+    <id>https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/</id>
+    <published>2023-01-26T06:24:01.000Z</published>
+    <updated>2023-01-26T06:39:01.302Z</updated>
+    
+    <content type="html"><![CDATA[<p>Whole padding as <code>body</code> element made bg-colored header&#x2F;footer L&#x2F;R-side character no margin from borders.<br>So, gave padding each header &#x2F; main &#x2F; footer elements.</p><p>Paginator:<br>Changed “&lt;&#x2F;&gt;” to “&amp;larr;&#x2F;&amp;rarr;” for better understandable.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Whole padding as &lt;code&gt;body&lt;/code&gt; element made bg-colored header&amp;#x2F;footer L&amp;#x2F;R-side character no margin from borders.&lt;br&gt;So, gave</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Installed &#39;Google Translate&#39; in index.html</title>

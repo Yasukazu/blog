@@ -1,11 +1,13 @@
 header {
-    background-color: #aa1;
+    background-color: hsl(11, 100%, 55%);
+    padding: 0.5em;
+}
+
+main {
+    padding: 0.5em;
 }
 
 footer {
     background-color: #1aa;
-}
-
-body {
     padding: 0.5em;
 }

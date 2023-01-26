@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/
 https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/
 https://blog.yskz.dev/2023/01/25/Set-blog-submodule-as-GitHub-Pages/
 https://blog.yskz.dev/2023/01/24/Switched-to-hexo-theme-starter/
