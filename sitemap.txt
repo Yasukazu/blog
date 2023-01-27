@@ -1,3 +1,5 @@
+https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/
+https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/
 https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/
 https://blog.yskz.dev/2023/01/25/Set-blog-submodule-as-GitHub-Pages/
@@ -24,3 +26,4 @@ https://blog.yskz.dev/tags/GitHub-url-public-dir/
 https://blog.yskz.dev/tags/starter-theme/
 https://blog.yskz.dev/tags/GitHub-Pages/
 https://blog.yskz.dev/tags/google-translate/
+https://blog.yskz.dev/tags/new-post-name/

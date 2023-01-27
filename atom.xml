@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-01-26T06:39:01.302Z</updated>
+  <updated>2023-01-27T13:07:23.844Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Set config to add date before title in file name</title>
+    <link href="https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/"/>
+    <id>https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/</id>
+    <published>2023-01-27T12:58:58.000Z</published>
+    <updated>2023-01-27T13:07:23.844Z</updated>
+    
+    <content type="html"><![CDATA[<p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:day-:month-:year-:title.md</span> <span class="comment"># File name of new posts</span></span><br></pre></td></tr></table></figure><p>Notify:</p><ul><li>This does not affect to create a new draft.</li><li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Set the main confiuration file of Hexo &lt;code&gt;_config.yml&lt;/code&gt; to include newly created date in its file name.&lt;/p&gt;
+&lt;figure class=&quot;highli</summary>
+      
+    
+    
+    
+    
+    <category term="new_post_name" scheme="https://blog.yskz.dev/tags/new-post-name/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>post-in-pug.pug</title>
+    <link href="https://blog.yskz.dev/2023/01/26/post-in-pug/"/>
+    <id>https://blog.yskz.dev/2023/01/26/post-in-pug/</id>
+    <published>2023-01-26T14:37:51.000Z</published>
+    <updated>2023-01-26T14:37:51.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>h2 A trial to write a post in pug<br>p<br>  | According to<br>  a(href&#x3D;”<a href="https://hexo.io/docs/writing.html&quot;">https://hexo.io/docs/writing.html&quot;</a>) Hexo official document #[i writing]<br>  | ,  Hexo supports #[i pug] as a post-formatting language.<br>p&#x3D;”To use pug, change the extension of a post file as ‘.pug’ from ‘.md’.”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;h2 A trial to write a post in pug&lt;br&gt;p&lt;br&gt;  | According to&lt;br&gt;  a(href&amp;#x3D;”&lt;a href=&quot;https://hexo.io/docs/writing.html&amp;quot;&quot;&gt;https://he</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>CSS: Pad each [header,main,footer], Color brighter &#39;header&#39; background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</title>
@@ -383,27 +426,6 @@
       
     <summary type="html">&lt;p&gt;This is the 2nd blog.&lt;/p&gt;
 &lt;h2 id=&quot;How-to-edit-the-new-source-document-created-by-hexo-new-command&quot;&gt;&lt;a href=&quot;#How-to-edit-the-new-source-d</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>My new 1</title>
-    <link href="https://blog.yskz.dev/2022/11/28/My-new-1/"/>
-    <id>https://blog.yskz.dev/2022/11/28/My-new-1/</id>
-    <published>2022-11-28T04:46:53.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>My 1st Hexo blog post.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;My 1st Hexo blog post.&lt;/p&gt;
-</summary>
       
     
     

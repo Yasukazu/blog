@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="A web log to use Hexo static site generator">
     <meta name="author" content="Y-M">
-    <title>fix timezone again | Hexo trial</title>
+    <title>Set config to add date before title in file name | Hexo trial</title>
     <link rel="icon" href="/">
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
@@ -24,16 +24,34 @@
     <main>
         <article>
             <header>
-                <h1>fix timezone again</h1><span>2023-01-17</span>
+                <h1>Set config to add date before title in file name</h1><span>2023-01-27</span>
             </header>
             <hr>
-            <div></div>
+            <div>
+                <p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p>
+                <figure class="highlight yaml">
+                    <table>
+                        <tr>
+                            <td class="gutter">
+                                <pre><span class="line">1</span><br></pre>
+                            </td>
+                            <td class="code">
+                                <pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:day-:month-:year-:title.md</span> <span class="comment"># File name of new posts</span></span><br></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </figure>
+                <p>Notify:</p>
+                <ul>
+                    <li>This does not affect to create a new draft.</li>
+                    <li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li>
+                </ul>
+            </div>
             <hr>
         </article>
     </main>
     <div class="paginator">
-        <div><a href="/2023/01/17/try-to-fix-timezone-for-date-diff/">日付がずれるのでtimezoneを修正してみる &rarr;</a></div>
-        <div><a href="/2023/01/22/hexo-usage/">&larr; Hexo Usage</a></div>
+        <div><a href="/2023/01/26/post-in-pug/">post-in-pug.pug &rarr;</a></div>
     </div>
     <footer>
         <p>&copy; 2023 Y-M.</p>
