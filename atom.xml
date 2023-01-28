@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-01-27T13:07:23.844Z</updated>
+  <updated>2023-01-28T04:57:47.988Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Added post date after title</title>
+    <link href="https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/"/>
+    <id>https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/</id>
+    <published>2023-01-28T04:40:59.000Z</published>
+    <updated>2023-01-28T04:57:47.988Z</updated>
+    
+    <content type="html"><![CDATA[<p>Under <code>ym-start/layout/index.pug</code>,<br> block content &gt; main &gt; article.post &gt; a </p><p>Added an <strong>hgroup</strong> tag which contains:</p><ul><li><code>h2.title= post.title</code></li><li><code>time.date= post.date.format(config.date_format)</code></li></ul><p>And also, edited the stylesheet of <code>ym-start/sources/css/theme.css</code> to make title and date inline as:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hgroup</span><span class="selector-class">.title-date</span> &gt; <span class="selector-tag">h2</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Under &lt;code&gt;ym-start/layout/index.pug&lt;/code&gt;,&lt;br&gt; block content &amp;gt; main &amp;gt; article.post &amp;gt; a &lt;/p&gt;
+&lt;p&gt;Added an &lt;strong&gt;hgroup&lt;/stron</summary>
+      
+    
+    
+    
+    
+    <category term="config" scheme="https://blog.yskz.dev/tags/config/"/>
+    
+    <category term="CSS" scheme="https://blog.yskz.dev/tags/CSS/"/>
+    
+    <category term="Layout" scheme="https://blog.yskz.dev/tags/Layout/"/>
+    
+    <category term="hgroup" scheme="https://blog.yskz.dev/tags/hgroup/"/>
+    
+    <category term="date.format" scheme="https://blog.yskz.dev/tags/date-format/"/>
+    
+  </entry>
   
   <entry>
     <title>Set config to add date before title in file name</title>
@@ -409,27 +440,6 @@
     
     
     <category term="js HTML nav" scheme="https://blog.yskz.dev/tags/js-HTML-nav/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2nd post</title>
-    <link href="https://blog.yskz.dev/2022/11/29/2nd-post/"/>
-    <id>https://blog.yskz.dev/2022/11/29/2nd-post/</id>
-    <published>2022-11-29T02:23:48.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is the 2nd blog.</p><h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2><p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 2nd post</span><br><span class="line">date: 2022-11-29 10:41:48</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p><p>Then, update the remote Git:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;update&#x27;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2><ul><li>Search in Hexo folder ‘timezone’</li><li>Fix ‘-0000’ as ‘<em>CountryName</em>‘</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This is the 2nd blog.&lt;/p&gt;
-&lt;h2 id=&quot;How-to-edit-the-new-source-document-created-by-hexo-new-command&quot;&gt;&lt;a href=&quot;#How-to-edit-the-new-source-d</summary>
-      
-    
-    
-    
     
   </entry>
   

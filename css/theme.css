@@ -1,5 +1,5 @@
 header {
-    background-color: hsl(11, 100%, 55%);
+    background-color: #1aa;
     padding: 0.5em;
 }
 
@@ -8,6 +8,34 @@ main {
 }
 
 footer {
-    background-color: #1aa;
+    background-color: hsl(11, 100%, 55%);
     padding: 0.5em;
+}
+
+hgroup.title-date > h2.title {
+    display: inline;
+}
+
+hgroup.title-date > time.date {
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+li.tag-name {
+    display: inline;
+    list-style-type: none;
+}
+
+li.tag-name::before {
+    content: "Tag: "
+}
+
+main.index article.post {
+    border: thin solid #000;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+article.post > header {
+    background-color: #fff;
 }
