@@ -39,3 +39,16 @@ main.index article.post {
 article.post > header {
     background-color: #fff;
 }
+
+header > ul.header > li {
+    display: inline;
+    list-style-type: none;
+}
+
+hgroup.title-subtitle > * {
+    display: inline;
+}
+hgroup.title-subtitle > p::before {
+    content: "-- ";
+
+}

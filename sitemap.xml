@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yskz.dev/about/index.html</loc>
+    
+    <lastmod>2023-01-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/</loc>
     
     <lastmod>2023-01-28</lastmod>
@@ -202,7 +211,7 @@
 
   <url>
     <loc>https://blog.yskz.dev/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -210,84 +219,84 @@
   
   <url>
     <loc>https://blog.yskz.dev/tags/Windows-node-install/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/js-HTML-nav/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/GitHub-url-public-dir/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/starter-theme/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/GitHub-Pages/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/google-translate/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/new-post-name/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/config/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/CSS/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/Layout/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/hgroup/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.yskz.dev/tags/date-format/</loc>
-    <lastmod>2023-01-28</lastmod>
+    <lastmod>2023-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
