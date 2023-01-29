@@ -35,19 +35,25 @@
             <hr>
             <div>
                 <h1 id="This-blog-site-is-about"><a href="#This-blog-site-is-about" class="headerlink" title="This blog site is about"></a>This blog site is about</h1>
-                <p>Because not enough time to organize documents.<br>If you have something to tell me, please notify me with the following form(powered by Hyperform: <a target="_blank" rel="noopener" href="https://hyperform.jp/">https://hyperform.jp</a>):</p>
-                <form method="post" action="https://hyperform.jp/api/CdLHS21L">
-                    <div>
-                        <label class="name">Your name <input type="text" name="name" placeholder="Family,Given" required></label>
-                    </div>
-                    <div>
-                        <label class="e-mail">Your e-mail address <input type="email" name="email" placeholder="example@example.com" required></label>
-                    </div>
-                    <div>
-                        <label class="comment">Comment about this blog <textarea name="comment" required></textarea></label>
-                    </div>
-                    <button class="submit" type="submit">Submit</button>
-                </form>
+                <p>–because of not enough time to organize each posts.<br>If you have something to tell me, please notify me with the following form(powered by Hyperform: <a target="_blank" rel="noopener" href="https://hyperform.jp/">https://hyperform.jp</a>):</p>
+                <fieldset class="form">
+                    <legend>Please fill in following items then press 'Submit' button.</legend>
+                    <form class="send-message" method="post" action="https://hyperform.jp/api/CdLHS21L">
+                        <div class="form-part">
+                            <label for="name" class="name">Your name</label>
+                            <input id="name" type="text" name="name" placeholder="family name, first name" required>
+                        </div>
+                        <div class="form-part">
+                            <label for="email" class="e-mail">Your e-mail address</label>
+                            <input id="email" type="email" name="email" placeholder="example@example.com" required>
+                        </div>
+                        <div class="form-part col">
+                            <label class="comment">Comment about this blog</label>
+                            <textarea name="comment" required></textarea>
+                        </div>
+                        <button class="submit form-part" type="submit">Submit</button>
+                    </form>
+                </fieldset>
             </div>
             <hr>
         </article>

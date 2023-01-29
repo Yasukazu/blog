@@ -52,3 +52,20 @@ hgroup.title-subtitle > p::before {
     content: "-- ";
 
 }
+form.send-message {
+    display: flex;
+    flex-direction: column;
+}
+div.form-part {
+    display: flex;
+    flex-direction: row;
+}
+div.form-part.col {
+    flex-direction: column;
+}
+div.form-part > label::after {
+    content: ": ";
+}
+button.submit {
+  margin-top: 1em;
+}

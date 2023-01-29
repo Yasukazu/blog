@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/01/29/form-in-About-page/
 https://blog.yskz.dev/about/index.html
 https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/
 https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/
@@ -34,3 +35,5 @@ https://blog.yskz.dev/tags/CSS/
 https://blog.yskz.dev/tags/Layout/
 https://blog.yskz.dev/tags/hgroup/
 https://blog.yskz.dev/tags/date-format/
+https://blog.yskz.dev/tags/comment-form/
+https://blog.yskz.dev/tags/about-page/
