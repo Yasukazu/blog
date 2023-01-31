@@ -61,9 +61,9 @@
     
     <category term="config" scheme="https://blog.yskz.dev/tags/config/"/>
     
-    <category term="CSS" scheme="https://blog.yskz.dev/tags/CSS/"/>
+    <category term="CSS" scheme="https://blog.yskz.dev/tags/css/"/>
     
-    <category term="Layout" scheme="https://blog.yskz.dev/tags/Layout/"/>
+    <category term="Layout" scheme="https://blog.yskz.dev/tags/layout/"/>
     
     <category term="hgroup" scheme="https://blog.yskz.dev/tags/hgroup/"/>
     
@@ -177,7 +177,7 @@
     
     
     
-    <category term="GitHub-Pages" scheme="https://blog.yskz.dev/tags/GitHub-Pages/"/>
+    <category term="GitHub-Pages" scheme="https://blog.yskz.dev/tags/github-pages/"/>
     
   </entry>
   
@@ -222,7 +222,7 @@
     
     
     
-    <category term="GitHub, url, public_dir" scheme="https://blog.yskz.dev/tags/GitHub-url-public-dir/"/>
+    <category term="GitHub, url, public_dir" scheme="https://blog.yskz.dev/tags/github-url-public-dir/"/>
     
   </entry>
   
@@ -420,7 +420,7 @@
     
     
     
-    <category term="Windows, node, install" scheme="https://blog.yskz.dev/tags/Windows-node-install/"/>
+    <category term="Windows, node, install" scheme="https://blog.yskz.dev/tags/windows-node-install/"/>
     
   </entry>
   
