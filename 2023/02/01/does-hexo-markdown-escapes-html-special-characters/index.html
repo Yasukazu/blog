@@ -40,10 +40,12 @@
                     <li>&lt; and &gt; must escape manually markdown writer himself &#x2F; herself.</li>
                     <li>Other HTML entities like aportrophe(&amp;apos;) are no need to escape.</li>
                 </ul>
-                <h3 id="Escaping-special-characters-‘LT’-lt-and-‘GT’-gt"><a href="#Escaping-special-characters-‘LT’-lt-and-‘GT’-gt" class="headerlink" title="Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)"></a>Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)</h3>
-                <ul>
-                    <li>Two special characters:[ <em>less-than</em> (&lt;) and _greater-than_ (&gt;) ] need forwarding <strong>backslash</strong> inserted as:[“\&lt;”, “\&gt;”] not to be treated as embedding HTML tags.</li>
-                </ul>
+                <h3 id="Escaping-special-characters-‘L-T-’-lt-‘G-T-’-gt-and-‘back-slash’"><a href="#Escaping-special-characters-‘L-T-’-lt-‘G-T-’-gt-and-‘back-slash’" class="headerlink" title="Escaping special characters ‘L.T.’(&lt;), ‘G.T.’(&gt;) and ‘back-slash’(\)"></a>Escaping special characters ‘L.T.’(&lt;), ‘G.T.’(&gt;) and ‘back-slash’(
+                    <pre lang='en'>\</pre>)
+                </h3>
+                <p> Three special characters:<br> [ <em>less-than</em> , <em>greater-than</em> , <em>back-slash</em> ]<br>[&lt;, &gt;, \]</p>
+                <p> need a <strong>backslash</strong> is inserted in front of each of them like:<br>[\&lt;, \&gt;, \\]</p>
+                <p> not to be treated as embedding HTML tags and an <strong>escape</strong> character.</p>
             </div>
             <hr>
         </article>
