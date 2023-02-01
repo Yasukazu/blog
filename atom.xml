@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-01-29T13:01:16.534Z</updated>
+  <updated>2023-02-01T11:31:24.654Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,80 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Does Hexo markdown escapes HTML special characters?</title>
+    <link href="https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/"/>
+    <id>https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/</id>
+    <published>2023-02-01T01:46:35.000Z</published>
+    <updated>2023-02-01T11:31:24.654Z</updated>
+    
+    <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML.<br>HTML document needs to escape special characters like ‘Less than’, ‘Greater than’ and ‘Apostropy’ as:<br>‘&lt;’, ‘&gt;’,’&amp;apos; &#x2F; &amp;#x27;’, ‘&amp;rarr;’.</p><h2 id="Result-of-entities"><a href="#Result-of-entities" class="headerlink" title="Result of entities:"></a>Result of entities:</h2><ul><li>&lt; and &gt; must escape manually markdown writer himself &#x2F; herself.</li><li>Other HTML entities like aportrophe(&amp;apos;) are no need to escape.</li></ul><h3 id="Escaping-special-characters-‘LT’-lt-and-‘GT’-gt"><a href="#Escaping-special-characters-‘LT’-lt-and-‘GT’-gt" class="headerlink" title="Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)"></a>Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)</h3><ul><li>Two special characters:[ <em>less-than</em> (&lt;) and  _greater-than_ (&gt;) ] need forwarding  <strong>backslash</strong> inserted as:[“\&lt;”, “\&gt;”] not to be treated as embedding HTML tags.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;In Hexo, A markdown-format post is converted to HTML.&lt;br&gt;HTML document needs to escape special characters like ‘Less than’, ‘Greater than</summary>
+      
+    
+    
+    
+    
+    <category term="Markdown" scheme="https://blog.yskz.dev/tags/markdown/"/>
+    
+    <category term="Entity" scheme="https://blog.yskz.dev/tags/entity/"/>
+    
+    <category term="HTML" scheme="https://blog.yskz.dev/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://blog.yskz.dev/2023/02/01/pug-out-post-in-pug/"/>
+    <id>https://blog.yskz.dev/2023/02/01/pug-out-post-in-pug/</id>
+    <published>2023-02-01T01:42:46.952Z</published>
+    <updated>2023-02-01T01:42:46.808Z</updated>
+    
+    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">
+&lt;!-- -----&gt;
+&lt;!-- -----&gt;
+&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;
+&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official do</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://blog.yskz.dev/2023/02/01/docs-post-in-pug/"/>
+    <id>https://blog.yskz.dev/2023/02/01/docs-post-in-pug/</id>
+    <published>2023-01-31T17:23:45.068Z</published>
+    <updated>2023-01-31T18:17:27.673Z</updated>
+    
+    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">
+&lt;!-- -----&gt;
+&lt;!-- -----&gt;
+&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;
+&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official do</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>form in About page</title>
@@ -95,18 +169,18 @@
   </entry>
   
   <entry>
-    <title>post-in-pug.pug</title>
+    <title></title>
     <link href="https://blog.yskz.dev/2023/01/26/post-in-pug/"/>
     <id>https://blog.yskz.dev/2023/01/26/post-in-pug/</id>
-    <published>2023-01-26T14:37:51.000Z</published>
-    <updated>2023-01-26T14:37:51.156Z</updated>
+    <published>2023-01-26T14:37:51.156Z</published>
+    <updated>2023-02-01T01:42:46.808Z</updated>
     
-    <content type="html"><![CDATA[<p>h2 A trial to write a post in pug<br>p<br>  | According to<br>  a(href&#x3D;”<a href="https://hexo.io/docs/writing.html&quot;">https://hexo.io/docs/writing.html&quot;</a>) Hexo official document #[i writing]<br>  | ,  Hexo supports #[i pug] as a post-formatting language.<br>p&#x3D;”To use pug, change the extension of a post file as ‘.pug’ from ‘.md’.”</p>]]></content>
+    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;h2 A trial to write a post in pug&lt;br&gt;p&lt;br&gt;  | According to&lt;br&gt;  a(href&amp;#x3D;”&lt;a href=&quot;https://hexo.io/docs/writing.html&amp;quot;&quot;&gt;https://he</summary>
+    <summary type="html">&lt;!-- -----&gt;&lt;!-- -----&gt;&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official docume</summary>
       
     
     
@@ -367,78 +441,6 @@
     <published>2023-01-12T16:42:00.000Z</published>
     <updated>2023-01-22T10:50:21.000Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Run Hexo &#39;npx&#39; in Gitpod</title>
-    <link href="https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/"/>
-    <id>https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/</id>
-    <published>2023-01-11T22:08:40.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>In <em>Gitpod</em>, after workspace reboot, installed <em>hexo</em> command is unavailable.<br>Countermeasure: use <code>npx</code> command as <code>npx hexo new post title</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;In &lt;em&gt;Gitpod&lt;/em&gt;, after workspace reboot, installed &lt;em&gt;hexo&lt;/em&gt; command is unavailable.&lt;br&gt;Countermeasure: use &lt;code&gt;npx&lt;/code&gt; comma</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>install Hexo to another PC</title>
-    <link href="https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/"/>
-    <id>https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/</id>
-    <published>2022-12-01T01:05:53.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<dl>  <dt>nodejs</dt>  <dd>JavaScript as a command</dd> </dl><ol><li>nodejs install to Windows OS:</li></ol><ul><li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li></ul><ol start="2"><li><p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p></li><li><p>Install <em>Hexo</em></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure> <aside>`-g` option is to let any user to use the *hexo* command.</aside></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;dl&gt;
-  &lt;dt&gt;nodejs&lt;/dt&gt;
-  &lt;dd&gt;JavaScript as a command&lt;/dd&gt; 
-&lt;/dl&gt;
-
-&lt;ol&gt;
-&lt;li&gt;nodejs install to Windows OS:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Download and ex</summary>
-      
-    
-    
-    
-    
-    <category term="Windows, node, install" scheme="https://blog.yskz.dev/tags/windows-node-install/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ts-doc wiki</title>
-    <link href="https://blog.yskz.dev/2022/11/30/ts-doc-wiki/"/>
-    <id>https://blog.yskz.dev/2022/11/30/ts-doc-wiki/</id>
-    <published>2022-11-30T06:36:52.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is rather about how to use <em>Hexo</em> static blog site genarator.</p><h2 id="Easy-way-to-open-the-new-post-just-created"><a href="#Easy-way-to-open-the-new-post-just-created" class="headerlink" title="Easy way to open the new post just created"></a>Easy way to open the new post just created</h2><p>Inside VS Code terminal, <code>hexo new &quot;title&quot;</code> creates a new post. Then, last output line shows an URL of the new post source file. Just move over the URL then [open with code] link appears. Clicking it, you can edit then new post with VS Code.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This is rather about how to use &lt;em&gt;Hexo&lt;/em&gt; static blog site genarator.&lt;/p&gt;
-&lt;h2 id=&quot;Easy-way-to-open-the-new-post-just-created&quot;&gt;&lt;a href</summary>
-      
     
     
     

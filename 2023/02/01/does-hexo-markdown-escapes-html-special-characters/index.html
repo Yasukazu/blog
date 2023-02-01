@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="A web log to use Hexo static site generator">
     <meta name="author" content="Y-M">
-    <title> | Hexo trial</title>
+    <title>Does Hexo markdown escapes HTML special characters? | Hexo trial</title>
     <link rel="icon" href="/">
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
@@ -30,20 +30,26 @@
     <main class="post">
         <article class="post">
             <header>
-                <h1 class="title"></h1><time class="date">2023-01-26</time>
+                <h1 class="title">Does Hexo markdown escapes HTML special characters?</h1><time class="date">2023-02-01</time>
             </header>
             <hr>
-            <div class="content"><!-- -----><!-- ----->
-                <h2>A trial to write a post in pug</h2>
-                <p>According to<a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>, Hexo supports <i>pug</i> as a post-formatting language.</p>
-                <p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>
+            <div class="content">
+                <p>In Hexo, A markdown-format post is converted to HTML.<br>HTML document needs to escape special characters like ‘Less than’, ‘Greater than’ and ‘Apostropy’ as:<br>‘&lt;’, ‘&gt;’,’&amp;apos; &#x2F; &amp;#x27;’, ‘&amp;rarr;’.</p>
+                <h2 id="Result-of-entities"><a href="#Result-of-entities" class="headerlink" title="Result of entities:"></a>Result of entities:</h2>
+                <ul>
+                    <li>&lt; and &gt; must escape manually markdown writer himself &#x2F; herself.</li>
+                    <li>Other HTML entities like aportrophe(&amp;apos;) are no need to escape.</li>
+                </ul>
+                <h3 id="Escaping-special-characters-‘LT’-lt-and-‘GT’-gt"><a href="#Escaping-special-characters-‘LT’-lt-and-‘GT’-gt" class="headerlink" title="Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)"></a>Escaping special characters ‘LT’(&lt;) and ‘GT’(&gt;)</h3>
+                <ul>
+                    <li>Two special characters:[ <em>less-than</em> (&lt;) and _greater-than_ (&gt;) ] need forwarding <strong>backslash</strong> inserted as:[“\&lt;”, “\&gt;”] not to be treated as embedding HTML tags.</li>
+                </ul>
             </div>
             <hr>
         </article>
     </main>
     <div class="paginator">
-        <div><a href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/">CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration &rarr;</a></div>
-        <div><a href="/2023/01/27/Set-config-to-add-date-before-title-in-file-name/">&larr; Set config to add date before title in file name</a></div>
+        <div><a href="/2023/02/01/pug-out-post-in-pug/"> &rarr;</a></div>
     </div>
     <footer>
         <p>&copy; 2023 Y-M.</p>
