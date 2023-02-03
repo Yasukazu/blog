@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-01T12:18:17.672Z</updated>
+  <updated>2023-02-03T01:44:06.176Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -21,14 +21,17 @@
     <link href="https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/"/>
     <id>https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/</id>
     <published>2023-02-01T01:46:35.000Z</published>
-    <updated>2023-02-01T12:18:17.672Z</updated>
+    <updated>2023-02-03T01:44:06.176Z</updated>
     
-    <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML.<br>HTML document needs to escape special two characters of ‘Less than’ and ‘Greater than’:<br>‘&lt;’</p><p>‘&gt;’</p><p>as:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;</span><br><span class="line">&amp;gt;</span><br></pre></td></tr></table></figure><p>&lt;br&gt;<br>is written as:<br><code>\&lt;br\&gt;</code></p><h2 id="Result-of-entities"><a href="#Result-of-entities" class="headerlink" title="Result of entities:"></a>Result of entities:</h2><ul><li>&lt; and &gt; must escape manually markdown writer himself &#x2F; herself.</li><li>Other HTML entities like aportrophe(&amp;apos;) are no need to escape.</li></ul><h3 id="Escaping-special-characters-‘L-T-’-lt-‘G-T-’-gt-and-‘back-slash’"><a href="#Escaping-special-characters-‘L-T-’-lt-‘G-T-’-gt-and-‘back-slash’" class="headerlink" title="Escaping special characters ‘L.T.’(&lt;), ‘G.T.’(&gt;) and ‘back-slash’(\)"></a>Escaping special characters ‘L.T.’(&lt;), ‘G.T.’(&gt;) and ‘back-slash’(<pre lang='en'>\</pre>)</h3><p> Three special characters:<br> [ <em>less-than</em> , <em>greater-than</em> , <em>back-slash</em> ]<br>[&lt;, &gt;, \]</p><p> need a <strong>backslash</strong> is inserted in front of each of them like:<br>[\&lt;, \&gt;, \\]</p><p> not to be treated as embedding HTML tags and an <strong>escape</strong> character.</p>]]></content>
+    <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML format.</p><p>HTML documents need to escape special two characters:</p><ul><li><em>Less-than</em>(&lt;) </li><li><em>Greater-than</em>(&gt;)</li></ul><p>respectively:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>Markdown is easier than HTML about this escaping.</p><p>Just put an <em>escape</em> character <strong>backslash</strong> before special characters as:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>But Markdown also needs to escape <strong>Backslash</strong> (\) as:</p><p><code>\\</code></p><p>or write as an entity as:</p><p><code>&amp;bsol;</code></p><p>And also, <strong>Ampersand</strong> (&amp;) might be better to be escaped as:</p><p><code>\&amp;</code></p><p>or write as an entity as:</p><p><code>&amp;amp;</code></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;In Hexo, A markdown-format post is converted to HTML.&lt;br&gt;HTML document needs to escape special two characters of ‘Less than’ and ‘Greater</summary>
+    <summary type="html">&lt;p&gt;In Hexo, A markdown-format post is converted to HTML format.&lt;/p&gt;
+&lt;p&gt;HTML documents need to escape special two characters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;e</summary>
       
     
     
@@ -39,54 +42,6 @@
     <category term="Entity" scheme="https://blog.yskz.dev/tags/entity/"/>
     
     <category term="HTML" scheme="https://blog.yskz.dev/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://blog.yskz.dev/2023/02/01/pug-out-post-in-pug/"/>
-    <id>https://blog.yskz.dev/2023/02/01/pug-out-post-in-pug/</id>
-    <published>2023-02-01T01:42:46.952Z</published>
-    <updated>2023-02-01T01:42:46.808Z</updated>
-    
-    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">
-&lt;!-- -----&gt;
-&lt;!-- -----&gt;
-&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;
-&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official do</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://blog.yskz.dev/2023/02/01/docs-post-in-pug/"/>
-    <id>https://blog.yskz.dev/2023/02/01/docs-post-in-pug/</id>
-    <published>2023-01-31T17:23:45.068Z</published>
-    <updated>2023-01-31T18:17:27.673Z</updated>
-    
-    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">
-&lt;!-- -----&gt;
-&lt;!-- -----&gt;
-&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;
-&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official do</summary>
-      
-    
-    
-    
     
   </entry>
   
@@ -121,7 +76,7 @@
     <published>2023-01-28T04:40:59.000Z</published>
     <updated>2023-01-28T04:57:47.988Z</updated>
     
-    <content type="html"><![CDATA[<p>Under <code>ym-start/layout/index.pug</code>,<br> block content &gt; main &gt; article.post &gt; a </p><p>Added an <strong>hgroup</strong> tag which contains:</p><ul><li><code>h2.title= post.title</code></li><li><code>time.date= post.date.format(config.date_format)</code></li></ul><p>And also, edited the stylesheet of <code>ym-start/sources/css/theme.css</code> to make title and date inline as:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hgroup</span><span class="selector-class">.title-date</span> &gt; <span class="selector-tag">h2</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>Under <code>ym-start/layout/index.pug</code>,<br> block content &gt; main &gt; article.post &gt; a </p><p>Added an <strong>hgroup</strong> tag which contains:</p><ul><li><code>h2.title= post.title</code></li><li><code>time.date= post.date.format(config.date_format)</code></li></ul><p>And also, edited the stylesheet of <code>ym-start/sources/css/theme.css</code> to make title and date inline as:</p><pre class="language-CSS" data-language="CSS"><code class="language-CSS">hgroup.title-date &gt; h2.title &#123;    display: inline;&#125;</code></pre>]]></content>
     
     
       
@@ -147,18 +102,18 @@
   
   <entry>
     <title>Set config to add date before title in file name</title>
-    <link href="https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/"/>
-    <id>https://blog.yskz.dev/2023/01/27/Set-config-to-add-date-before-title-in-file-name/</id>
+    <link href="https://blog.yskz.dev/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/"/>
+    <id>https://blog.yskz.dev/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/</id>
     <published>2023-01-27T12:58:58.000Z</published>
     <updated>2023-01-27T13:07:23.844Z</updated>
     
-    <content type="html"><![CDATA[<p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:day-:month-:year-:title.md</span> <span class="comment"># File name of new posts</span></span><br></pre></td></tr></table></figure><p>Notify:</p><ul><li>This does not affect to create a new draft.</li><li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>day<span class="token punctuation">-</span><span class="token punctuation">:</span>month<span class="token punctuation">-</span><span class="token punctuation">:</span>year<span class="token punctuation">-</span><span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span></code></pre><p>Notify:</p><ul><li>This does not affect to create a new draft.</li><li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li></ul>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;Set the main confiuration file of Hexo &lt;code&gt;_config.yml&lt;/code&gt; to include newly created date in its file name.&lt;/p&gt;
-&lt;figure class=&quot;highli</summary>
+&lt;pre class=&quot;language-</summary>
       
     
     
@@ -209,13 +164,33 @@
   </entry>
   
   <entry>
+    <title>Hexo Usage</title>
+    <link href="https://blog.yskz.dev/2023/01/25/hexo-usage/"/>
+    <id>https://blog.yskz.dev/2023/01/25/hexo-usage/</id>
+    <published>2023-01-25T14:53:43.320Z</published>
+    <updated>2023-01-22T02:34:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Installed &#39;Google Translate&#39; in index.html</title>
     <link href="https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/"/>
     <id>https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/</id>
     <published>2023-01-25T09:11:01.000Z</published>
     <updated>2023-01-25T09:16:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Changes:</p><ul><li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li><li><code>scripts.pug</code>: Added <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">script.</span><br><span class="line">    function googleTranslateElementInit() &#123;</span><br><span class="line">        new google.translate.TranslateElement(&#123;pageLanguage: &#x27;en&#x27;, layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL&#125;, &#x27;google_translate_element&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">script(src=&quot;https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&quot;)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Changes:</p><ul><li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li><li><code>scripts.pug</code>: Added <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">    <span class="token keyword">function</span> <span class="token function">googleTranslateElementInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">pageLanguage</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">layout</span><span class="token operator">:</span> google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement<span class="token punctuation">.</span>InlineLayout<span class="token punctuation">.</span><span class="token constant">HORIZONTAL</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">'google_translate_element'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span></span><span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"</span></span><span class="token punctuation">)</span></span></span></code></pre></li></ul>]]></content>
     
     
       
@@ -322,26 +297,6 @@
   </entry>
   
   <entry>
-    <title>Hexo Usage</title>
-    <link href="https://blog.yskz.dev/2023/01/22/hexo-usage/"/>
-    <id>https://blog.yskz.dev/2023/01/22/hexo-usage/</id>
-    <published>2023-01-22T02:34:01.584Z</published>
-    <updated>2023-01-22T02:34:01.584Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>fix timezone again</title>
     <link href="https://blog.yskz.dev/2023/01/17/fix-timezone-again/"/>
     <id>https://blog.yskz.dev/2023/01/17/fix-timezone-again/</id>
@@ -399,9 +354,9 @@
     <link href="https://blog.yskz.dev/2023/01/15/Hexo-config-somehow/"/>
     <id>https://blog.yskz.dev/2023/01/15/Hexo-config-somehow/</id>
     <published>2023-01-15T08:43:00.000Z</published>
-    <updated>2023-01-22T02:34:01.584Z</updated>
+    <updated>2023-01-22T02:34:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’"><a href="#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’" class="headerlink" title="Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’"></a>Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’</h1><h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><p>A typical usecase is <code>www.example.com/blog</code>.<br>So, about <code>_config.yml</code>, last path of <code>url</code> and <code>public_dir</code> must be the same. </p><h2 id="How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS"><a href="#How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS" class="headerlink" title="How to set the hexo-generated website with ‘document root’ in a VPS"></a>How to set the hexo-generated website with ‘document root’ in a VPS</h2><ol><li>In the same directory where document root exists, clone the hexo website repository.(repository name as <code>hexo-blog</code>)</li><li>Make a symbolic link of <code>hexo-blog/blog</code> into the document root as <code>blog</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[DocumentRoot]$ <span class="built_in">ln</span> -s hexo-blog/blog /blog</span><br></pre></td></tr></table></figure><ol start="3"><li>Make a symbolic link of <code>hexo-blog/blog/index.html</code> into the document root as <code>index.html</code></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’"><a href="#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’" class="headerlink" title="Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’"></a>Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’</h1><h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><p>A typical usecase is <code>www.example.com/blog</code>.<br>So, about <code>_config.yml</code>, last path of <code>url</code> and <code>public_dir</code> must be the same. </p><h2 id="How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS"><a href="#How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS" class="headerlink" title="How to set the hexo-generated website with ‘document root’ in a VPS"></a>How to set the hexo-generated website with ‘document root’ in a VPS</h2><ol><li>In the same directory where document root exists, clone the hexo website repository.(repository name as <code>hexo-blog</code>)</li><li>Make a symbolic link of <code>hexo-blog/blog</code> into the document root as <code>blog</code></li></ol><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>DocumentRoot<span class="token punctuation">]</span>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> hexo-blog/blog /blog</code></pre><ol start="3"><li>Make a symbolic link of <code>hexo-blog/blog/index.html</code> into the document root as <code>index.html</code></li></ol>]]></content>
     
     
       
@@ -444,6 +399,57 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Run Hexo &#39;npx&#39; in Gitpod</title>
+    <link href="https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/"/>
+    <id>https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/</id>
+    <published>2023-01-11T22:08:40.000Z</published>
+    <updated>2023-01-22T02:34:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>In <em>Gitpod</em>, after workspace reboot, installed <em>hexo</em> command is unavailable.<br>Countermeasure: use <code>npx</code> command as <code>npx hexo new post title</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;In &lt;em&gt;Gitpod&lt;/em&gt;, after workspace reboot, installed &lt;em&gt;hexo&lt;/em&gt; command is unavailable.&lt;br&gt;Countermeasure: use &lt;code&gt;npx&lt;/code&gt; comma</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>install Hexo to another PC</title>
+    <link href="https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/"/>
+    <id>https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/</id>
+    <published>2022-12-01T01:05:53.000Z</published>
+    <updated>2023-01-22T02:34:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<dl>  <dt>nodejs</dt>  <dd>JavaScript as a command</dd> </dl><ol><li>nodejs install to Windows OS:</li></ol><ul><li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li></ul><ol start="2"><li><p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p></li><li><p>Install <em>Hexo</em></p> <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span></code></pre> <aside>`-g` option is to let any user to use the *hexo* command.</aside></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;dl&gt;
+  &lt;dt&gt;nodejs&lt;/dt&gt;
+  &lt;dd&gt;JavaScript as a command&lt;/dd&gt; 
+&lt;/dl&gt;
+
+&lt;ol&gt;
+&lt;li&gt;nodejs install to Windows OS:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and ex</summary>
+      
+    
+    
+    
+    
+    <category term="Windows, node, install" scheme="https://blog.yskz.dev/tags/windows-node-install/"/>
     
   </entry>
   

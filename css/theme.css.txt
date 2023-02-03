@@ -52,23 +52,6 @@ div.form-part.col {
 div.form-part > label::after {
   content: ": ";
 }
-div.form-part.submit {
-  flex-direction: row-reverse;
-}
-button {
-  border-radius: 0.4em;
-}
 button.submit {
   margin-top: 1em;
-  width: fit-content;
-}
-code {
-  color: #ff0;
-  background-color: #000;
-}
-code::before {
-  border-bottom: thin solid #000;
-}
-code::after {
-  border-top: thin solid #000;
 }
