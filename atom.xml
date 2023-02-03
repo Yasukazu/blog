@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-03T01:44:06.176Z</updated>
+  <updated>2023-02-03T08:13:19.580Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/"/>
     <id>https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/</id>
     <published>2023-02-01T01:46:35.000Z</published>
-    <updated>2023-02-03T01:44:06.176Z</updated>
+    <updated>2023-02-03T08:13:19.580Z</updated>
     
-    <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML format.</p><p>HTML documents need to escape special two characters:</p><ul><li><em>Less-than</em>(&lt;) </li><li><em>Greater-than</em>(&gt;)</li></ul><p>respectively:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>Markdown is easier than HTML about this escaping.</p><p>Just put an <em>escape</em> character <strong>backslash</strong> before special characters as:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>But Markdown also needs to escape <strong>Backslash</strong> (\) as:</p><p><code>\\</code></p><p>or write as an entity as:</p><p><code>&amp;bsol;</code></p><p>And also, <strong>Ampersand</strong> (&amp;) might be better to be escaped as:</p><p><code>\&amp;</code></p><p>or write as an entity as:</p><p><code>&amp;amp;</code></p>]]></content>
+    <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML format.</p><p>HTML documents need to escape special two characters:</p><ul><li><em>Less-than</em>(&lt;) </li><li><em>Greater-than</em>(&gt;)</li></ul><p>respectively:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>Markdown is easier than HTML about this escaping.</p><p>Just put an <em>escape</em> character <strong>backslash</strong> before special characters as:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>But Markdown also needs to escape <strong>Backslash</strong> (\) as:</p><p><code>\\</code></p><p>or write its entity as:</p><p><code>&amp;bsol;</code></p><p>HTML-Entity backslash appears as: &amp;bsol;</p><p>And also, <strong>Ampersand</strong> (&amp;) might be better to be escaped as:</p><p><code>\&amp;</code></p><p>or write its entity as: <code>&amp;amp;</code></p><p>HTML-Entity ampersand appears as: &amp;</p>]]></content>
     
     
       

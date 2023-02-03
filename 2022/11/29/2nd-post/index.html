@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
-    <link rel="alternate" href="/atom.xml" title="Hexo trial" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hexo trial" type="application/atom+xml">
 </head>
 
 <body>
@@ -37,32 +37,16 @@
                 <p>This is the 2nd blog.</p>
                 <h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2>
                 <p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p>
-                <figure class="highlight plaintext">
-                    <table>
-                        <tr>
-                            <td class="gutter">
-                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
-                            </td>
-                            <td class="code">
-                                <pre><span class="line">---</span><br><span class="line">title: 2nd post</span><br><span class="line">date: 2022-11-29 10:41:48</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre>
-                            </td>
-                        </tr>
-                    </table>
-                </figure>
+                <pre class="language-none"><code class="language-none">---
+title: 2nd post
+date: 2022-11-29 10:41:48
+tags:
+---</code></pre>
                 <p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p>
                 <p>Then, update the remote Git:</p>
-                <figure class="highlight plaintext">
-                    <table>
-                        <tr>
-                            <td class="gutter">
-                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
-                            </td>
-                            <td class="code">
-                                <pre><span class="line">git add .</span><br><span class="line">git commit -m &#x27;update&#x27;</span><br><span class="line">git push</span><br></pre>
-                            </td>
-                        </tr>
-                    </table>
-                </figure>
+                <pre class="language-none"><code class="language-none">git add .
+git commit -m &#39;update&#39;
+git push</code></pre>
                 <h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2>
                 <ul>
                     <li>Search in Hexo folder ‘timezone’</li>

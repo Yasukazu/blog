@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
-    <link rel="alternate" href="/atom.xml" title="Hexo trial" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hexo trial" type="application/atom+xml">
 </head>
 
 <body>
@@ -37,18 +37,13 @@
                 <p>Changes:</p>
                 <ul>
                     <li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li>
-                    <li><code>scripts.pug</code>: Added <figure class="highlight plaintext">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line">script.</span><br><span class="line">    function googleTranslateElementInit() &#123;</span><br><span class="line">        new google.translate.TranslateElement(&#123;pageLanguage: &#x27;en&#x27;, layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL&#125;, &#x27;google_translate_element&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">script(src=&quot;https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&quot;)</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
+                    <li><code>scripts.pug</code>: Added
+                        <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">
+    <span class="token keyword">function</span> <span class="token function">googleTranslateElementInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">pageLanguage</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">layout</span><span class="token operator">:</span> google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement<span class="token punctuation">.</span>InlineLayout<span class="token punctuation">.</span><span class="token constant">HORIZONTAL</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">'google_translate_element'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+</span>
+<span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"</span></span><span class="token punctuation">)</span></span></span></code></pre>
                     </li>
                 </ul>
             </div>
@@ -57,7 +52,7 @@
     </main>
     <div class="paginator">
         <div><a href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/">Set 'blog' submodule as GitHub Pages &rarr;</a></div>
-        <div><a href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/">&larr; CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</a></div>
+        <div><a href="/2023/01/25/hexo-usage/">&larr; Hexo Usage</a></div>
     </div>
     <footer>
         <p>&copy; 2023 Y-M.</p>

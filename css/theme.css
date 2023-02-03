@@ -38,31 +38,36 @@ li.tag-name {
 article.post > header {
   background-color: #fff;
 }
+fieldset.form {
+  background-color: #aaa;
+}
+fieldset.form > legend {
+  background-color: #fff;
+}
 form.send-message {
   display: flex;
   flex-direction: column;
 }
-div.form-part {
+form.send-message div.form-part {
   display: flex;
   flex-direction: row;
 }
-div.form-part.col {
+form.send-message div.form-part.col {
   flex-direction: column;
 }
-div.form-part > label::after {
+form.send-message div.form-part > label::after {
   content: ": ";
 }
-div.form-part.submit {
+form.send-message div.submit {
   flex-direction: row-reverse;
 }
-button {
+form.send-message div.submit > button.submit {
   border-radius: 0.4em;
-}
-button.submit {
   margin-top: 1em;
   width: fit-content;
 }
 code {
+  font-family: monospace;
   color: #ff0;
   background-color: #000;
 }
