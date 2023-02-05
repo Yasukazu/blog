@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-03T08:13:19.580Z</updated>
+  <updated>2023-02-04T23:56:02.453Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Theme style SCSS again</title>
+    <link href="https://blog.yskz.dev/2023/02/05/theme-style-scss-again/"/>
+    <id>https://blog.yskz.dev/2023/02/05/theme-style-scss-again/</id>
+    <published>2023-02-04T23:46:20.000Z</published>
+    <updated>2023-02-04T23:56:02.453Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p><span id="more"></span><p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p><pre class="language-json" data-language="json"><code class="language-json"><span class="token property">"liveSassCompile.settings.formats"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token punctuation">&#123;</span>        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"expanded"</span><span class="token punctuation">,</span>        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".css"</span><span class="token punctuation">,</span>        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/css"</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>    <span class="token punctuation">&#123;</span>        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".min.css"</span><span class="token punctuation">,</span>        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"compressed"</span><span class="token punctuation">,</span>        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/min.css"</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">"liveSassCompile.settings.excludeList"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"/**/node_modules/**"</span><span class="token punctuation">,</span>    <span class="token string">"/.vscode/**"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">"liveSassCompile.settings.generateMap"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment">//autoprefix, will auto add perfix like -webkit- -moz-..</span><span class="token property">"liveSassCompile.settings.autoprefix"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"> 1%"</span><span class="token punctuation">,</span>    <span class="token string">"last 2 versions"</span><span class="token punctuation">]</span></code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;This is &lt;em&gt;Post Excerpt&lt;/em&gt;: Embedding renderer directive in comment (TURBO_PASCAL-like)&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Added Archives in menu</title>
+    <link href="https://blog.yskz.dev/2023/02/04/added-archives-in-menu/"/>
+    <id>https://blog.yskz.dev/2023/02/04/added-archives-in-menu/</id>
+    <published>2023-02-04T11:17:49.000Z</published>
+    <updated>2023-02-04T11:21:00.810Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Added-Archives-item-in-Menu-Links-in-Header"><a href="#Added-Archives-item-in-Menu-Links-in-Header" class="headerlink" title="Added Archives item in Menu(Links in Header )"></a>Added <em>Archives</em> item in Menu(Links in Header )</h1><h2 id="Returned-to-pure-CSS-‘cause-Stylus-won’t-work"><a href="#Returned-to-pure-CSS-‘cause-Stylus-won’t-work" class="headerlink" title="Returned to pure CSS ‘cause Stylus won’t work"></a>Returned to pure CSS ‘cause Stylus won’t work</h2><p><code>themes/ym-start/source/css/theme.css</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Added-Archives-item-in-Menu-Links-in-Header&quot;&gt;&lt;a href=&quot;#Added-Archives-item-in-Menu-Links-in-Header&quot; class=&quot;headerlink&quot; title=&quot;Added </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Does Hexo markdown escapes HTML special characters?</title>
@@ -128,7 +165,7 @@
     <link href="https://blog.yskz.dev/2023/01/26/post-in-pug/"/>
     <id>https://blog.yskz.dev/2023/01/26/post-in-pug/</id>
     <published>2023-01-26T14:37:51.156Z</published>
-    <updated>2023-02-01T01:42:46.808Z</updated>
+    <updated>2023-02-04T22:27:13.395Z</updated>
     
     <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
     
@@ -399,57 +436,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Run Hexo &#39;npx&#39; in Gitpod</title>
-    <link href="https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/"/>
-    <id>https://blog.yskz.dev/2023/01/12/Run-Hexo-npx/</id>
-    <published>2023-01-11T22:08:40.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>In <em>Gitpod</em>, after workspace reboot, installed <em>hexo</em> command is unavailable.<br>Countermeasure: use <code>npx</code> command as <code>npx hexo new post title</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;In &lt;em&gt;Gitpod&lt;/em&gt;, after workspace reboot, installed &lt;em&gt;hexo&lt;/em&gt; command is unavailable.&lt;br&gt;Countermeasure: use &lt;code&gt;npx&lt;/code&gt; comma</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>install Hexo to another PC</title>
-    <link href="https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/"/>
-    <id>https://blog.yskz.dev/2022/12/01/install-Hexo-to-another-PC/</id>
-    <published>2022-12-01T01:05:53.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<dl>  <dt>nodejs</dt>  <dd>JavaScript as a command</dd> </dl><ol><li>nodejs install to Windows OS:</li></ol><ul><li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li></ul><ol start="2"><li><p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p></li><li><p>Install <em>Hexo</em></p> <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span></code></pre> <aside>`-g` option is to let any user to use the *hexo* command.</aside></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;dl&gt;
-  &lt;dt&gt;nodejs&lt;/dt&gt;
-  &lt;dd&gt;JavaScript as a command&lt;/dd&gt; 
-&lt;/dl&gt;
-
-&lt;ol&gt;
-&lt;li&gt;nodejs install to Windows OS:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Download and ex</summary>
-      
-    
-    
-    
-    
-    <category term="Windows, node, install" scheme="https://blog.yskz.dev/tags/windows-node-install/"/>
     
   </entry>
   

@@ -1,0 +1,76 @@
+:root
+    --main-color: #000
+
+header
+    background-color #0aa
+    padding 0.5em
+
+main
+    padding 0.5em
+    &.index
+        article
+            &.post
+                border thin solid var(--main-color)
+                margin-bottom 1em
+                padding 0.5em
+
+footer
+    background-color hsl(11, 100%, 55%)
+    padding 0.5em
+
+hgroup
+    &.title-date
+        & > h2
+            &.title
+                display inline
+        & > time
+            &.date
+                font-size 1em
+                margin-left 1em
+    &.title-subtitle
+        & > *
+            display inline
+        & > p
+            &::before
+                content "-- "
+
+ul.header
+        display inline
+        list-style-type none
+
+article
+    &.post
+        & > header
+            background-color #fff
+
+fieldset.form
+    background-color: #aaa;
+    > legend
+        background-color: #fff;
+
+form.send-message
+    display flex
+    flex-direction column
+    div.form-part
+        display flex
+        flex-direction row
+        &.col
+         flex-direction column
+        > label
+            &::after
+                content ": "
+    div.submit
+        flex-direction: row-reverse;
+        > button.submit
+            border-radius: 0.4em;
+            margin-top 1em
+            width: fit-content;
+
+code 
+    font-family: monospace;
+    color: yellow;
+    background-color: #000;
+    &::before
+        border-bottom: thin solid #000;
+    &::after
+        border-top: thin solid #000;
