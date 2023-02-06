@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="A web log to study better ways to utilize Hexo static site generator">
     <meta name="author" content="Y-M">
-    <title>Added post date after title | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
+    <title>theme.css | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
@@ -27,31 +27,22 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main class="post">
-        <article class="post">
-            <header>
-                <h1 class="title">Added post date after title</h1><time class="date">2023-01-28</time>
-            </header>
-            <hr>
-            <div class="content">
-                <p>Under <code>ym-start/layout/index.pug</code>,<br> block content &gt; main &gt; article.post &gt; a </p>
-                <p>Added an <strong>hgroup</strong> tag which contains:</p>
-                <ul>
-                    <li><code>h2.title= post.title</code></li>
-                    <li><code>time.date= post.date.format(config.date_format)</code></li>
-                </ul>
-                <p>And also, edited the stylesheet of <code>ym-start/sources/css/theme.css</code> to make title and date inline as:</p>
-                <pre class="language-CSS" data-language="CSS"><code class="language-CSS">hgroup.title-date &gt; h2.title &#123;
-    display: inline;
-&#125;</code></pre>
-            </div>
-            <hr>
-        </article>
+    <main>
+        <header id="tag-page--header">
+            <h1 id="tag-page--header--title">Tag: theme.css</h1>
+        </header>
+        <hr id="tag-page--top-hr">
+        <div class="posts" id="tag-page--posts">
+            <article class="post"><a class="post--content--link-wrapper" href="/2023/02/05/theme-style-scss-again/">
+                    <h2 class="post--content--title">Theme style SCSS again</h2>
+                </a></article>
+            <article class="post"><a class="post--content--link-wrapper" href="/2023/02/04/added-archives-in-menu/">
+                    <h2 class="post--content--title">Added Archives in menu</h2>
+                </a></article>
+        </div>
+        <hr id="tag-page--bottom-hr">
     </main>
-    <div class="paginator">
-        <div><a href="/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/">Set config to add date before title in file name &rarr;</a></div>
-        <div><a href="/2023/01/29/form-in-About-page/">&larr; form in About page</a></div>
-    </div>
+    <div id="tag-page--pagination"></div>
     <footer><small>Theme created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
     <script>
         function googleTranslateElementInit()

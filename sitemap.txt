@@ -1,11 +1,11 @@
 https://blog.yskz.dev/2023/02/05/theme-style-scss-again/
-https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/2023/02/04/added-archives-in-menu/
+https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/about/index.html
 https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/
 https://blog.yskz.dev/2023/01/29/form-in-About-page/
-https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/
-https://blog.yskz.dev/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/
+https://blog.yskz.dev/2023/01/28/added-post-date-after-title/
+https://blog.yskz.dev/2023/01/27/set-config-to-add-date-before-title-in-file-name/
 https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/
 https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/
 https://blog.yskz.dev/2023/01/25/Set-blog-submodule-as-GitHub-Pages/
@@ -43,3 +43,4 @@ https://blog.yskz.dev/tags/about-page/
 https://blog.yskz.dev/tags/windows-node-install/
 https://blog.yskz.dev/tags/github-url-public-dir/
 https://blog.yskz.dev/tags/js-html-nav/
+https://blog.yskz.dev/tags/theme-css/

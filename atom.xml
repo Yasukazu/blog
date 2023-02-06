@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-04T23:56:02.453Z</updated>
+  <updated>2023-02-06T00:10:30.616Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="https://blog.yskz.dev/2023/02/05/theme-style-scss-again/"/>
     <id>https://blog.yskz.dev/2023/02/05/theme-style-scss-again/</id>
     <published>2023-02-04T23:46:20.000Z</published>
-    <updated>2023-02-04T23:56:02.453Z</updated>
+    <updated>2023-02-06T00:10:30.616Z</updated>
     
-    <content type="html"><![CDATA[<p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p><span id="more"></span><p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p><pre class="language-json" data-language="json"><code class="language-json"><span class="token property">"liveSassCompile.settings.formats"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token punctuation">&#123;</span>        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"expanded"</span><span class="token punctuation">,</span>        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".css"</span><span class="token punctuation">,</span>        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/css"</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>    <span class="token punctuation">&#123;</span>        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".min.css"</span><span class="token punctuation">,</span>        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"compressed"</span><span class="token punctuation">,</span>        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/min.css"</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">"liveSassCompile.settings.excludeList"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"/**/node_modules/**"</span><span class="token punctuation">,</span>    <span class="token string">"/.vscode/**"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">"liveSassCompile.settings.generateMap"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment">//autoprefix, will auto add perfix like -webkit- -moz-..</span><span class="token property">"liveSassCompile.settings.autoprefix"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"> 1%"</span><span class="token punctuation">,</span>    <span class="token string">"last 2 versions"</span><span class="token punctuation">]</span></code></pre>]]></content>
+    <content type="html"><![CDATA[<p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p><span id="more"></span><p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p><details>    <summary>settings.json</summary> <code>    "liveSassCompile.settings.formats": [        &#123;            "format": "expanded",            "extensionName": ".css",            "savePath": "~/css"        &#125;,        &#123;            "extensionName": ".min.css",            "format": "compressed",            "savePath": "~/min.css"        &#125;    ],    "liveSassCompile.settings.excludeList": [        "/**/node_modules/**",        "/.vscode/**"    ],    "liveSassCompile.settings.generateMap": false,    //autoprefix, will auto add perfix like -webkit- -moz-..    "liveSassCompile.settings.autoprefix": [        "> 1%",        "last 2 versions"    ]</code></details><h2 id="post-link-tag-plugin-requires-post-filename-contains-no-date"><a href="#post-link-tag-plugin-requires-post-filename-contains-no-date" class="headerlink" title="post_link tag plugin requires post filename contains no date"></a><em>post_link</em> tag plugin requires post filename contains no date</h2><a href="/2023/02/04/added-archives-in-menu/" title="Added Archives in menu">Added Archives in menu</a><pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% post_link added-archives-in-menu %&#125;</code></pre>]]></content>
     
     
     <summary type="html">&lt;p&gt;This is &lt;em&gt;Post Excerpt&lt;/em&gt;: Embedding renderer directive in comment (TURBO_PASCAL-like)&lt;/p&gt;</summary>
     
     
     
+    
+    <category term="theme.css" scheme="https://blog.yskz.dev/tags/theme-css/"/>
     
   </entry>
   
@@ -38,7 +40,7 @@
     <link href="https://blog.yskz.dev/2023/02/04/added-archives-in-menu/"/>
     <id>https://blog.yskz.dev/2023/02/04/added-archives-in-menu/</id>
     <published>2023-02-04T11:17:49.000Z</published>
-    <updated>2023-02-04T11:21:00.810Z</updated>
+    <updated>2023-02-05T23:46:32.260Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Added-Archives-item-in-Menu-Links-in-Header"><a href="#Added-Archives-item-in-Menu-Links-in-Header" class="headerlink" title="Added Archives item in Menu(Links in Header )"></a>Added <em>Archives</em> item in Menu(Links in Header )</h1><h2 id="Returned-to-pure-CSS-‘cause-Stylus-won’t-work"><a href="#Returned-to-pure-CSS-‘cause-Stylus-won’t-work" class="headerlink" title="Returned to pure CSS ‘cause Stylus won’t work"></a>Returned to pure CSS ‘cause Stylus won’t work</h2><p><code>themes/ym-start/source/css/theme.css</code></p>]]></content>
     
@@ -50,6 +52,8 @@
     
     
     
+    
+    <category term="theme.css" scheme="https://blog.yskz.dev/tags/theme-css/"/>
     
   </entry>
   
@@ -108,8 +112,8 @@
   
   <entry>
     <title>Added post date after title</title>
-    <link href="https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/"/>
-    <id>https://blog.yskz.dev/2023/01/28/Added-post-date-after-title/</id>
+    <link href="https://blog.yskz.dev/2023/01/28/added-post-date-after-title/"/>
+    <id>https://blog.yskz.dev/2023/01/28/added-post-date-after-title/</id>
     <published>2023-01-28T04:40:59.000Z</published>
     <updated>2023-01-28T04:57:47.988Z</updated>
     
@@ -139,8 +143,8 @@
   
   <entry>
     <title>Set config to add date before title in file name</title>
-    <link href="https://blog.yskz.dev/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/"/>
-    <id>https://blog.yskz.dev/2023/01/27/27-01-2023-Set-config-to-add-date-before-title-in-file-name/</id>
+    <link href="https://blog.yskz.dev/2023/01/27/set-config-to-add-date-before-title-in-file-name/"/>
+    <id>https://blog.yskz.dev/2023/01/27/set-config-to-add-date-before-title-in-file-name/</id>
     <published>2023-01-27T12:58:58.000Z</published>
     <updated>2023-01-27T13:07:23.844Z</updated>
     

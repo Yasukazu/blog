@@ -37,28 +37,12 @@
                 <p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p>
                 <span id="more"></span>
                 <p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p>
-                <pre class="language-json" data-language="json"><code class="language-json"><span class="token property">"liveSassCompile.settings.formats"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"expanded"</span><span class="token punctuation">,</span>
-        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".css"</span><span class="token punctuation">,</span>
-        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/css"</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token property">"extensionName"</span><span class="token operator">:</span> <span class="token string">".min.css"</span><span class="token punctuation">,</span>
-        <span class="token property">"format"</span><span class="token operator">:</span> <span class="token string">"compressed"</span><span class="token punctuation">,</span>
-        <span class="token property">"savePath"</span><span class="token operator">:</span> <span class="token string">"~/min.css"</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">"liveSassCompile.settings.excludeList"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"/**/node_modules/**"</span><span class="token punctuation">,</span>
-    <span class="token string">"/.vscode/**"</span>
-<span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">"liveSassCompile.settings.generateMap"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-<span class="token comment">//autoprefix, will auto add perfix like -webkit- -moz-..</span>
-<span class="token property">"liveSassCompile.settings.autoprefix"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"> 1%"</span><span class="token punctuation">,</span>
-    <span class="token string">"last 2 versions"</span>
-<span class="token punctuation">]</span></code></pre>
+                <details>
+                    <summary>settings.json</summary>
+                    <code> "liveSassCompile.settings.formats": [ &#123; "format": "expanded", "extensionName": ".css", "savePath": "~/css" &#125;, &#123; "extensionName": ".min.css", "format": "compressed", "savePath": "~/min.css" &#125; ], "liveSassCompile.settings.excludeList": [ "/**/node_modules/**", "/.vscode/**" ], "liveSassCompile.settings.generateMap": false, //autoprefix, will auto add perfix like -webkit- -moz-.. "liveSassCompile.settings.autoprefix": [ "> 1%", "last 2 versions" ] </code>
+                </details>
+                <h2 id="post-link-tag-plugin-requires-post-filename-contains-no-date"><a href="#post-link-tag-plugin-requires-post-filename-contains-no-date" class="headerlink" title="post_link tag plugin requires post filename contains no date"></a><em>post_link</em> tag plugin requires post filename contains no date</h2><a href="/2023/02/04/added-archives-in-menu/" title="Added Archives in menu">Added Archives in menu</a>
+                <pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% post_link added-archives-in-menu %&#125;</code></pre>
             </div>
             <hr>
         </article>
