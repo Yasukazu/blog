@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Added &#39;categories&#39; in scaffolds/post.md</title>
+      <link href="/2023/02/06/added-categories-in-scaffolds-post-md/"/>
+      <url>/2023/02/06/added-categories-in-scaffolds-post-md/</url>
+      
+        <content type="html"><![CDATA[<p>Visited Agri Coop to apply a part-time job</p><span id="more"></span><p>The job is to harvest strawberry fruits.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> job </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> agri </tag>
+            
+            <tag> strawberry </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Theme style SCSS again</title>
+      <link href="/2023/02/05/theme-style-scss-again/"/>
+      <url>/2023/02/05/theme-style-scss-again/</url>
+      
+        <content type="html"><![CDATA[<p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p><span id="more"></span><p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p><details>    <summary>settings.json</summary> <code>    "liveSassCompile.settings.formats": [        &#123;            "format": "expanded",            "extensionName": ".css",            "savePath": "~/css"        &#125;,        &#123;            "extensionName": ".min.css",            "format": "compressed",            "savePath": "~/min.css"        &#125;    ],    "liveSassCompile.settings.excludeList": [        "/**/node_modules/**",        "/.vscode/**"    ],    "liveSassCompile.settings.generateMap": false,    //autoprefix, will auto add perfix like -webkit- -moz-..    "liveSassCompile.settings.autoprefix": [        "> 1%",        "last 2 versions"    ]</code></details><h2 id="post-link-tag-plugin-requires-post-filename-contains-no-date"><a href="#post-link-tag-plugin-requires-post-filename-contains-no-date" class="headerlink" title="post_link tag plugin requires post filename contains no date"></a><em>post_link</em> tag plugin requires post filename contains no date</h2><a href="/2023/02/04/added-archives-in-menu/" title="Added Archives in menu">Added Archives in menu</a><pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% post_link added-archives-in-menu %&#125;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> theme.css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Added Archives in menu</title>
+      <link href="/2023/02/04/added-archives-in-menu/"/>
+      <url>/2023/02/04/added-archives-in-menu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Added-Archives-item-in-Menu-Links-in-Header"><a href="#Added-Archives-item-in-Menu-Links-in-Header" class="headerlink" title="Added Archives item in Menu(Links in Header )"></a>Added <em>Archives</em> item in Menu(Links in Header )</h1><h2 id="Returned-to-pure-CSS-‘cause-Stylus-won’t-work"><a href="#Returned-to-pure-CSS-‘cause-Stylus-won’t-work" class="headerlink" title="Returned to pure CSS ‘cause Stylus won’t work"></a>Returned to pure CSS ‘cause Stylus won’t work</h2><p><code>themes/ym-start/source/css/theme.css</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> theme.css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Does Hexo markdown escapes HTML special characters?</title>
+      <link href="/2023/02/01/does-hexo-markdown-escapes-html-special-characters/"/>
+      <url>/2023/02/01/does-hexo-markdown-escapes-html-special-characters/</url>
+      
+        <content type="html"><![CDATA[<p>In Hexo, A markdown-format post is converted to HTML format.</p><p>HTML documents need to escape special two characters:</p><ul><li><em>Less-than</em>(&lt;) </li><li><em>Greater-than</em>(&gt;)</li></ul><p>respectively:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>Markdown is easier than HTML about this escaping.</p><p>Just put an <em>escape</em> character <strong>backslash</strong> before special characters as:</p><pre class="language-none"><code class="language-none">\&lt;\&gt;</code></pre><p>But Markdown also needs to escape <strong>Backslash</strong> (\) as:</p><p><code>\\</code></p><p>or write its entity as:</p><p><code>&amp;bsol;</code></p><p>HTML-Entity backslash appears as: &amp;bsol;</p><p>And also, <strong>Ampersand</strong> (&amp;) might be better to be escaped as:</p><p><code>\&amp;</code></p><p>or write its entity as: <code>&amp;amp;</code></p><p>HTML-Entity ampersand appears as: &amp;</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> Entity </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>form in About page</title>
+      <link href="/2023/01/29/form-in-About-page/"/>
+      <url>/2023/01/29/form-in-About-page/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Added-‘About’-page-which-contains-a-form-to-send-comments-to-this-blog-site-owner"><a href="#Added-‘About’-page-which-contains-a-form-to-send-comments-to-this-blog-site-owner" class="headerlink" title="Added ‘About’ page which contains a form to send comments to this blog site owner."></a>Added ‘About’ page which contains a form to send comments to this blog site owner.</h2><p>‘About” page location is: <code>source/about/index.md</code> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> comment-form </tag>
+            
+            <tag> about-page </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Added post date after title</title>
+      <link href="/2023/01/28/added-post-date-after-title/"/>
+      <url>/2023/01/28/added-post-date-after-title/</url>
+      
+        <content type="html"><![CDATA[<p>Under <code>ym-start/layout/index.pug</code>,<br> block content &gt; main &gt; article.post &gt; a </p><p>Added an <strong>hgroup</strong> tag which contains:</p><ul><li><code>h2.title= post.title</code></li><li><code>time.date= post.date.format(config.date_format)</code></li></ul><p>And also, edited the stylesheet of <code>ym-start/sources/css/theme.css</code> to make title and date inline as:</p><pre class="language-CSS" data-language="CSS"><code class="language-CSS">hgroup.title-date &gt; h2.title &#123;    display: inline;&#125;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> config </tag>
+            
+            <tag> CSS </tag>
+            
+            <tag> Layout </tag>
+            
+            <tag> hgroup </tag>
+            
+            <tag> date.format </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Set config to add date before title in file name</title>
+      <link href="/2023/01/27/set-config-to-add-date-before-title-in-file-name/"/>
+      <url>/2023/01/27/set-config-to-add-date-before-title-in-file-name/</url>
+      
+        <content type="html"><![CDATA[<p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>day<span class="token punctuation">-</span><span class="token punctuation">:</span>month<span class="token punctuation">-</span><span class="token punctuation">:</span>year<span class="token punctuation">-</span><span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span></code></pre><p>Notify:</p><ul><li>This does not affect to create a new draft.</li><li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> new_post_name </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/01/26/post-in-pug/"/>
+      <url>/2023/01/26/post-in-pug/</url>
+      
+        <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS: Pad each [header,main,footer], Color brighter &#39;header&#39; background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</title>
+      <link href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/"/>
+      <url>/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/</url>
+      
+        <content type="html"><![CDATA[<p>Whole padding as <code>body</code> element made bg-colored header&#x2F;footer L&#x2F;R-side character no margin from borders.<br>So, gave padding each header &#x2F; main &#x2F; footer elements.</p><p>Paginator:<br>Changed “&lt;&#x2F;&gt;” to “&amp;larr;&#x2F;&amp;rarr;” for better understandable.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo Usage</title>
+      <link href="/2023/01/25/hexo-usage/"/>
+      <url>/2023/01/25/hexo-usage/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Installed &#39;Google Translate&#39; in index.html</title>
+      <link href="/2023/01/25/Installed-Google-Translate-in-index-html/"/>
+      <url>/2023/01/25/Installed-Google-Translate-in-index-html/</url>
+      
+        <content type="html"><![CDATA[<p>Changes:</p><ul><li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li><li><code>scripts.pug</code>: Added <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">    <span class="token keyword">function</span> <span class="token function">googleTranslateElementInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">pageLanguage</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">layout</span><span class="token operator">:</span> google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement<span class="token punctuation">.</span>InlineLayout<span class="token punctuation">.</span><span class="token constant">HORIZONTAL</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">'google_translate_element'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span></span><span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"</span></span><span class="token punctuation">)</span></span></span></code></pre></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> google-translate </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Set &#39;blog&#39; submodule as GitHub Pages</title>
+      <link href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/"/>
+      <url>/2023/01/25/Set-blog-submodule-as-GitHub-Pages/</url>
+      
+        <content type="html"><![CDATA[<p>Since main branch of ‘blog’ submodule is ‘dev’, it matches to use GitHub Pages <em>‘Deploy from branch’</em>.<br>Now it is public in <em>Internet</em> as a web page at <a href="https://yasukazu.github.io/blog/">https://yasukazu.github.io/blog/</a>.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> GitHub-Pages </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Switched to my fork of &#39;hexo-theme-starter&#39;</title>
+      <link href="/2023/01/24/Switched-to-hexo-theme-starter/"/>
+      <url>/2023/01/24/Switched-to-hexo-theme-starter/</url>
+      
+        <content type="html"><![CDATA[<p>Felt to change my Hexo theme because current theme seemed too complicated to modify.</p><p><em>starter</em> theme looked simpler than current one.</p><p>At first, it had no style sheet.  So I tried to add a style sheet following the same way of the previous theme.</p><ul><li>Added <code>source/css/theme.css</code> file</li><li>Added a stylesheet as <code>href=url_for(&#39;css/theme.css&#39;)</code> in <code>layout/_include/head.pug</code></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> starter-theme </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>public_dir:docs;url:.../hexo-blog</title>
+      <link href="/2023/01/22/public-dir-docs-url-hexo-blog/"/>
+      <url>/2023/01/22/public-dir-docs-url-hexo-blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Edited-config-yml-を編集した"><a href="#Edited-config-yml-を編集した" class="headerlink" title="Edited _config.yml を編集した"></a>Edited <code>_config.yml</code> を編集した</h1><ul><li>Set <code>public_dir</code> name as <code>docs</code> to make it the root directory of GitHub Pages.</li><li>Set <code>url</code> to ends with <code>hexo-blog</code> : the same as GitHub repository name.</li></ul><h2 id="Countermeasure-to-preview-with-Live-Server"><a href="#Countermeasure-to-preview-with-Live-Server" class="headerlink" title="Countermeasure to preview with Live Server:"></a>Countermeasure to preview with Live Server:</h2><ul><li>Made a symbolic link as named <code>hexo-blog</code> to point <code>docs</code> directory.</li></ul><h2 id="Unable-to-add-docs-directory-recursively"><a href="#Unable-to-add-docs-directory-recursively" class="headerlink" title="Unable to add docs directory recursively"></a>Unable to add <code>docs</code> directory recursively</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> GitHub, url, public_dir </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Installed _hexo-blog_ to my VPS</title>
+      <link href="/2023/01/22/Installed-hexo-blog-to-my-VPS/"/>
+      <url>/2023/01/22/Installed-hexo-blog-to-my-VPS/</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS"><a href="#title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS" class="headerlink" title="title: Install ‘hexo-blog’ to my VPSdate: 2023-01-22 17:48:53tags: VPS"></a>title: Install ‘hexo-blog’ to my VPS<br>date: 2023-01-22 17:48:53<br>tags: VPS</h2><p>Hoped to login from VS Code to edit files and execute Hexo generate.<br>But the VPS terminal in VS Code freezed when installed VS Code plugins.<br>Why need for plugin: Live server to check rendered HTML.</p><p>Result: <em>Un-use-able</em> because the remote(VPS) cuts its connection when <em>‘Hexo generate’</em> starts.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>fix timezone again</title>
+      <link href="/2023/01/17/fix-timezone-again/"/>
+      <url>/2023/01/17/fix-timezone-again/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日付がずれるのでtimezoneを修正してみる</title>
+      <link href="/2023/01/17/try-to-fix-timezone-for-date-diff/"/>
+      <url>/2023/01/17/try-to-fix-timezone-for-date-diff/</url>
+      
+        <content type="html"><![CDATA[<p><code>_config.yml</code> の <code>timezone</code> を <em>Asia&#x2F;Tokyo</em> に変更してみる。<span lang="en">(‘Asia’ seems to need to start with a capital letter)</span></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>rsyncの sshオプションで blogを zip圧縮した ファイルを　ブログ用サーバーに転送した</title>
+      <link href="/2023/01/17/rsync-ssh-transfer-blog-zip-file/"/>
+      <url>/2023/01/17/rsync-ssh-transfer-blog-zip-file/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Used-rsync-to-transfer-blog-HTML-files-to-www-yskz-xyz"><a href="#Used-rsync-to-transfer-blog-HTML-files-to-www-yskz-xyz" class="headerlink" title="Used rsync to transfer blog HTML files to www.yskz.xyz."></a>Used <em>rsync</em> to transfer blog HTML files to <code>www.yskz.xyz</code>.</h1><p>なぜかrsyncでディレクトリごと転送すると<code>index.html</code>ファイルが全て空すなわちサイズ0になってしまう。<br>Failed to transfer all HTML files in <em>blog</em> folder; ‘cause every HTML file size is zero.</p><p>やむなくblogディレクトリをアーカイブして一つのファイルにまとめて転送することで切り抜けた。<br>So, archived files into a zip format file.</p><p>Archive command is:<br><code>zip -r blog.zip blog</code></p><p>Extract command is:<br><code>unzip blog.zip -d blog</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo config url and public_dir and document-root settings</title>
+      <link href="/2023/01/15/Hexo-config-somehow/"/>
+      <url>/2023/01/15/Hexo-config-somehow/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’"><a href="#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’" class="headerlink" title="Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’"></a>Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’</h1><h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><p>A typical usecase is <code>www.example.com/blog</code>.<br>So, about <code>_config.yml</code>, last path of <code>url</code> and <code>public_dir</code> must be the same. </p><h2 id="How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS"><a href="#How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS" class="headerlink" title="How to set the hexo-generated website with ‘document root’ in a VPS"></a>How to set the hexo-generated website with ‘document root’ in a VPS</h2><ol><li>In the same directory where document root exists, clone the hexo website repository.(repository name as <code>hexo-blog</code>)</li><li>Make a symbolic link of <code>hexo-blog/blog</code> into the document root as <code>blog</code></li></ol><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>DocumentRoot<span class="token punctuation">]</span>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> hexo-blog/blog /blog</code></pre><ol start="3"><li>Make a symbolic link of <code>hexo-blog/blog/index.html</code> into the document root as <code>index.html</code></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Installed &#39;generator-hexo-theme&#39;</title>
+      <link href="/2023/01/13/Installed-generator-hexo-theme-1/"/>
+      <url>/2023/01/13/Installed-generator-hexo-theme-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Changed-to-a-simple-blog-template"><a href="#Changed-to-a-simple-blog-template" class="headerlink" title="Changed to a simple blog template"></a>Changed to a simple blog template</h1><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p><a href="https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit">https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Installed &#39;generator-hexo-theme&#39;</title>
+      <link href="/2023/01/13/Installed-generator-hexo-theme/"/>
+      <url>/2023/01/13/Installed-generator-hexo-theme/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Run Hexo &#39;npx&#39; in Gitpod</title>
+      <link href="/2023/01/12/Run-Hexo-npx/"/>
+      <url>/2023/01/12/Run-Hexo-npx/</url>
+      
+        <content type="html"><![CDATA[<p>In <em>Gitpod</em>, after workspace reboot, installed <em>hexo</em> command is unavailable.<br>Countermeasure: use <code>npx</code> command as <code>npx hexo new post title</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>install Hexo to another PC</title>
+      <link href="/2022/12/01/install-Hexo-to-another-PC/"/>
+      <url>/2022/12/01/install-Hexo-to-another-PC/</url>
+      
+        <content type="html"><![CDATA[<dl>  <dt>nodejs</dt>  <dd>JavaScript as a command</dd> </dl><ol><li>nodejs install to Windows OS:</li></ol><ul><li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li></ul><ol start="2"><li><p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p></li><li><p>Install <em>Hexo</em></p> <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span></code></pre> <aside>`-g` option is to let any user to use the *hexo* command.</aside></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows, node, install </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ts-doc wiki</title>
+      <link href="/2022/11/30/ts-doc-wiki/"/>
+      <url>/2022/11/30/ts-doc-wiki/</url>
+      
+        <content type="html"><![CDATA[<p>This is rather about how to use <em>Hexo</em> static blog site genarator.</p><h2 id="Easy-way-to-open-the-new-post-just-created"><a href="#Easy-way-to-open-the-new-post-just-created" class="headerlink" title="Easy way to open the new post just created"></a>Easy way to open the new post just created</h2><p>Inside VS Code terminal, <code>hexo new &quot;title&quot;</code> creates a new post. Then, last output line shows an URL of the new post source file. Just move over the URL then [open with code] link appears. Clicking it, you can edit then new post with VS Code.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ts-doc(Technical Document) event-example.js nav-shrink button 新設</title>
+      <link href="/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/"/>
+      <url>/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/</url>
+      
+        <content type="html"><![CDATA[<h2 id="初期値の設定-CSSで定義されている変数の読み込み"><a href="#初期値の設定-CSSで定義されている変数の読み込み" class="headerlink" title="初期値の設定(CSSで定義されている変数の読み込み)"></a>初期値の設定(CSSで定義されている変数の読み込み)</h2><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> cbody <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_h <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-h"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_h_2 <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-h-2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_w <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_w_2 <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-w-2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_expand_button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"button#nav-expand"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> nav_shrink_button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"button#nav-shrink"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> pc_media <span class="token operator">=</span> <span class="token string">"(min-width: 540px)"</span><span class="token punctuation">;</span><span class="token keyword">const</span> dbody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">;</span></code></pre><h2 id="拡大ボタン関数"><a href="#拡大ボタン関数" class="headerlink" title="拡大ボタン関数"></a>拡大ボタン関数</h2><pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_expand_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>  <span class="token keyword">const</span> isPC <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span>pc_media<span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>  <span class="token keyword">const</span> dst <span class="token operator">=</span> <span class="token string">"--nav-"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>isPC <span class="token operator">?</span> <span class="token string">'w'</span> <span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">const</span> src_val <span class="token operator">=</span> isPC <span class="token operator">?</span> nav_w <span class="token operator">:</span> nav_h<span class="token punctuation">;</span>  dbody<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src_val<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre><h2 id="縮小ボタン関数"><a href="#縮小ボタン関数" class="headerlink" title="縮小ボタン関数"></a>縮小ボタン関数</h2><pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_shrink_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>  <span class="token keyword">const</span> isPC <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span>pc_media<span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>  <span class="token keyword">const</span> dst <span class="token operator">=</span> <span class="token string">"--nav-"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>isPC <span class="token operator">?</span> <span class="token string">'w'</span> <span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">const</span> src_val <span class="token operator">=</span> isPC <span class="token operator">?</span> nav_w_2 <span class="token operator">:</span> nav_h_2<span class="token punctuation">;</span>  dbody<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src_val<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre><p>(TODO:):現状では、拡大&#x2F;縮小ボタンが押されるたびに規定値への書き込みを行っているが、 状態を記憶しておいて、すでに縮小しているのなら即リターンすれば無駄な計算資源を使わなくて済む。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> js HTML nav </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2nd post</title>
+      <link href="/2022/11/29/2nd-post/"/>
+      <url>/2022/11/29/2nd-post/</url>
+      
+        <content type="html"><![CDATA[<p>This is the 2nd blog.</p><h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2><p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p><pre class="language-none"><code class="language-none">---title: 2nd postdate: 2022-11-29 10:41:48tags:---</code></pre><p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p><p>Then, update the remote Git:</p><pre class="language-none"><code class="language-none">git add .git commit -m &#39;update&#39;git push</code></pre><h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2><ul><li>Search in Hexo folder ‘timezone’</li><li>Fix ‘-0000’ as ‘<em>CountryName</em>‘</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>My new 1</title>
+      <link href="/2022/11/28/My-new-1/"/>
+      <url>/2022/11/28/My-new-1/</url>
+      
+        <content type="html"><![CDATA[<p>My 1st Hexo blog post.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

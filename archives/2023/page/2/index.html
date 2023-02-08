@@ -17,54 +17,85 @@
 
 <body>
     <header>
-        <hgroup class="title-subtitle">
+        <hgroup class="title subtitle">
             <h1>Hexo development</h1>
             <p>A web log to study about Hexo static website generator</p>
         </hgroup>
         <ul class="header">
             <li class="home"><a href="/">Home</a></li>
-            <li class="archives"><a href="/archives/">Archives</a></li>
+            <li class="archives"><a href="/archives/">Archives(Categories, Tags)</a></li>
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main>
+    <main id="archive">
         <header>
             <h1>Archive</h1>
         </header>
         <hr>
         <div>
-            <article><a href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/">
+            <article class="archive"><a href="/2023/01/25/Installed-Google-Translate-in-index-html/">
+                    <h2>Installed 'Google Translate' in index.html</h2>
+                </a></article>
+            <article class="archive"><a href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/">
                     <h2>Set 'blog' submodule as GitHub Pages</h2>
                 </a></article>
-            <article><a href="/2023/01/24/Switched-to-hexo-theme-starter/">
+            <article class="archive"><a href="/2023/01/24/Switched-to-hexo-theme-starter/">
                     <h2>Switched to my fork of 'hexo-theme-starter'</h2>
                 </a></article>
-            <article><a href="/2023/01/22/public-dir-docs-url-hexo-blog/">
+            <article class="archive"><a href="/2023/01/22/public-dir-docs-url-hexo-blog/">
                     <h2>public_dir:docs;url:.../hexo-blog</h2>
                 </a></article>
-            <article><a href="/2023/01/22/Installed-hexo-blog-to-my-VPS/">
+            <article class="archive"><a href="/2023/01/22/Installed-hexo-blog-to-my-VPS/">
                     <h2>Installed _hexo-blog_ to my VPS</h2>
                 </a></article>
-            <article><a href="/2023/01/17/fix-timezone-again/">
+            <article class="archive"><a href="/2023/01/17/fix-timezone-again/">
                     <h2>fix timezone again</h2>
                 </a></article>
-            <article><a href="/2023/01/17/try-to-fix-timezone-for-date-diff/">
+            <article class="archive"><a href="/2023/01/17/try-to-fix-timezone-for-date-diff/">
                     <h2>日付がずれるのでtimezoneを修正してみる</h2>
                 </a></article>
-            <article><a href="/2023/01/17/rsync-ssh-transfer-blog-zip-file/">
+            <article class="archive"><a href="/2023/01/17/rsync-ssh-transfer-blog-zip-file/">
                     <h2>rsyncの sshオプションで blogを zip圧縮した ファイルを　ブログ用サーバーに転送した</h2>
                 </a></article>
-            <article><a href="/2023/01/15/Hexo-config-somehow/">
+            <article class="archive"><a href="/2023/01/15/Hexo-config-somehow/">
                     <h2>Hexo config url and public_dir and document-root settings</h2>
                 </a></article>
-            <article><a href="/2023/01/13/Installed-generator-hexo-theme-1/">
-                    <h2>Installed 'generator-hexo-theme'</h2>
-                </a></article>
-            <article><a href="/2023/01/13/Installed-generator-hexo-theme/">
+            <article class="archive"><a href="/2023/01/13/Installed-generator-hexo-theme-1/">
                     <h2>Installed 'generator-hexo-theme'</h2>
                 </a></article>
         </div>
-        <hr>
+        <hr><!-- show all categories and tags-->
+        <h2>Categories</h2>
+        <div class="all-categories">
+            <ul class="tag-box list-unstyled">
+                <li><a href="/categories/job/">job<span>1</span></a></li>
+            </ul>
+        </div>
+        <h2>Tags</h2>
+        <div class="all-tags">
+            <ul class="tag-box list-unstyled">
+                <li><a href="/tags/css/">CSS<span>1</span></a></li>
+                <li><a href="/tags/entity/">Entity<span>1</span></a></li>
+                <li><a href="/tags/github-url-public-dir/">GitHub, url, public_dir<span>1</span></a></li>
+                <li><a href="/tags/github-pages/">GitHub-Pages<span>1</span></a></li>
+                <li><a href="/tags/html/">HTML<span>1</span></a></li>
+                <li><a href="/tags/layout/">Layout<span>1</span></a></li>
+                <li><a href="/tags/markdown/">Markdown<span>1</span></a></li>
+                <li><a href="/tags/windows-node-install/">Windows, node, install<span>1</span></a></li>
+                <li><a href="/tags/about-page/">about-page<span>1</span></a></li>
+                <li><a href="/tags/agri/">agri<span>1</span></a></li>
+                <li><a href="/tags/comment-form/">comment-form<span>1</span></a></li>
+                <li><a href="/tags/config/">config<span>1</span></a></li>
+                <li><a href="/tags/date-format/">date.format<span>1</span></a></li>
+                <li><a href="/tags/google-translate/">google-translate<span>1</span></a></li>
+                <li><a href="/tags/hgroup/">hgroup<span>1</span></a></li>
+                <li><a href="/tags/js-html-nav/">js HTML nav<span>1</span></a></li>
+                <li><a href="/tags/new-post-name/">new_post_name<span>1</span></a></li>
+                <li><a href="/tags/starter-theme/">starter-theme<span>1</span></a></li>
+                <li><a href="/tags/strawberry/">strawberry<span>1</span></a></li>
+                <li><a href="/tags/theme-css/">theme.css<span>2</span></a></li>
+            </ul>
+        </div>
     </main>
     <div class="paginator">
         <div><a href="/archives/2023/page/3/">Next &rarr;</a></div>

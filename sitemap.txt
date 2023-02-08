@@ -1,3 +1,6 @@
+https://blog.yskz.dev/tags/index.html
+https://blog.yskz.dev/categories/index.html
+https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/
 https://blog.yskz.dev/2023/02/05/theme-style-scss-again/
 https://blog.yskz.dev/2023/02/04/added-archives-in-menu/
 https://blog.yskz.dev/2023/01/26/post-in-pug/
@@ -44,3 +47,6 @@ https://blog.yskz.dev/tags/windows-node-install/
 https://blog.yskz.dev/tags/github-url-public-dir/
 https://blog.yskz.dev/tags/js-html-nav/
 https://blog.yskz.dev/tags/theme-css/
+https://blog.yskz.dev/tags/agri/
+https://blog.yskz.dev/tags/strawberry/
+https://blog.yskz.dev/categories/job/
