@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/
 https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/
 https://blog.yskz.dev/2023/02/06/agri-coop-job/
 https://blog.yskz.dev/tags/index.html
@@ -53,5 +54,6 @@ https://blog.yskz.dev/tags/category/
 https://blog.yskz.dev/tags/scaffold/
 https://blog.yskz.dev/tags/harvest/
 https://blog.yskz.dev/tags/excerpt/
+https://blog.yskz.dev/tags/e-mail/
 https://blog.yskz.dev/categories/job/
 https://blog.yskz.dev/categories/hexo/

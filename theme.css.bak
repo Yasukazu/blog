@@ -52,21 +52,13 @@ ul.header {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-ul.header > li {
-  margin-left: 1em;
-}
 
-section.category > h3.cat-1 {
-  display: inline;
-  margin-right: 0.5em;
-}
-
-article.post > ul.tags {
+ul.tags {
   display: inline;
   margin-left: 1em;
   list-style-type: none;
 }
-article.post > ul.tags > li {
+ul.tags > li {
   display: inline;
   margin-left: 1em;
 }

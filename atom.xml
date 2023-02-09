@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-09T01:58:20.895Z</updated>
+  <updated>2023-02-09T05:37:19.631Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Applied a website e-mail supporter job</title>
+    <link href="https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/"/>
+    <id>https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/</id>
+    <published>2023-02-09T05:26:40.000Z</published>
+    <updated>2023-02-09T05:37:19.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>Applied a job to reply customers in e-mail and to maintain website selling items.</p><span id="more"></span><p>It is a user-to-user sell-and-buy website.<br>Requires to work full time(8-hours a day) and also Saturdays, Sundays and holidays on work.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Applied a job to reply customers in e-mail and to maintain website selling items.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="job" scheme="https://blog.yskz.dev/categories/job/"/>
+    
+    
+    <category term="e-mail" scheme="https://blog.yskz.dev/tags/e-mail/"/>
+    
+  </entry>
   
   <entry>
     <title>Added &#39;categories&#39; in scaffolds/post.md</title>
@@ -431,26 +452,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;Used-rsync-to-transfer-blog-HTML-files-to-www-yskz-xyz&quot;&gt;&lt;a href=&quot;#Used-rsync-to-transfer-blog-HTML-files-to-www-yskz-xyz&quot; class=&quot;hea</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo config url and public_dir and document-root settings</title>
-    <link href="https://blog.yskz.dev/2023/01/15/Hexo-config-somehow/"/>
-    <id>https://blog.yskz.dev/2023/01/15/Hexo-config-somehow/</id>
-    <published>2023-01-15T08:43:00.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’"><a href="#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’" class="headerlink" title="Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’"></a>Hexo assumes its generated website is accessed as ‘URL&#x2F;dir’</h1><h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><p>A typical usecase is <code>www.example.com/blog</code>.<br>So, about <code>_config.yml</code>, last path of <code>url</code> and <code>public_dir</code> must be the same. </p><h2 id="How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS"><a href="#How-to-set-the-hexo-generated-website-with-‘document-root’-in-a-VPS" class="headerlink" title="How to set the hexo-generated website with ‘document root’ in a VPS"></a>How to set the hexo-generated website with ‘document root’ in a VPS</h2><ol><li>In the same directory where document root exists, clone the hexo website repository.(repository name as <code>hexo-blog</code>)</li><li>Make a symbolic link of <code>hexo-blog/blog</code> into the document root as <code>blog</code></li></ol><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>DocumentRoot<span class="token punctuation">]</span>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> hexo-blog/blog /blog</code></pre><ol start="3"><li>Make a symbolic link of <code>hexo-blog/blog/index.html</code> into the document root as <code>index.html</code></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’&quot;&gt;&lt;a href=&quot;#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2</summary>
       
     
     

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/</loc>
+    
+    <lastmod>2023-02-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/</loc>
     
     <lastmod>2023-02-09</lastmod>
@@ -445,6 +454,13 @@
   
   <url>
     <loc>https://blog.yskz.dev/tags/excerpt/</loc>
+    <lastmod>2023-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yskz.dev/tags/e-mail/</loc>
     <lastmod>2023-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
