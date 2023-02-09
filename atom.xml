@@ -238,14 +238,14 @@
     <link href="https://blog.yskz.dev/2023/01/26/post-in-pug/"/>
     <id>https://blog.yskz.dev/2023/01/26/post-in-pug/</id>
     <published>2023-01-26T14:37:51.156Z</published>
-    <updated>2023-02-04T22:27:13.395Z</updated>
+    <updated>2023-02-09T06:14:57.187Z</updated>
     
-    <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
+    <content type="html"><![CDATA[<!-- -----><!-- -----><script type="text/javascript"><page>= pg;</page></script><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;!-- -----&gt;&lt;!-- -----&gt;&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;&lt;p&gt;According to&lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Hexo official docume</summary>
+    <summary type="html">&lt;!-- -----&gt;&lt;!-- -----&gt;&lt;script type=&quot;text/javascript&quot;&gt;&lt;page&gt;= pg;&lt;/page&gt;&lt;/script&gt;&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;&lt;p&gt;According to&lt;a hre</summary>
       
     
     

@@ -217,7 +217,7 @@
       <link href="/2023/01/26/post-in-pug/"/>
       <url>/2023/01/26/post-in-pug/</url>
       
-        <content type="html"><![CDATA[<!-- -----><!-- -----><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
+        <content type="html"><![CDATA[<!-- -----><!-- -----><script type="text/javascript"><page>= pg;</page></script><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
       
       
       

@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/
 https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/
 https://blog.yskz.dev/2023/02/06/agri-coop-job/
@@ -5,7 +6,6 @@ https://blog.yskz.dev/tags/index.html
 https://blog.yskz.dev/categories/index.html
 https://blog.yskz.dev/2023/02/05/theme-style-scss-again/
 https://blog.yskz.dev/2023/02/04/added-archives-in-menu/
-https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/about/index.html
 https://blog.yskz.dev/2023/02/01/does-hexo-markdown-escapes-html-special-characters/
 https://blog.yskz.dev/2023/01/29/form-in-About-page/
