@@ -27,35 +27,44 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">2nd post</h1><time class="date">2022-11-29</time>
-            </header>
-            <hr>
-            <div class="content">
-                <p>This is the 2nd blog.</p>
-                <h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2>
-                <p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p>
-                <pre class="language-none"><code class="language-none">---
+    <article id="post">
+        <header class="post">
+            <h1 class="title">2nd post</h1><time class="date">2022-11-29</time>
+        </header><br>
+        <main class="post">
+            <p>This is the 2nd blog.</p>
+            <h2 id="How-to-edit-the-new-source-document-created-by-hexo-new-command"><a href="#How-to-edit-the-new-source-document-created-by-hexo-new-command" class="headerlink" title="How to edit the new source document created by hexo new command:"></a>How to edit the new source document created by <em>hexo new</em> command:</h2>
+            <p><code>hexo new &quot;title&quot;</code><br>is:<br>Open the post document with VS Code in:<br><code>source\_posts</code> folder. It’s name is added with extension ‘.md’.<br>Also, you can check if it’s the proper file by the file starts like:</p>
+            <pre class="language-none"><code class="language-none">---
 title: 2nd post
 date: 2022-11-29 10:41:48
 tags:
 ---</code></pre>
-                <p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p>
-                <p>Then, update the remote Git:</p>
-                <pre class="language-none"><code class="language-none">git add .
+            <p>After editing it, let Hexo to generate a static HTML document:<br><code>hexo generate</code></p>
+            <p>Then, update the remote Git:</p>
+            <pre class="language-none"><code class="language-none">git add .
 git commit -m &#39;update&#39;
 git push</code></pre>
-                <h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2>
-                <ul>
-                    <li>Search in Hexo folder ‘timezone’</li>
-                    <li>Fix ‘-0000’ as ‘<em>CountryName</em>‘</li>
+            <h2 id="Fix-own-timezone"><a href="#Fix-own-timezone" class="headerlink" title="Fix own timezone:"></a>Fix own timezone:</h2>
+            <ul>
+                <li>Search in Hexo folder ‘timezone’</li>
+                <li>Fix ‘-0000’ as ‘<em>CountryName</em>‘</li>
+            </ul>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <p>No other same tag post.</p>
                 </ul>
-            </div>
-            <hr>
-        </article>
-    </main>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
         <div><a href="/2022/11/28/My-new-1/">My new 1 &rarr;</a></div>
         <div><a href="/2022/11/29/ts-doc-Technical-Document-event-example-js-nav-shrink-button-%E6%96%B0%E8%A8%AD/">&larr; ts-doc(Technical Document) event-example.js nav-shrink button 新設</a></div>

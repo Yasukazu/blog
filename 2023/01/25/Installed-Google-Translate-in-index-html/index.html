@@ -27,29 +27,38 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">Installed 'Google Translate' in index.html</h1><time class="date">2023-01-25</time>
-            </header>
-            <hr>
-            <div class="content">
-                <p>Changes:</p>
-                <ul>
-                    <li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li>
-                    <li><code>scripts.pug</code>: Added
-                        <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">
+    <article id="post">
+        <header class="post">
+            <h1 class="title">Installed 'Google Translate' in index.html</h1><time class="date">2023-01-25</time>
+        </header><br>
+        <main class="post">
+            <p>Changes:</p>
+            <ul>
+                <li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li>
+                <li><code>scripts.pug</code>: Added
+                    <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">
     <span class="token keyword">function</span> <span class="token function">googleTranslateElementInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">pageLanguage</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">layout</span><span class="token operator">:</span> google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement<span class="token punctuation">.</span>InlineLayout<span class="token punctuation">.</span><span class="token constant">HORIZONTAL</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">'google_translate_element'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 </span>
 <span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"</span></span><span class="token punctuation">)</span></span></span></code></pre>
-                    </li>
+                </li>
+            </ul>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <p>No other same tag post.</p>
                 </ul>
-            </div>
-            <hr>
-        </article>
-    </main>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
         <div><a href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/">Set 'blog' submodule as GitHub Pages &rarr;</a></div>
         <div><a href="/2023/01/25/hexo-usage/">&larr; Hexo Usage</a></div>

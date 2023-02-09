@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-07T08:39:46.824Z</updated>
+  <updated>2023-02-09T01:58:20.895Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -21,9 +21,32 @@
     <link href="https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/"/>
     <id>https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/</id>
     <published>2023-02-06T10:26:46.000Z</published>
-    <updated>2023-02-07T08:39:46.824Z</updated>
+    <updated>2023-02-09T01:58:20.895Z</updated>
     
-    <content type="html"><![CDATA[<p>Visited Agri Coop to apply a part-time job</p><span id="more"></span><p>The job is to harvest strawberry fruits.</p>]]></content>
+    <content type="html"><![CDATA[<p>Added a <em>categories</em> line in <em>front matter</em>.</p><span id="more"></span><p>Inside <em>front matter</em>, added a line as:</p><pre class="language-njk" data-language="njk"><code class="language-njk">categories: &#123;&#123; categories &#125;&#125;</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Added a &lt;em&gt;categories&lt;/em&gt; line in &lt;em&gt;front matter&lt;/em&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.yskz.dev/categories/hexo/"/>
+    
+    
+    <category term="category" scheme="https://blog.yskz.dev/tags/category/"/>
+    
+    <category term="scaffold" scheme="https://blog.yskz.dev/tags/scaffold/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visited Japan Agri. Co-op to apply a job</title>
+    <link href="https://blog.yskz.dev/2023/02/06/agri-coop-job/"/>
+    <id>https://blog.yskz.dev/2023/02/06/agri-coop-job/</id>
+    <published>2023-02-06T10:26:46.000Z</published>
+    <updated>2023-02-09T01:55:01.310Z</updated>
+    
+    <content type="html"><![CDATA[<p>Visited Agri Coop to apply a part-time job</p><span id="more"></span><p>The job is to harvest strawberry fruits.</p><h3 id="How-to-write-an-excerpt-in-post"><a href="#How-to-write-an-excerpt-in-post" class="headerlink" title="How to write an excerpt in post"></a>How to write an excerpt in post</h3><p>Until the HTML comment as ‘more’ like:</p><pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- more --></span></code></pre><p>makes the excerpt of the post.</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;Visited Agri Coop to apply a part-time job&lt;/p&gt;</summary>
@@ -33,9 +56,11 @@
     <category term="job" scheme="https://blog.yskz.dev/categories/job/"/>
     
     
-    <category term="agri" scheme="https://blog.yskz.dev/tags/agri/"/>
-    
     <category term="strawberry" scheme="https://blog.yskz.dev/tags/strawberry/"/>
+    
+    <category term="harvest" scheme="https://blog.yskz.dev/tags/harvest/"/>
+    
+    <category term="excerpt" scheme="https://blog.yskz.dev/tags/excerpt/"/>
     
   </entry>
   
@@ -426,26 +451,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2F-dir’&quot;&gt;&lt;a href=&quot;#Hexo-assumes-its-generated-website-is-accessed-as-‘URL-x2</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Installed &#39;generator-hexo-theme&#39;</title>
-    <link href="https://blog.yskz.dev/2023/01/13/Installed-generator-hexo-theme-1/"/>
-    <id>https://blog.yskz.dev/2023/01/13/Installed-generator-hexo-theme-1/</id>
-    <published>2023-01-12T16:43:21.000Z</published>
-    <updated>2023-01-22T02:34:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Changed-to-a-simple-blog-template"><a href="#Changed-to-a-simple-blog-template" class="headerlink" title="Changed to a simple blog template"></a>Changed to a simple blog template</h1><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p><a href="https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit">https://github.com/Yasukazu/blog/wiki/Hexo-Page-Generator/_edit</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Changed-to-a-simple-blog-template&quot;&gt;&lt;a href=&quot;#Changed-to-a-simple-blog-template&quot; class=&quot;headerlink&quot; title=&quot;Changed to a simple blog t</summary>
       
     
     

@@ -27,22 +27,32 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">Added 'categories' in scaffolds/post.md</h1><time class="date">2023-02-06</time>
-            </header>
-            <hr>
-            <div class="content">
-                <p>Visited Agri Coop to apply a part-time job</p>
-                <span id="more"></span>
-                <p>The job is to harvest strawberry fruits.</p>
-            </div>
-            <hr>
-        </article>
-    </main>
+    <article id="post">
+        <header class="post">
+            <h1 class="title">Added 'categories' in scaffolds/post.md</h1><time class="date">2023-02-06</time>
+        </header><br>
+        <main class="post">
+            <p>Added a <em>categories</em> line in <em>front matter</em>.</p>
+            <span id="more"></span>
+            <p>Inside <em>front matter</em>, added a line as:</p>
+            <pre class="language-njk" data-language="njk"><code class="language-njk">categories: &#123;&#123; categories &#125;&#125;</code></pre>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <p>No other same tag post.</p>
+                </ul>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
-        <div><a href="/2023/02/05/theme-style-scss-again/">Theme style SCSS again &rarr;</a></div>
+        <div><a href="/2023/02/06/agri-coop-job/">Visited Japan Agri. Co-op to apply a job &rarr;</a></div>
     </div>
     <footer><small>Theme created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
     <script>

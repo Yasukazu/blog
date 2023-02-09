@@ -27,37 +27,46 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">install Hexo to another PC</h1><time class="date">2022-12-01</time>
-            </header>
-            <hr>
-            <div class="content">
-                <dl>
-                    <dt>nodejs</dt>
-                    <dd>JavaScript as a command</dd>
-                </dl>
-                <ol>
-                    <li>nodejs install to Windows OS:</li>
-                </ol>
-                <ul>
-                    <li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li>
+    <article id="post">
+        <header class="post">
+            <h1 class="title">install Hexo to another PC</h1><time class="date">2022-12-01</time>
+        </header><br>
+        <main class="post">
+            <dl>
+                <dt>nodejs</dt>
+                <dd>JavaScript as a command</dd>
+            </dl>
+            <ol>
+                <li>nodejs install to Windows OS:</li>
+            </ol>
+            <ul>
+                <li>Download and execute a file like a filename as “node-v??.??.?-x64.msi”.</li>
+            </ul>
+            <ol start="2">
+                <li>
+                    <p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p>
+                </li>
+                <li>
+                    <p>Install <em>Hexo</em></p>
+                    <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span></code></pre>
+                    <aside>`-g` option is to let any user to use the *hexo* command.</aside>
+                </li>
+            </ol>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <p>No other same tag post.</p>
                 </ul>
-                <ol start="2">
-                    <li>
-                        <p>Logoff and login to enable the installed <em>node</em> and <em>npm</em> command.</p>
-                    </li>
-                    <li>
-                        <p>Install <em>Hexo</em></p>
-                        <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span></code></pre>
-                        <aside>`-g` option is to let any user to use the *hexo* command.</aside>
-                    </li>
-                </ol>
-            </div>
-            <hr>
-        </article>
-    </main>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
         <div><a href="/2022/11/30/ts-doc-wiki/">ts-doc wiki &rarr;</a></div>
         <div><a href="/2023/01/12/Run-Hexo-npx/">&larr; Run Hexo 'npx' in Gitpod</a></div>

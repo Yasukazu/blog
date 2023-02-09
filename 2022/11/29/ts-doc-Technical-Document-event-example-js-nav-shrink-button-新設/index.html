@@ -27,15 +27,13 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">ts-doc(Technical Document) event-example.js nav-shrink button 新設</h1><time class="date">2022-11-29</time>
-            </header>
-            <hr>
-            <div class="content">
-                <h2 id="初期値の設定-CSSで定義されている変数の読み込み"><a href="#初期値の設定-CSSで定義されている変数の読み込み" class="headerlink" title="初期値の設定(CSSで定義されている変数の読み込み)"></a>初期値の設定(CSSで定義されている変数の読み込み)</h2>
-                <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> cbody <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <article id="post">
+        <header class="post">
+            <h1 class="title">ts-doc(Technical Document) event-example.js nav-shrink button 新設</h1><time class="date">2022-11-29</time>
+        </header><br>
+        <main class="post">
+            <h2 id="初期値の設定-CSSで定義されている変数の読み込み"><a href="#初期値の設定-CSSで定義されている変数の読み込み" class="headerlink" title="初期値の設定(CSSで定義されている変数の読み込み)"></a>初期値の設定(CSSで定義されている変数の読み込み)</h2>
+            <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> cbody <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> nav_h <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-h"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> nav_h_2 <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-h-2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> nav_w <span class="token operator">=</span> cbody<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--nav-w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -44,25 +42,36 @@
 <span class="token keyword">const</span> nav_shrink_button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"button#nav-shrink"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> pc_media <span class="token operator">=</span> <span class="token string">"(min-width: 540px)"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> dbody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">;</span></code></pre>
-                <h2 id="拡大ボタン関数"><a href="#拡大ボタン関数" class="headerlink" title="拡大ボタン関数"></a>拡大ボタン関数</h2>
-                <pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_expand_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+            <h2 id="拡大ボタン関数"><a href="#拡大ボタン関数" class="headerlink" title="拡大ボタン関数"></a>拡大ボタン関数</h2>
+            <pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_expand_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">const</span> isPC <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span>pc_media<span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>
   <span class="token keyword">const</span> dst <span class="token operator">=</span> <span class="token string">"--nav-"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>isPC <span class="token operator">?</span> <span class="token string">'w'</span> <span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> src_val <span class="token operator">=</span> isPC <span class="token operator">?</span> nav_w <span class="token operator">:</span> nav_h<span class="token punctuation">;</span>
   dbody<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src_val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>
-                <h2 id="縮小ボタン関数"><a href="#縮小ボタン関数" class="headerlink" title="縮小ボタン関数"></a>縮小ボタン関数</h2>
-                <pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_shrink_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+            <h2 id="縮小ボタン関数"><a href="#縮小ボタン関数" class="headerlink" title="縮小ボタン関数"></a>縮小ボタン関数</h2>
+            <pre class="language-javascript" data-language="javascript"><code class="language-javascript">nav_shrink_button<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">const</span> isPC <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span>pc_media<span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>
   <span class="token keyword">const</span> dst <span class="token operator">=</span> <span class="token string">"--nav-"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>isPC <span class="token operator">?</span> <span class="token string">'w'</span> <span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> src_val <span class="token operator">=</span> isPC <span class="token operator">?</span> nav_w_2 <span class="token operator">:</span> nav_h_2<span class="token punctuation">;</span>
   dbody<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src_val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>
-                <p>(TODO:):現状では、拡大&#x2F;縮小ボタンが押されるたびに規定値への書き込みを行っているが、 状態を記憶しておいて、すでに縮小しているのなら即リターンすれば無駄な計算資源を使わなくて済む。</p>
-            </div>
-            <hr>
-        </article>
-    </main>
+            <p>(TODO:):現状では、拡大&#x2F;縮小ボタンが押されるたびに規定値への書き込みを行っているが、 状態を記憶しておいて、すでに縮小しているのなら即リターンすれば無駄な計算資源を使わなくて済む。</p>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <p>No other same tag post.</p>
+                </ul>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
         <div><a href="/2022/11/29/2nd-post/">2nd post &rarr;</a></div>
         <div><a href="/2022/11/30/ts-doc-wiki/">&larr; ts-doc wiki</a></div>

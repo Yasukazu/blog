@@ -27,29 +27,38 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
-    <main id="post">
-        <article class="post">
-            <header>
-                <h1 class="title">Theme style SCSS again</h1><time class="date">2023-02-05</time>
-            </header>
-            <hr>
-            <div class="content">
-                <p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p>
-                <span id="more"></span>
-                <p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p>
-                <details>
-                    <summary>settings.json</summary>
-                    <code> "liveSassCompile.settings.formats": [ &#123; "format": "expanded", "extensionName": ".css", "savePath": "~/css" &#125;, &#123; "extensionName": ".min.css", "format": "compressed", "savePath": "~/min.css" &#125; ], "liveSassCompile.settings.excludeList": [ "/**/node_modules/**", "/.vscode/**" ], "liveSassCompile.settings.generateMap": false, //autoprefix, will auto add perfix like -webkit- -moz-.. "liveSassCompile.settings.autoprefix": [ "> 1%", "last 2 versions" ] </code>
-                </details>
-                <h2 id="post-link-tag-plugin-requires-post-filename-contains-no-date"><a href="#post-link-tag-plugin-requires-post-filename-contains-no-date" class="headerlink" title="post_link tag plugin requires post filename contains no date"></a><em>post_link</em> tag plugin requires post filename contains no date</h2><a href="/2023/02/04/added-archives-in-menu/" title="Added Archives in menu">Added Archives in menu</a>
-                <pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% post_link added-archives-in-menu %&#125;</code></pre>
-            </div>
-            <hr>
-        </article>
-    </main>
+    <article id="post">
+        <header class="post">
+            <h1 class="title">Theme style SCSS again</h1><time class="date">2023-02-05</time>
+        </header><br>
+        <main class="post">
+            <p>This is <em>Post Excerpt</em>: Embedding renderer directive in comment (TURBO_PASCAL-like)</p>
+            <span id="more"></span>
+            <p>Using <em>Live Sass</em>, a plugin of VS Code, retried to use SCSS as a style sheet.</p>
+            <details>
+                <summary>settings.json</summary>
+                <code> "liveSassCompile.settings.formats": [ &#123; "format": "expanded", "extensionName": ".css", "savePath": "~/css" &#125;, &#123; "extensionName": ".min.css", "format": "compressed", "savePath": "~/min.css" &#125; ], "liveSassCompile.settings.excludeList": [ "/**/node_modules/**", "/.vscode/**" ], "liveSassCompile.settings.generateMap": false, //autoprefix, will auto add perfix like -webkit- -moz-.. "liveSassCompile.settings.autoprefix": [ "> 1%", "last 2 versions" ] </code>
+            </details>
+            <h2 id="post-link-tag-plugin-requires-post-filename-contains-no-date"><a href="#post-link-tag-plugin-requires-post-filename-contains-no-date" class="headerlink" title="post_link tag plugin requires post filename contains no date"></a><em>post_link</em> tag plugin requires post filename contains no date</h2><a href="/2023/02/04/added-archives-in-menu/" title="Added Archives in menu">Added Archives in menu</a>
+            <pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% post_link added-archives-in-menu %&#125;</code></pre>
+        </main>
+        <hr>
+        <section id="tags">
+            <h2>Tags<ul class="tag-box list-unstyled">
+                    <li class="tag"><a href="/tags/theme-css/">theme.css</a></li>
+                </ul>
+            </h2>
+        </section>
+        <section id="all-categories">
+            <h2>Categories<ul class="tag-box list-unstyled">
+                    <p>No other same category post.</p>
+                </ul>
+            </h2>
+        </section>
+    </article>
     <div class="paginator">
         <div><a href="/2023/02/04/added-archives-in-menu/">Added Archives in menu &rarr;</a></div>
-        <div><a href="/2023/02/06/added-categories-in-scaffolds-post-md/">&larr; Added 'categories' in scaffolds/post.md</a></div>
+        <div><a href="/2023/02/06/agri-coop-job/">&larr; Visited Japan Agri. Co-op to apply a job</a></div>
     </div>
     <footer><small>Theme created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
     <script>

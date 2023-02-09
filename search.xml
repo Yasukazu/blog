@@ -8,7 +8,34 @@
       <link href="/2023/02/06/added-categories-in-scaffolds-post-md/"/>
       <url>/2023/02/06/added-categories-in-scaffolds-post-md/</url>
       
-        <content type="html"><![CDATA[<p>Visited Agri Coop to apply a part-time job</p><span id="more"></span><p>The job is to harvest strawberry fruits.</p>]]></content>
+        <content type="html"><![CDATA[<p>Added a <em>categories</em> line in <em>front matter</em>.</p><span id="more"></span><p>Inside <em>front matter</em>, added a line as:</p><pre class="language-njk" data-language="njk"><code class="language-njk">categories: &#123;&#123; categories &#125;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> category </tag>
+            
+            <tag> scaffold </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Visited Japan Agri. Co-op to apply a job</title>
+      <link href="/2023/02/06/agri-coop-job/"/>
+      <url>/2023/02/06/agri-coop-job/</url>
+      
+        <content type="html"><![CDATA[<p>Visited Agri Coop to apply a part-time job</p><span id="more"></span><p>The job is to harvest strawberry fruits.</p><h3 id="How-to-write-an-excerpt-in-post"><a href="#How-to-write-an-excerpt-in-post" class="headerlink" title="How to write an excerpt in post"></a>How to write an excerpt in post</h3><p>Until the HTML comment as ‘more’ like:</p><pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- more --></span></code></pre><p>makes the excerpt of the post.</p>]]></content>
       
       
       <categories>
@@ -20,9 +47,11 @@
       
         <tags>
             
-            <tag> agri </tag>
-            
             <tag> strawberry </tag>
+            
+            <tag> harvest </tag>
+            
+            <tag> excerpt </tag>
             
         </tags>
       
