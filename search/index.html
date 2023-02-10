@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="A web log to study better ways to utilize Hexo static site generator">
     <meta name="author" content="Y-M">
-    <title>search | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
+    <title> | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
@@ -26,30 +26,15 @@
             <li class="archives"><a href="/archives/">Posts</a></li>
             <li class="about"><a href="/about/">About</a></li>
         </ul>
+        <form class="search"><input type="text" id="search-text"><button id="search-submit">In-site Search</button></form>
+        <div id="plugin-search-result"></div>
     </header>
     <div id="google_translate_element"></div>
     <header class="page">
-        <h1>search</h1><span>2023-02-10</span>
+        <h1></h1><span>2023-02-11</span>
     </header><br>
     <main class="page">
-        <script src="/js/search.js"></script>
-        <div>
-            <h1 class="post-title">検索</h1>
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="キーワードを入力してください" class="form-control input--large" autofocus="autofocus" />
-            <hr>
-            <div id="local-search-result"></div>
-            <script>
-                debugger;
-                var search_path = "search.xml";
-                if (search_path.length == 0)
-                {
-                    search_path = "search.xml";
-                }
-                var path = "/" + search_path;
-                searchFunc(path, 'local-search-input', 'local-search-result');
-
-            </script>
-        </div>
+        <div id="plugin-search-result"></div>
     </main>
     <footer><small>Theme created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
     <script type="text/javascript">
@@ -63,6 +48,92 @@
 
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?  cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        const text = document.getElementById("search-text")
+        const submit = document.getElementById("search-submit")
+        submit.addEventListener("click", () =>
+        {
+            window.location.href = "/search/?search=" + text.value
+        })
+
+        function fetchData(fetchUrl)
+        {
+            return new Promise(resolve =>
+            {
+                const xhr = new XMLHttpRequest()
+                xhr.open('GET', fetchUrl, true)
+                xhr.responseType = 'document'
+                xhr.overrideMimeType('text/xml')
+                xhr.onreadystatechange = () =>
+                {
+                    if (xhr.readyState === xhr.DONE)
+                    {
+                        if (xhr.status === 200 || xhr.status === 304)
+                        {
+                            resolve(xhr.response)
+                        }
+                    }
+                }
+                xhr.send(null)
+            })
+        }
+
+        function analyzeData(document, query)
+        {
+            const entries = document.getElementsByTagName('entry')
+            const matchEntries = []
+            for (var entry of entries)
+            {
+                const regExp = new RegExp(query)
+                if (regExp.test(entry.children[0].textContent) || regExp.test(entry.children[2].textContent))
+                {
+                    matchEntries.push(entry)
+                }
+            }
+            return matchEntries
+        }
+
+        function makeSearchResult(entries)
+        {
+            let innerHTML = ''
+            for (let entry of entries)
+            {
+                innerHTML += '<div class="search-result-entry">'
+                const title = entry.children[0].textContent
+                const url = entry.children[2].textContent
+                const content = entry.children[3].textContent
+                innerHTML += '<h2><a href="' + url + '">' + title + '</a></h2>'
+                const thumbnail = /<img[^>]*>/.exec(content)
+                if (thumbnail && thumbnail.length >= 1)
+                {
+                    innerHTML += '<div class="search-result-thumbnail">' + thumbnail[1] + '</div>'
+                }
+                innerHTML += content.replace(/<[^>]*>/g, '').substring(0, 300)
+                innerHTML += '...</div>'
+            }
+            return innerHTML
+        }
+
+        function getSearchQueryFromUrlParams()
+        {
+            const params = window.location.search.substring(1).split('&')
+            const search = params.filter(param => param.search(/$search=/))
+            return search.length > 0 ? search[0].split('=')[1] : null
+        }
+
+        function init()
+        {
+            const searchResult = document.getElementById("plugin-search-result")
+            searchResult.textContent = 'Search...'
+            fetchData('/search.xml').then(document =>
+            {
+                const entries = analyzeData(document, getSearchQueryFromUrlParams())
+                searchResult.innerHTML = makeSearchResult(entries)
+            })
+        }
+        init();
+
+    </script>
 </body>
 
 </html>

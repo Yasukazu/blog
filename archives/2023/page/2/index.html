@@ -26,6 +26,8 @@
             <li class="archives"><a href="/archives/">Posts</a></li>
             <li class="about"><a href="/about/">About</a></li>
         </ul>
+        <form class="search"><input type="text" id="search-text"><button id="search-submit">In-site Search</button></form>
+        <div id="plugin-search-result"></div>
     </header>
     <div id="google_translate_element"></div>
     <main id="archive">
@@ -34,6 +36,9 @@
         </header>
         <section id="all-posts">
             <h2>Posts</h2>
+            <article class="post"><a href="/2023/01/26/post-in-pug/">
+                    <h3></h3>
+                </a></article>
             <article class="post"><a href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/">
                     <h3>CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</h3>
                 </a></article>
@@ -60,9 +65,6 @@
                 </a></article>
             <article class="post"><a href="/2023/01/17/try-to-fix-timezone-for-date-diff/">
                     <h3>日付がずれるのでtimezoneを修正してみる</h3>
-                </a></article>
-            <article class="post"><a href="/2023/01/17/rsync-ssh-transfer-blog-zip-file/">
-                    <h3>rsyncの sshオプションで blogを zip圧縮した ファイルを　ブログ用サーバーに転送した</h3>
                 </a></article>
         </section>
         <hr>
@@ -119,6 +121,92 @@
 
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?  cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        const text = document.getElementById("search-text")
+        const submit = document.getElementById("search-submit")
+        submit.addEventListener("click", () =>
+        {
+            window.location.href = "/search/?search=" + text.value
+        })
+
+        function fetchData(fetchUrl)
+        {
+            return new Promise(resolve =>
+            {
+                const xhr = new XMLHttpRequest()
+                xhr.open('GET', fetchUrl, true)
+                xhr.responseType = 'document'
+                xhr.overrideMimeType('text/xml')
+                xhr.onreadystatechange = () =>
+                {
+                    if (xhr.readyState === xhr.DONE)
+                    {
+                        if (xhr.status === 200 || xhr.status === 304)
+                        {
+                            resolve(xhr.response)
+                        }
+                    }
+                }
+                xhr.send(null)
+            })
+        }
+
+        function analyzeData(document, query)
+        {
+            const entries = document.getElementsByTagName('entry')
+            const matchEntries = []
+            for (var entry of entries)
+            {
+                const regExp = new RegExp(query)
+                if (regExp.test(entry.children[0].textContent) || regExp.test(entry.children[2].textContent))
+                {
+                    matchEntries.push(entry)
+                }
+            }
+            return matchEntries
+        }
+
+        function makeSearchResult(entries)
+        {
+            let innerHTML = ''
+            for (let entry of entries)
+            {
+                innerHTML += '<div class="search-result-entry">'
+                const title = entry.children[0].textContent
+                const url = entry.children[2].textContent
+                const content = entry.children[3].textContent
+                innerHTML += '<h2><a href="' + url + '">' + title + '</a></h2>'
+                const thumbnail = /<img[^>]*>/.exec(content)
+                if (thumbnail && thumbnail.length >= 1)
+                {
+                    innerHTML += '<div class="search-result-thumbnail">' + thumbnail[1] + '</div>'
+                }
+                innerHTML += content.replace(/<[^>]*>/g, '').substring(0, 300)
+                innerHTML += '...</div>'
+            }
+            return innerHTML
+        }
+
+        function getSearchQueryFromUrlParams()
+        {
+            const params = window.location.search.substring(1).split('&')
+            const search = params.filter(param => param.search(/$search=/))
+            return search.length > 0 ? search[0].split('=')[1] : null
+        }
+
+        function init()
+        {
+            const searchResult = document.getElementById("plugin-search-result")
+            searchResult.textContent = 'Search...'
+            fetchData('/search.xml').then(document =>
+            {
+                const entries = analyzeData(document, getSearchQueryFromUrlParams())
+                searchResult.innerHTML = makeSearchResult(entries)
+            })
+        }
+        init();
+
+    </script>
 </body>
 
 </html>
