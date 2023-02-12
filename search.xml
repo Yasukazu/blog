@@ -8,7 +8,7 @@
       <link href="/2023/02/11/in-site-search-half-success/"/>
       <url>/2023/02/11/in-site-search-half-success/</url>
       
-        <content type="html"><![CDATA[<p>It only works when input as <code>URL/search/?search=...</code></p><span id="more"></span><p>Search box picks up all entries..</p>]]></content>
+        <content type="html"><![CDATA[<p>It only works when input as <code>URL/search/?search=...</code></p><span id="more"></span><p>Search box picks up all entries..</p><pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">function getSearchQueryFromUrlParams () &#123;  const params &#x3D; window.location.search.substring(1).split(&#39;&amp;&#39;);  const search &#x3D; params.filter(param &#x3D;&gt; param.search(&#x2F;$search&#x3D;&#x2F;));  return search.length &gt; 0 ? search[0].split(&#39;&#x3D;&#39;)[1] : null;&#125;</code></pre><p><var>getSearchQueryFromUrlParams</var> returns <code>null</code> from search input text window.</p>]]></content>
       
       
       

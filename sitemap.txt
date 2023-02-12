@@ -1,5 +1,4 @@
 https://blog.yskz.dev/2023/02/11/in-site-search-half-success/
-https://blog.yskz.dev/search/index.html
 https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/
 https://blog.yskz.dev/2023/02/06/added-categories-in-scaffolds-post-md/

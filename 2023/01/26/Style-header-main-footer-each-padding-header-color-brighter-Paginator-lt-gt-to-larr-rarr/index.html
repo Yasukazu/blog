@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
-    <link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
 </head>
 
 <body>
@@ -26,10 +26,9 @@
             <li class="archives"><a href="/archives/">Posts</a></li>
             <li class="about"><a href="/about/">About</a></li>
         </ul>
-        <form class="search"><input type="text" id="search-text"><button id="search-submit">In-site Search</button></form>
-        <div id="plugin-search-result"></div>
-    </header>
-    <div id="google_translate_element"></div>
+        <form id="search"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input class="submit" type="submit" onclick="search()"></form>
+        <div id="search-result"></div>
+    </header><!--  form.search--><!--    input(type="text" id="search-text")--><!--    button(id="search-submit") In-site Search--><!--  div#google_translate_element-->
     <article id="post">
         <header class="post">
             <h1 class="title">CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</h1><time class="date">2023-01-26</time>
@@ -68,92 +67,7 @@
 
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?  cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
-        const text = document.getElementById("search-text")
-        const submit = document.getElementById("search-submit")
-        submit.addEventListener("click", () =>
-        {
-            window.location.href = "/search/?search=" + text.value
-        })
-
-        function fetchData(fetchUrl)
-        {
-            return new Promise(resolve =>
-            {
-                const xhr = new XMLHttpRequest()
-                xhr.open('GET', fetchUrl, true)
-                xhr.responseType = 'document'
-                xhr.overrideMimeType('text/xml')
-                xhr.onreadystatechange = () =>
-                {
-                    if (xhr.readyState === xhr.DONE)
-                    {
-                        if (xhr.status === 200 || xhr.status === 304)
-                        {
-                            resolve(xhr.response)
-                        }
-                    }
-                }
-                xhr.send(null)
-            })
-        }
-
-        function analyzeData(document, query)
-        {
-            const entries = document.getElementsByTagName('entry')
-            const matchEntries = []
-            for (var entry of entries)
-            {
-                const regExp = new RegExp(query)
-                if (regExp.test(entry.children[0].textContent) || regExp.test(entry.children[2].textContent))
-                {
-                    matchEntries.push(entry)
-                }
-            }
-            return matchEntries
-        }
-
-        function makeSearchResult(entries)
-        {
-            let innerHTML = ''
-            for (let entry of entries)
-            {
-                innerHTML += '<div class="search-result-entry">'
-                const title = entry.children[0].textContent
-                const url = entry.children[2].textContent
-                const content = entry.children[3].textContent
-                innerHTML += '<h2><a href="' + url + '">' + title + '</a></h2>'
-                const thumbnail = /<img[^>]*>/.exec(content)
-                if (thumbnail && thumbnail.length >= 1)
-                {
-                    innerHTML += '<div class="search-result-thumbnail">' + thumbnail[1] + '</div>'
-                }
-                innerHTML += content.replace(/<[^>]*>/g, '').substring(0, 300)
-                innerHTML += '...</div>'
-            }
-            return innerHTML
-        }
-
-        function getSearchQueryFromUrlParams()
-        {
-            const params = window.location.search.substring(1).split('&')
-            const search = params.filter(param => param.search(/$search=/))
-            return search.length > 0 ? search[0].split('=')[1] : null
-        }
-
-        function init()
-        {
-            const searchResult = document.getElementById("plugin-search-result")
-            searchResult.textContent = 'Search...'
-            fetchData('/search.xml').then(document =>
-            {
-                const entries = analyzeData(document, getSearchQueryFromUrlParams())
-                searchResult.innerHTML = makeSearchResult(entries)
-            })
-        }
-        init();
-
-    </script>
+    <script type="text/javascript" src="/js/search.js"></script>
 </body>
 
 </html>
