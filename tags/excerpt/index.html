@@ -28,7 +28,16 @@
         </ul>
         <div id="search"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input class="submit" type="submit" onclick="search()"></div>
         <div id="search-result"></div>
-    </header><!--  form.search--><!--    input(type="text" id="search-text")--><!--    button(id="search-submit") In-site Search--><!--  div#google_translate_element-->
+    </header><template id="search-result-container">
+        <div class="search-result-container">
+            <h2>Search result</h2>
+            <ul class="entries"></ul>
+        </div>
+    </template><template id="search-result-entry">
+        <li class="search-result-entry"><a class="title"></a>
+            <p class="content"></p>
+        </li>
+    </template><!--  form.search--><!--    input(type="text" id="search-text")--><!--    button(id="search-submit") In-site Search--><!--  div#google_translate_element-->
     <main>
         <header id="tag-page--header">
             <h1 id="tag-page--header--title">Tag: excerpt</h1>
