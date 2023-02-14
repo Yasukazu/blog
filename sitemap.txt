@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/02/14/in-site-search-hexo-server-success/
 https://blog.yskz.dev/2023/02/11/in-site-search-half-success/
 https://blog.yskz.dev/2023/01/26/post-in-pug/
 https://blog.yskz.dev/2023/02/09/applied-a-website-e-mail-supporter-job/
@@ -56,5 +57,6 @@ https://blog.yskz.dev/tags/scaffold/
 https://blog.yskz.dev/tags/harvest/
 https://blog.yskz.dev/tags/excerpt/
 https://blog.yskz.dev/tags/e-mail/
+https://blog.yskz.dev/tags/search/
 https://blog.yskz.dev/categories/job/
 https://blog.yskz.dev/categories/hexo/

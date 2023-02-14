@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="A web log to study better ways to utilize Hexo static site generator">
     <meta name="author" content="Y-M">
-    <title>In-site search half success | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
+    <title>Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="/css/theme.css">
     <meta name="generator" content="Hexo 6.3.0">
@@ -29,38 +29,15 @@
         <div id="search"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input class="submit" type="submit" onclick="search()"></div>
         <div id="search-result"></div>
     </header><!--  form.search--><!--    input(type="text" id="search-text")--><!--    button(id="search-submit") In-site Search--><!--  div#google_translate_element-->
-    <article id="post">
-        <header class="post">
-            <h1 class="title">In-site search half success</h1><time class="date">2023-02-11</time>
-        </header><br>
-        <main class="post">
-            <p>It only works when input as <code>URL/search/?search=...</code></p>
-            <span id="more"></span>
-            <p>Search box picks up all entries..</p>
-            <pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">function getSearchQueryFromUrlParams () &#123;
-  const params &#x3D; window.location.search.substring(1).split(&#39;&amp;&#39;);
-  const search &#x3D; params.filter(param &#x3D;&gt; param.search(&#x2F;$search&#x3D;&#x2F;));
-  return search.length &gt; 0 ? search[0].split(&#39;&#x3D;&#39;)[1] : null;
-&#125;</code></pre>
-            <p><var>getSearchQueryFromUrlParams</var> returns <code>null</code> from search input text window.</p>
-        </main>
+    <main id="index">
+        <article class="post"><a href="/2022/11/28/My-new-1/">
+                <h2 class="title">My new 1</h2>
+            </a><time class="post date">2022-11-28</time></article>
         <hr>
-        <section id="tags">
-            <h2>Tags<ul class="tag-box list-unstyled">
-                    <p>No other common-tag post.</p>
-                </ul>
-            </h2>
-        </section>
-        <section id="all-categories">
-            <h2>Categories<ul class="tag-box list-unstyled">
-                    <p>No other common-category post.</p>
-                </ul>
-            </h2>
-        </section>
-    </article>
+    </main>
+    <hr>
     <div class="paginator">
-        <div><a href="/2023/02/09/applied-a-website-e-mail-supporter-job/">Applied a website e-mail supporter job &rarr;</a></div>
-        <div><a href="/2023/02/14/in-site-search-hexo-server-success/">&larr; In-site search Hexo server success</a></div>
+        <div><a href="/page/3/">&larr; Prev.</a></div>
     </div>
     <footer><small>Theme created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
     <script type="text/javascript" src="/js/search.js"></script>

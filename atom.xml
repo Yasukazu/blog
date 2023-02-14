@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-11T12:23:38.706Z</updated>
+  <updated>2023-02-14T02:28:05.283Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>In-site search Hexo server success</title>
+    <link href="https://blog.yskz.dev/2023/02/14/in-site-search-hexo-server-success/"/>
+    <id>https://blog.yskz.dev/2023/02/14/in-site-search-hexo-server-success/</id>
+    <published>2023-02-14T01:48:46.000Z</published>
+    <updated>2023-02-14T02:28:05.283Z</updated>
+    
+    <content type="html"><![CDATA[<p>In-sit search function works only in Hexo server mode.</p><span id="more"></span><h2 id="Misunderstandings">Misunderstandings:</h2><ul><li>HTML <strong>form</strong> tag redirects to <code>action=</code> URL, if no <code>action</code> property, redirects document root (‘/’). Countermeasure is <code>Event.preventDefault()</code> in called function.</li><li>HTML <strong>template</strong> tag is made to use from JavaScript.  In js code, usually the template is used after cloning as: <code>document.importNode(template.content, true)</code>. *(<code>true</code> means recursive clone aka: including all its descendants) In other words, <strong>template</strong> is a pre-defined format strategy of <code>document.createDocumentFragment()</code> to insert a new element tree in an HTML document.</li></ul><h2 id="Useful-teaching-webpage">Useful teaching webpage:</h2><p><a href="https://catnose.me/learning/html/template">https://catnose.me/learning/html/template</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;In-sit search function works only in Hexo server mode.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.yskz.dev/categories/hexo/"/>
+    
+    
+    <category term="search" scheme="https://blog.yskz.dev/tags/search/"/>
+    
+  </entry>
   
   <entry>
     <title>In-site search half success</title>
@@ -430,26 +451,6 @@
     <published>2023-01-17T00:30:24.000Z</published>
     <updated>2023-01-22T10:50:21.000Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>日付がずれるのでtimezoneを修正してみる</title>
-    <link href="https://blog.yskz.dev/2023/01/17/try-to-fix-timezone-for-date-diff/"/>
-    <id>https://blog.yskz.dev/2023/01/17/try-to-fix-timezone-for-date-diff/</id>
-    <published>2023-01-16T23:54:52.000Z</published>
-    <updated>2023-01-22T10:50:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>_config.yml</code> の <code>timezone</code> を <em>Asia&#x2F;Tokyo</em> に変更してみる。<span lang="en">(‘Asia’ seems to need to start with a capital letter)</span></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt; の &lt;code&gt;timezone&lt;/code&gt; を &lt;em&gt;Asia&amp;#x2F;Tokyo&lt;/em&gt; に変更してみる。&lt;span lang=&quot;en&quot;&gt;(‘Asia’ seems to need to start with a</summary>
-      
     
     
     

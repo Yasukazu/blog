@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>In-site search Hexo server success</title>
+      <link href="/2023/02/14/in-site-search-hexo-server-success/"/>
+      <url>/2023/02/14/in-site-search-hexo-server-success/</url>
+      
+        <content type="html"><![CDATA[<p>In-sit search function works only in Hexo server mode.</p><span id="more"></span><h2 id="Misunderstandings">Misunderstandings:</h2><ul><li>HTML <strong>form</strong> tag redirects to <code>action=</code> URL, if no <code>action</code> property, redirects document root (‘/’). Countermeasure is <code>Event.preventDefault()</code> in called function.</li><li>HTML <strong>template</strong> tag is made to use from JavaScript.  In js code, usually the template is used after cloning as: <code>document.importNode(template.content, true)</code>. *(<code>true</code> means recursive clone aka: including all its descendants) In other words, <strong>template</strong> is a pre-defined format strategy of <code>document.createDocumentFragment()</code> to insert a new element tree in an HTML document.</li></ul><h2 id="Useful-teaching-webpage">Useful teaching webpage:</h2><p><a href="https://catnose.me/learning/html/template">https://catnose.me/learning/html/template</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> search </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>In-site search half success</title>
       <link href="/2023/02/11/in-site-search-half-success/"/>
       <url>/2023/02/11/in-site-search-half-success/</url>
