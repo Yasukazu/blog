@@ -4,7 +4,7 @@
   --sub-bg-color: #ddd;
 }
 
-header {
+header.included {
   background-color: var(--sub-bg-color);
   padding: 0.5em;
 }
@@ -137,4 +137,12 @@ code::before {
 }
 code::after {
   border-top: thin solid #000;
+}
+
+div.search-result-container {
+  border: thin solid black;
+}
+
+li.search-result-entry {
+  background-color: #fff;
 }
