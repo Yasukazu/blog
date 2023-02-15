@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Added date in search result. Hexo generate won&#39;t update javascript files.</title>
+      <link href="/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/"/>
+      <url>/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/</url>
+      
+        <content type="html"><![CDATA[<p>Improved search result.  Hexo seems has a bug of no replacement of javascript files.</p><span id="more"></span>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> search </tag>
+            
+            <tag> theme </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>In-site search Hexo server success</title>
       <link href="/2023/02/14/in-site-search-hexo-server-success/"/>
       <url>/2023/02/14/in-site-search-hexo-server-success/</url>

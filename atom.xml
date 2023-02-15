@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-14T02:28:05.283Z</updated>
+  <updated>2023-02-15T06:22:35.473Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Added date in search result. Hexo generate won&#39;t update javascript files.</title>
+    <link href="https://blog.yskz.dev/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/"/>
+    <id>https://blog.yskz.dev/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/</id>
+    <published>2023-02-15T06:20:32.000Z</published>
+    <updated>2023-02-15T06:22:35.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>Improved search result.  Hexo seems has a bug of no replacement of javascript files.</p><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Improved search result.  Hexo seems has a bug of no replacement of javascript files.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.yskz.dev/categories/hexo/"/>
+    
+    
+    <category term="search" scheme="https://blog.yskz.dev/tags/search/"/>
+    
+    <category term="theme" scheme="https://blog.yskz.dev/tags/theme/"/>
+    
+  </entry>
   
   <entry>
     <title>In-site search Hexo server success</title>
@@ -438,19 +461,6 @@
     <summary type="html">&lt;hr&gt;
 &lt;h2 id=&quot;title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS&quot;&gt;&lt;a href=&quot;#title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-</summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>fix timezone again</title>
-    <link href="https://blog.yskz.dev/2023/01/17/fix-timezone-again/"/>
-    <id>https://blog.yskz.dev/2023/01/17/fix-timezone-again/</id>
-    <published>2023-01-17T00:30:24.000Z</published>
-    <updated>2023-01-22T10:50:21.000Z</updated>
-    
     
     
     

@@ -16,43 +16,29 @@ function fetchData (fetchUrl) {
   })
 }
 
+/**
+ * 
+ * @param {Document} document 
+ * @param {string} query 
+ * @returns 
+ */
 function analyzeData(document, query) {
   const entries = document.getElementsByTagName('entry')
   const matchEntries = []
+  const regExp = new RegExp(query)
   for (var entry of entries) {
-    const regExp = new RegExp(query)
-    if (regExp.test(entry.children[0].textContent) ||
-        regExp.test(entry.children[2].textContent)) {
+     if (entry?.children[0]?.textContent && regExp.test(entry.children[0].textContent) ||
+        entry?.children[2]?.textContent && regExp.test(entry.children[2].textContent)) {
       matchEntries.push(entry)
     }
   }
   return matchEntries
 }
 
-function makeSearchResult (entries) {
-  let innerHTML = ''
-  for (let entry of entries) {
-    innerHTML += '<div class="search-result-entry">'
-    const title = entry.children[0].textContent
-    // const link = entry.children[1].textContent
-    const url = entry.children[2].textContent
-    const content = entry.children[3].textContent
-    // const tags = entry.children[4].textContent
-    innerHTML += '<h2><a href="' + url + '">' + title + '</a></h2>'
-    const thumbnail = /<img[^>]*>/.exec(content)
-    if (thumbnail && thumbnail.length >= 1) {
-      innerHTML += '<div class="search-result-thumbnail">' + thumbnail[1] + '</div>'
-    }
-    innerHTML += content.replace(/<[^>]*>/g, '').substring(0, 300)
-    innerHTML += '...</div>'
-  }
-  return innerHTML
-}
-
 /**
  * 
- * @param {Array<Node>} entries 
- * @returns {Node}
+ * @param {Array<Element>} entries 
+ * @returns {Element}
  */
 function makeSearchResultFromTemplates (entries) {
   let template_str = "template#search-result-container";
@@ -72,19 +58,59 @@ function makeSearchResultFromTemplates (entries) {
     throw `${template_str} is not found!`;
   }
   for (let entry of entries) {
-    const search_result_entry = document.importNode(template.content, true);
+    const entry_output = document.importNode(template.content, true);
     const title = entry.children[0].textContent
+    if (!title) {
+      throw "No title!";
+    }
     const url = entry.children[2].textContent
-    const content = entry.children[3].textContent
+    if (!url) {
+      throw "No url!";
+    }
+
     // const tags = entry.children[4].textContent
-    const ar = search_result_entry.querySelector('a.title');
+    const ar = entry_output.querySelector('a.title');
     ar.href = url;
     ar.innerText = title;
-    const ct = search_result_entry.querySelector('.content');
-    ct.innerText = content.replace(/<[^>]*>/g, '').substring(0, 300) + '...';
-    search_result_entries.appendChild(search_result_entry);
+    // pick up date from url beginning
+    const date_str = startsFromDate(url);
+    if (date_str) {
+      const dt = entry_output.querySelector('.date');
+      if (dt) {
+        dt.innerText = date_str;
+      }
+    }
+
+    const ct = entry_output.querySelector('.content');
+    if (ct){
+      const content = entry.children[3].textContent;
+      const content_tree = content ? new DOMParser().parseFromString(content, "text/html") : null;
+      const text_content = content_tree?.children[0]?.textContent;
+      if (text_content) {
+        // ct.innerText = content.replace(/<[^>]*>/g, '').substring(0, 300) + '...';
+        ct.innerText = text_content.substring(0, 300) + '...';
+      }
+    }
+    search_result_entries.appendChild(entry_output);
   }
   return search_result_container;
+}
+
+/**
+ * Check url string represents a valid date
+ * @param {string} url 
+ * @returns {string}
+ */
+function startsFromDate(url) {
+  const re = /(\d\d\d\d)\/(\d\d)\/(\d\d)/;
+  const date = re.exec(url);
+  if (date && date.length > 3) {
+    const dt = [date[1], date[2], date[3]].join('-');
+    const dateNum = Date.parse(dt);
+    if (!isNaN(dateNum))
+      return dt;
+  }
+  return '';
 }
 
 const search_result_str = "#search-result";

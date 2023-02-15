@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/
 https://blog.yskz.dev/2023/02/14/in-site-search-hexo-server-success/
 https://blog.yskz.dev/2023/02/11/in-site-search-half-success/
 https://blog.yskz.dev/2023/01/26/post-in-pug/
@@ -58,5 +59,6 @@ https://blog.yskz.dev/tags/harvest/
 https://blog.yskz.dev/tags/excerpt/
 https://blog.yskz.dev/tags/e-mail/
 https://blog.yskz.dev/tags/search/
+https://blog.yskz.dev/tags/theme/
 https://blog.yskz.dev/categories/job/
 https://blog.yskz.dev/categories/hexo/
