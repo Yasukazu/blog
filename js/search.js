@@ -1,3 +1,4 @@
+//@ts-check
 function fetchData (fetchUrl) {
   return new Promise(resolve => {
     const xhr = new XMLHttpRequest()
@@ -33,8 +34,10 @@ function makeSearchResult (entries) {
   for (let entry of entries) {
     innerHTML += '<div class="search-result-entry">'
     const title = entry.children[0].textContent
-    const url = entry.children[3].textContent
+    // const link = entry.children[1].textContent
+    const url = entry.children[2].textContent
     const content = entry.children[3].textContent
+    // const tags = entry.children[4].textContent
     innerHTML += '<h2><a href="' + url + '">' + title + '</a></h2>'
     const thumbnail = /<img[^>]*>/.exec(content)
     if (thumbnail && thumbnail.length >= 1) {
@@ -46,77 +49,96 @@ function makeSearchResult (entries) {
   return innerHTML
 }
 
-function getSearchQueryFromUrlParams () {
-  const params = window.location.search.substring(1).split('&');
-  const search = params.filter(param => param.search(/$search=/));
-  return search.length > 0 ? search[0].split('=')[1] : null;
+/**
+ * 
+ * @param {Array<Node>} entries 
+ * @returns {Node}
+ */
+function makeSearchResultFromTemplates (entries) {
+  let template_str = "template#search-result-container";
+  let template = document.querySelector(template_str);
+  if (!template) {
+    throw `${template_str} is not found!`;
+  }
+  const search_result_container = document.importNode(template.content, true);
+  const search_result_entries = search_result_container.querySelector('.entries');
+  if (!search_result_entries) {
+    throw `.entries is not found!`;
+  }
+
+  template_str = "template#search-result-entry";
+  template = document.querySelector(template_str);
+  if (!template) {
+    throw `${template_str} is not found!`;
+  }
+  for (let entry of entries) {
+    const search_result_entry = document.importNode(template.content, true);
+    const title = entry.children[0].textContent
+    const url = entry.children[2].textContent
+    const content = entry.children[3].textContent
+    // const tags = entry.children[4].textContent
+    const ar = search_result_entry.querySelector('a.title');
+    ar.href = url;
+    ar.innerText = title;
+    const ct = search_result_entry.querySelector('.content');
+    ct.innerText = content.replace(/<[^>]*>/g, '').substring(0, 300) + '...';
+    search_result_entries.appendChild(search_result_entry);
+  }
+  return search_result_container;
 }
 
-const template_search_result_str = "template#search-result";
-let searchResultStr = "search-result";
-let form = document.querySelector("form#search");
-if (!form) {
-  console.log("'form#search' is not found.");
+const search_result_str = "#search-result";
+const searchResult = document.querySelector(search_result_str);
+if (!searchResult) {
+  console.error(`${search_result_str} is not found!`);
+}
+
+const fetch_path = '/search.xml';
+const fetch_data = fetchData(fetch_path);
+if (!fetch_data) {
+  console.error("fetch_data promise is null!");
 }
 
 const search_text_tag = "input#search-text";
+const search_text = document.querySelector(search_text_tag);
+if (!search_text) {
+  console.error(search_text_tag + " is not found.");
+}
+
+/**
+ * 
+ * @returns {boolean}
+ */
 function search() {
-  const searchResult = document.querySelector(template_search_result_str);
+  if (!fetch_data) {
+    throw "'Cause fetch_data is null, exiting search()..";
+  }
   if (!searchResult) {
-    console.error(template_search_result_str + " is not found!");
-    return false;
+    throw search_result_str + " is not found!";
   }
-  const search_text = document.querySelector(search_text_tag);
   if (!search_text) {
-    console.error(search_text_tag + " is not found.");
-    return false;
-  }
-  if (search_text.value.length <= 0) {
-    console.error("search text length is 0!");
-    return false;
+    throw search_text_tag + " is not found.";
   }
   const queryWord = search_text.value;
-  const fetch_path = '/search.xml';
-  searchResult.textContent = `FetchData from ${fetch_path} with ${queryWord}`;
-  fetchData('/search.xml').then(document => {
+  if (!queryWord || queryWord.length <= 0) {
+    console.log("No search_text.value or search_text.length <= 0 !");
+    return false;
+  }
+  // let search_result = `FetchData from ${fetch_path} with ${queryWord}`;
+  fetch_data.then(document => {
     const entries = analyzeData(document, queryWord); 
     if (entries.length <= 0) {
       console.log("entries.length is zero.");
     }
-    debugger;
-    searchResult.innerHTML = makeSearchResult(entries)
+    while (searchResult.firstChild) {
+      searchResult.removeChild(searchResult.firstChild);
+    }
+    const search_result = makeSearchResultFromTemplates(entries)
+    if (search_result) {
+      searchResult.appendChild(search_result);
+    }
+    // searchResult.innerHTML = search_result;
+    // Event.preventDefault();
   })
   return true;
 }
-
-// Replace serchResultStr to 'plugin-search-result' if '#search-result' not found.
-function init_search() {
-  let searchResult = document.querySelector(`#${searchResultStr}`);
-  if (!searchResult) {
-    const url_prefix = "plugin-";
-    console.log(`#${searchResultStr} is not found.`);
-    searchResultStr = url_prefix + searchResultStr;
-    console.log(`Fell back to #${searchResultStr}.`);
-    searchResult = document.querySelector(`#${searchResultStr}`);
-    if (!searchResult) {
-      console.error(searchResultStr + " is not found!");
-      return false;
-    }
-    searchResult.textContent = 'Loading...'
-    fetchData('/search.xml').then(document => {
-      const queryWord = getSearchQueryFromUrlParams();
-      if (queryWord == null) {
-        console.log("Query word is null.");
-        return;
-      }
-      console.log(`Query word is ${queryWord}.`);
-      const entries = analyzeData(document, queryWord); 
-      searchResult.innerHTML = makeSearchResult(entries)
-    })
-    return true;
-  }
-  return true;
-}
-
-if (!init_search())
-  console.error("init_search() call failed!");
