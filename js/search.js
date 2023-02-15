@@ -1,5 +1,12 @@
 //@ts-check
+/**
+ * 
+ * @param {string} fetchUrl 
+ * @returns 
+ */
 function fetchData (fetchUrl) {
+  if (!fetchUrl)
+    throw "No fetchUrl!";
   return new Promise(resolve => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', fetchUrl, true)
@@ -20,7 +27,7 @@ function fetchData (fetchUrl) {
  * 
  * @param {Document} document 
  * @param {string} query 
- * @returns 
+ * @returns {Array<Element>}
  */
 function analyzeData(document, query) {
   const entries = document.getElementsByTagName('entry')
@@ -91,7 +98,7 @@ function makeSearchResultFromTemplates (entries) {
         ct.innerText = text_content.substring(0, 300) + '...';
       }
     }
-    search_result_entries.appendChild(entry_output);
+    search_result_entries.append(entry_output);
   }
   return search_result_container;
 }
@@ -133,38 +140,39 @@ if (!search_text) {
 
 /**
  * 
- * @returns {boolean}
+ * @returns {boolean|undefined}
  */
 function search() {
   if (!fetch_data) {
-    throw "'Cause fetch_data is null, exiting search()..";
+    throw "'Cause fetch_data is null, exiting search().."
   }
   if (!searchResult) {
-    throw search_result_str + " is not found!";
+    throw search_result_str + " is not found!"
   }
   if (!search_text) {
-    throw search_text_tag + " is not found.";
+    throw search_text_tag + " is not found."
   }
-  const queryWord = search_text.value;
+  const queryWord = search_text.value
   if (!queryWord || queryWord.length <= 0) {
-    console.log("No search_text.value or search_text.length <= 0 !");
-    return false;
+    console.log("No search_text.value or search_text.length <= 0 !")
+    return false
   }
   // let search_result = `FetchData from ${fetch_path} with ${queryWord}`;
   fetch_data.then(document => {
-    const entries = analyzeData(document, queryWord); 
+    const entries = analyzeData(document, queryWord)
     if (entries.length <= 0) {
-      console.log("entries.length is zero.");
+      console.log("entries.length is zero.")
     }
     while (searchResult.firstChild) {
-      searchResult.removeChild(searchResult.firstChild);
+      debugger;
+      searchResult.firstChild.remove()
     }
     const search_result = makeSearchResultFromTemplates(entries)
     if (search_result) {
-      searchResult.appendChild(search_result);
+      searchResult.append(search_result)
     }
     // searchResult.innerHTML = search_result;
     // Event.preventDefault();
   })
-  return true;
+  return true
 }
