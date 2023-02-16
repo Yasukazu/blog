@@ -1,12 +1,11 @@
 //@ts-check
+// import {XRegExp} from 'xregexp';
 /**
  * 
  * @param {string} fetchUrl 
- * @returns 
+ * @returns {Promise}
  */
 function fetchData (fetchUrl) {
-  if (!fetchUrl)
-    throw "No fetchUrl!";
   return new Promise(resolve => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', fetchUrl, true)
@@ -23,23 +22,37 @@ function fetchData (fetchUrl) {
   })
 }
 
+// import XRegExp from 'xregexp/xregexp-all.js';
 /**
  * 
  * @param {Document} document 
- * @param {string} query 
- * @returns {Array<Element>}
+ * @param {string} query_str 
+ * @returns 
  */
-function analyzeData(document, query) {
-  const entries = document.getElementsByTagName('entry')
-  const matchEntries = []
-  const regExp = new RegExp(query)
+function analyzeData(document, query_str) {
+  const entries = document.getElementsByTagName('entry');
+  const matchEntries = [];
+  const normalized_query = query_str.normalize('NFKD');
+  const combining_chars_regex = /\p{Mark}/gu;
+  const query = normalized_query.replace(combining_chars_regex, '');
+  const query_regex = RegExp(query);
+  const test_children = [0, 2];
   for (var entry of entries) {
-     if (entry?.children[0]?.textContent && regExp.test(entry.children[0].textContent) ||
-        entry?.children[2]?.textContent && regExp.test(entry.children[2].textContent)) {
-      matchEntries.push(entry)
+    let match = false;
+    let content = '';
+    for (var cn of test_children) {
+      let _content = entry.children[cn]?.textContent;
+      if (_content)
+        content = _content.normalize('NFKD').replace(combining_chars_regex, "");
+      if (query_regex.test(content)) {
+        match = true;
+        break;
+      }
     }
+    if (match)
+      matchEntries.push(entry);
   }
-  return matchEntries
+  return matchEntries;
 }
 
 /**
@@ -140,39 +153,38 @@ if (!search_text) {
 
 /**
  * 
- * @returns {boolean|undefined}
+ * @returns {boolean}
  */
 function search() {
   if (!fetch_data) {
-    throw "'Cause fetch_data is null, exiting search().."
+    throw "'Cause fetch_data is null, exiting search()..";
   }
   if (!searchResult) {
-    throw search_result_str + " is not found!"
+    throw search_result_str + " is not found!";
   }
   if (!search_text) {
-    throw search_text_tag + " is not found."
+    throw search_text_tag + " is not found.";
   }
-  const queryWord = search_text.value
+  const queryWord = search_text.value;
   if (!queryWord || queryWord.length <= 0) {
-    console.log("No search_text.value or search_text.length <= 0 !")
-    return false
+    console.log("No search_text.value or search_text.length <= 0 !");
+    return false;
   }
   // let search_result = `FetchData from ${fetch_path} with ${queryWord}`;
   fetch_data.then(document => {
-    const entries = analyzeData(document, queryWord)
+    const entries = analyzeData(document, queryWord); 
     if (entries.length <= 0) {
-      console.log("entries.length is zero.")
+      console.log("entries.length is zero.");
     }
     while (searchResult.firstChild) {
-      debugger;
-      searchResult.firstChild.remove()
+      searchResult.firstChild.remove();
     }
     const search_result = makeSearchResultFromTemplates(entries)
     if (search_result) {
-      searchResult.append(search_result)
+      searchResult.append(search_result);
     }
     // searchResult.innerHTML = search_result;
     // Event.preventDefault();
   })
-  return true
+  return true;
 }

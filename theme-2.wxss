@@ -1,0 +1,113 @@
+:root {
+  --code-color: #ff0;
+  --main-color: #000;
+  --main-bg-color: #eee;
+  --header-bg-color: #ddd;
+}
+header.included {
+  background-color: var(--header-bg-color);
+  padding: 0.5em;
+}
+main {
+  padding: 0.5em;
+}
+main.index article.post {
+  border: thin solid var(--main-color);
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+footer {
+  background-color: #a52a2a;
+  padding: 0.5em;
+}
+hgroup.title-date > h2.title {
+  display: inline;
+}
+hgroup.title-date > time.date {
+  font-size: 1em;
+  margin-left: 1em;
+}
+hgroup.title-subtitle > * {
+  display: inline;
+}
+hgroup.title-subtitle > p::before {
+  content: "-- ";
+}
+ul.header {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+ul.header > li {
+  margin-left: 1em;
+}
+section.category > h3.cat-1 {
+  display: inline;
+  margin-right: 0.5em;
+}
+article.post > ul.tags {
+  display: inline;
+  margin-left: 1em;
+  list-style-type: none;
+}
+article.post > ul.tags > li {
+  display: inline;
+  margin-left: 1em;
+}
+article.post > header {
+  background-color: #fff;
+}
+span.length {
+  margin-left: 1em;
+}
+fieldset.form {
+  background-color: #aaa;
+}
+fieldset.form > legend {
+  background-color: #fff;
+}
+form.send-message {
+  display: flex;
+  flex-direction: column;
+}
+form.send-message div.form-part {
+  display: flex;
+  flex-direction: row;
+}
+form.send-message div.form-part > label::after {
+  content: ": ";
+}
+form.send-message div.form-part.col {
+  flex-direction: column;
+}
+form.send-message div.submit {
+  flex-direction: row-reverse;
+}
+form.send-message div.submit > button.submit {
+  border-radius: 0.4em;
+  margin-top: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+code {
+  font-family: monospace;
+  color: var(--code-color);
+  background-color: #000;
+}
+code::before {
+  border-bottom: thin solid #000;
+}
+code::after {
+  border-top: thin solid #000;
+}
+div.search-result-container {
+  border: thin solid #000;
+}
+div.search-result-container li.search-result-entry {
+  background-color: #fff;
+}
+div.search-result-container li.search-result-entry .date {
+  margin-left: 1em;
+}

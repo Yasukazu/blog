@@ -122,7 +122,10 @@ code {
 
 div.search-result-container {
 	border: thin solid black;
-}
-li.search-result-entry {
-	background-color: #fff;
+    li.search-result-entry {
+    	background-color: #fff;
+		.date {
+			margin-left: 1em;
+		}
+    }
 }
