@@ -25,9 +25,9 @@ function fetchData (fetchUrl) {
 // import XRegExp from 'xregexp/xregexp-all.js';
 /**
  * 
- * @param {Document} document 
- * @param {string} query_str 
- * @returns 
+ * @param {Document} document // XML
+ * @param {string} query_str // Regex expression
+ * @returns {Array<Element>}
  */
 function analyzeData(document, query_str) {
   const entries = document.getElementsByTagName('entry');
