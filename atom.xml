@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-16T23:00:43.695Z</updated>
+  <updated>2023-02-17T07:52:37.068Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ignore diacritical marks in search</title>
+    <link href="https://blog.yskz.dev/2023/02/17/ignore-diacritical-marks-in-search/"/>
+    <id>https://blog.yskz.dev/2023/02/17/ignore-diacritical-marks-in-search/</id>
+    <published>2023-02-17T07:43:33.000Z</published>
+    <updated>2023-02-17T07:52:37.068Z</updated>
+    
+    <content type="html"><![CDATA[<p>Search ignores marks like tilde(like letter ‘n’ with upper wave in <em>España</em>).</p><span id="more"></span><p>Japanese dakuten(だくてん) and handakuten(はんだくてん) are kind of diacritical mark.</p><p>Search also ignores cases aka small or capital letters.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Search ignores marks like tilde(like letter ‘n’ with upper wave in &lt;em&gt;España&lt;/em&gt;).&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.yskz.dev/categories/hexo/"/>
+    
+    
+    <category term="ym-start" scheme="https://blog.yskz.dev/tags/ym-start/"/>
+    
+  </entry>
   
   <entry>
     <title>Enabled post_asset_folder for _config.yml</title>
@@ -438,28 +459,6 @@
     
     
     <category term="starter-theme" scheme="https://blog.yskz.dev/tags/starter-theme/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>public_dir:docs;url:.../hexo-blog</title>
-    <link href="https://blog.yskz.dev/2023/01/22/public-dir-docs-url-hexo-blog/"/>
-    <id>https://blog.yskz.dev/2023/01/22/public-dir-docs-url-hexo-blog/</id>
-    <published>2023-01-22T13:38:17.000Z</published>
-    <updated>2023-01-22T14:06:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Edited-config-yml-を編集した"><a href="#Edited-config-yml-を編集した" class="headerlink" title="Edited _config.yml を編集した"></a>Edited <code>_config.yml</code> を編集した</h1><ul><li>Set <code>public_dir</code> name as <code>docs</code> to make it the root directory of GitHub Pages.</li><li>Set <code>url</code> to ends with <code>hexo-blog</code> : the same as GitHub repository name.</li></ul><h2 id="Countermeasure-to-preview-with-Live-Server"><a href="#Countermeasure-to-preview-with-Live-Server" class="headerlink" title="Countermeasure to preview with Live Server:"></a>Countermeasure to preview with Live Server:</h2><ul><li>Made a symbolic link as named <code>hexo-blog</code> to point <code>docs</code> directory.</li></ul><h2 id="Unable-to-add-docs-directory-recursively"><a href="#Unable-to-add-docs-directory-recursively" class="headerlink" title="Unable to add docs directory recursively"></a>Unable to add <code>docs</code> directory recursively</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Edited-config-yml-を編集した&quot;&gt;&lt;a href=&quot;#Edited-config-yml-を編集した&quot; class=&quot;headerlink&quot; title=&quot;Edited _config.yml を編集した&quot;&gt;&lt;/a&gt;Edited &lt;code&gt;_co</summary>
-      
-    
-    
-    
-    
-    <category term="GitHub, url, public_dir" scheme="https://blog.yskz.dev/tags/github-url-public-dir/"/>
     
   </entry>
   

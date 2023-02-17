@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Ignore diacritical marks in search</title>
+      <link href="/2023/02/17/ignore-diacritical-marks-in-search/"/>
+      <url>/2023/02/17/ignore-diacritical-marks-in-search/</url>
+      
+        <content type="html"><![CDATA[<p>Search ignores marks like tilde(like letter ‘n’ with upper wave in <em>España</em>).</p><span id="more"></span><p>Japanese dakuten(だくてん) and handakuten(はんだくてん) are kind of diacritical mark.</p><p>Search also ignores cases aka small or capital letters.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ym-start </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Enabled post_asset_folder for _config.yml</title>
       <link href="/2023/02/17/enabled-post-asset-folder-for-config-yml/"/>
       <url>/2023/02/17/enabled-post-asset-folder-for-config-yml/</url>
