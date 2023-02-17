@@ -36,7 +36,7 @@ function analyzeData(document, query_str) {
   const normalized_query = query_str.normalize('NFKD');
   const combining_chars_regex = /\p{Mark}/gu;
   const query = normalized_query.replace(combining_chars_regex, '');
-  const query_regex = RegExp(query);
+  const query_regex = RegExp(query, 'i'); // ignore case
   const test_children = [0, 2];
   const test_items = ['title', 'content'];
   for (let entry of entries) {
