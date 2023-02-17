@@ -115,5 +115,5 @@ div.search-result-container li.search-result-entry {
   background-color: #fff;
 }
 div.search-result-container li.search-result-entry .date {
-  margin-left: 1em;
+  margin: 0 1em;
 }
