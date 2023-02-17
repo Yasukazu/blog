@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="65.496" y="67.168" width="185.619" height="255.853" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <rect x="74.972" y="118.45" width="98.105" height="25.084" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="220.178" cy="130.156" rx="18.116" ry="10.033"/>
+  <rect x="93.924" y="170.847" width="124.303" height="57.971" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <rect x="93.367" y="237.18" width="124.303" height="57.971" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="96.154" y="135.73">Input</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="182.553" y="111.204">Submit</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="119.565" y="194.816">Reslut 1</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="119.008" y="259.476">Result 2</text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="69.955" y="40.412">Search box</text>
+</svg>
