@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Enabled post_asset_folder for _config.yml</title>
+      <link href="/2023/02/17/enabled-post-asset-folder-for-config-yml/"/>
+      <url>/2023/02/17/enabled-post-asset-folder-for-config-yml/</url>
+      
+        <content type="html"><![CDATA[<p>If <code>post_asset_folder</code> is true,  the same name directory of the created post file name without extension.</p><span id="more"></span><p>In post document, the asset folder and file can get with:</p><pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% asset_path filename %&#125;</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Added date in search result. Hexo generate won&#39;t update javascript files.</title>
       <link href="/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/"/>
       <url>/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/</url>

@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/02/17/enabled-post-asset-folder-for-config-yml/
 https://blog.yskz.dev/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/
 https://blog.yskz.dev/2023/02/14/in-site-search-hexo-server-success/
 https://blog.yskz.dev/2023/02/11/in-site-search-half-success/

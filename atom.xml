@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-15T06:22:35.473Z</updated>
+  <updated>2023-02-16T23:00:43.695Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Enabled post_asset_folder for _config.yml</title>
+    <link href="https://blog.yskz.dev/2023/02/17/enabled-post-asset-folder-for-config-yml/"/>
+    <id>https://blog.yskz.dev/2023/02/17/enabled-post-asset-folder-for-config-yml/</id>
+    <published>2023-02-16T22:39:40.000Z</published>
+    <updated>2023-02-16T23:00:43.695Z</updated>
+    
+    <content type="html"><![CDATA[<p>If <code>post_asset_folder</code> is true,  the same name directory of the created post file name without extension.</p><span id="more"></span><p>In post document, the asset folder and file can get with:</p><pre class="language-njk" data-language="njk"><code class="language-njk">&#123;% asset_path filename %&#125;</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;If &lt;code&gt;post_asset_folder&lt;/code&gt; is true,  the same name directory of the created post file name without extension.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Added date in search result. Hexo generate won&#39;t update javascript files.</title>
@@ -443,27 +460,6 @@
     
     
     <category term="GitHub, url, public_dir" scheme="https://blog.yskz.dev/tags/github-url-public-dir/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Installed _hexo-blog_ to my VPS</title>
-    <link href="https://blog.yskz.dev/2023/01/22/Installed-hexo-blog-to-my-VPS/"/>
-    <id>https://blog.yskz.dev/2023/01/22/Installed-hexo-blog-to-my-VPS/</id>
-    <published>2023-01-22T10:53:08.000Z</published>
-    <updated>2023-01-22T10:53:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h2 id="title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS"><a href="#title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS" class="headerlink" title="title: Install ‘hexo-blog’ to my VPSdate: 2023-01-22 17:48:53tags: VPS"></a>title: Install ‘hexo-blog’ to my VPS<br>date: 2023-01-22 17:48:53<br>tags: VPS</h2><p>Hoped to login from VS Code to edit files and execute Hexo generate.<br>But the VPS terminal in VS Code freezed when installed VS Code plugins.<br>Why need for plugin: Live server to check rendered HTML.</p><p>Result: <em>Un-use-able</em> because the remote(VPS) cuts its connection when <em>‘Hexo generate’</em> starts.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-22-17-48-53tags-VPS&quot;&gt;&lt;a href=&quot;#title-Install-‘hexo-blog’-to-my-VPSdate-2023-01-</summary>
-      
-    
-    
-    
     
   </entry>
   
