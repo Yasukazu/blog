@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-17T19:36:32.300Z</updated>
+  <updated>2023-02-18T09:06:13.921Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Japanese yam and soybean planting visit</title>
+    <link href="https://blog.yskz.dev/2023/02/18/japanese-yam-and-soybean-planting-visit/"/>
+    <id>https://blog.yskz.dev/2023/02/18/japanese-yam-and-soybean-planting-visit/</id>
+    <published>2023-02-18T08:43:11.000Z</published>
+    <updated>2023-02-18T09:06:13.921Z</updated>
+    
+    <content type="html"><![CDATA[<p>We attended an inspection of farmers planting Japanese mountain yam and young soybean.</p><span id="more"></span><ol><li>Japanese mountain yam</li></ol><ul><li>Start to grow virus-free fetus</li><li>With not-patented method anyone can plant with member fee(JPY 5,000 / year)</li><li>Need to fence against wild deer, serow and boar.</li><li>Hard to plant on old wet rice farm</li></ul><ol start="2"><li>Young soybean in greenhouse</li></ol><ul><li>4-time crop / year in greenhouse with active(fuel consuming) heater</li><li>3-time crop in greenhouse without heater</li><li>Need to maintain water not to grow too large nor too small</li><li>Hard after-harvest process: fast packaging needs long-term job experience</li><li>Very hot in summer season: over 40 degrees in greenhouse</li></ul><h3 id="figure-of-Japanese-mountain-yam-planting">figure of Japanese mountain yam planting</h3><?xml version="1.0" encoding="utf-8"?><svg viewBox="0 0 374.025 231.884" xmlns="http://www.w3.org/2000/svg">  <rect x="107.301" y="120.123" width="169.454" height="40.134" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>  <rect x="123.467" y="108.974" width="136.566" height="32.887" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 287.904 122.352 C 285.789 122.352 276.508 126.563 280.658 130.714 C 281.94 131.996 294.636 138.474 289.019 144.091 C 287.2 145.911 281.884 145.095 280.1 146.878 C 276.238 150.741 283.001 157.469 285.117 157.469"/>  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="199.833" y="177.536"> </text>  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="212.653" y="167.503" transform="matrix(1, 0, 0, 1, -18.394644, 23.968779)">Wave plate<tspan x="212.6529998779297" dy="1em">​</tspan></text>  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.5px;" x="102.843" y="83.333">Plastic bag</text></svg>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;We attended an inspection of farmers planting Japanese mountain yam and young soybean.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Agri" scheme="https://blog.yskz.dev/categories/agri/"/>
+    
+    
+    <category term="Japanese-moutain-yam" scheme="https://blog.yskz.dev/tags/japanese-moutain-yam/"/>
+    
+    <category term="soybean" scheme="https://blog.yskz.dev/tags/soybean/"/>
+    
+  </entry>
   
   <entry>
     <title>Ignore diacritical marks in search</title>
@@ -442,29 +465,6 @@
     
     
     <category term="GitHub-Pages" scheme="https://blog.yskz.dev/tags/github-pages/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Switched to my fork of &#39;hexo-theme-starter&#39;</title>
-    <link href="https://blog.yskz.dev/2023/01/24/Switched-to-hexo-theme-starter/"/>
-    <id>https://blog.yskz.dev/2023/01/24/Switched-to-hexo-theme-starter/</id>
-    <published>2023-01-24T06:30:44.000Z</published>
-    <updated>2023-01-24T07:08:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Felt to change my Hexo theme because current theme seemed too complicated to modify.</p><p><em>starter</em> theme looked simpler than current one.</p><p>At first, it had no style sheet.  So I tried to add a style sheet following the same way of the previous theme.</p><ul><li>Added <code>source/css/theme.css</code> file</li><li>Added a stylesheet as <code>href=url_for(&#39;css/theme.css&#39;)</code> in <code>layout/_include/head.pug</code></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Felt to change my Hexo theme because current theme seemed too complicated to modify.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;starter&lt;/em&gt; theme looked simpler than cu</summary>
-      
-    
-    
-    
-    
-    <category term="starter-theme" scheme="https://blog.yskz.dev/tags/starter-theme/"/>
     
   </entry>
   
