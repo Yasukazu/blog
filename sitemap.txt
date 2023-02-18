@@ -1,3 +1,4 @@
+https://blog.yskz.dev/2023/02/18/subscribed-boxy-svg-com-for-svg-drawing-online/
 https://blog.yskz.dev/2023/02/18/japanese-yam-and-soybean-planting-visit/
 https://blog.yskz.dev/2023/02/17/enabled-post-asset-folder-for-config-yml/
 https://blog.yskz.dev/2023/02/17/ignore-diacritical-marks-in-search/
@@ -68,6 +69,7 @@ https://blog.yskz.dev/tags/embed/
 https://blog.yskz.dev/tags/post/
 https://blog.yskz.dev/tags/japanese-moutain-yam/
 https://blog.yskz.dev/tags/soybean/
+https://blog.yskz.dev/tags/svg-editor/
 https://blog.yskz.dev/categories/job/
 https://blog.yskz.dev/categories/hexo/
 https://blog.yskz.dev/categories/agri/
