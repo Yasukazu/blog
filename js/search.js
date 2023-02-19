@@ -1,5 +1,5 @@
 //@ts-check
-// import {XRegExp} from 'xregexp';
+// import {makeThumbnail} from './thumbnail.js';
 /**
  * 
  * @param {string} fetchUrl 
@@ -88,7 +88,7 @@ function makeSearchResultFromTemplates (entries, items) {
   if (!template) {
     throw `'${template_str}' template is not found!`;
   }
-  for (const [i, entry] of entries.entries()) {
+  for (const [index, entry] of entries.entries()) {
     const entry_output = document.importNode(template.content, true);
     const title = entry.querySelector('title')?.textContent; // children[0]
     if (!title) {
@@ -98,15 +98,12 @@ function makeSearchResultFromTemplates (entries, items) {
     if (!url) {
       throw "No 'url' in entry!";
     }
-
-    // const tags = entry.children[4].textContent
     const ar = entry_output.querySelector('a.title');
     if (!ar) {
       throw "No 'a' in template!"
     }
     ar.href = url;
     ar.innerText = title;
-    // pick up date from url beginning
     const date_str = startsFromDate(url);
     if (date_str) {
       const dt = entry_output.querySelector('.date');
@@ -114,21 +111,40 @@ function makeSearchResultFromTemplates (entries, items) {
         dt.innerText = date_str;
       }
     }
-
     const ct = entry_output.querySelector('.content');
     if (ct){
-      const content = entry.querySelector('content')?.textContent;
-      if (content) {
-        const content_tree = new DOMParser().parseFromString(content, "text/html");
-        const text_content = content_tree?.children[0]?.textContent;
-        if (text_content) {
-          // ct.innerText = content.replace(/<[^>]*>/g, '').substring(0, 300) + '...';
-          const chars = Array.from(text_content); // code point sequences
-          const limitedStr = getFirstNChars(chars, 300);
-          // const innerText = chars.slice(0, 300).join('').replace(/\s+/g, ' ');
-          ct.innerText = limitedStr;
+      const content_elem = entry.querySelector('content'); // ?.textContent;
+      if (content_elem && content_elem.textContent) {
+        const content_tree = new DOMParser().parseFromString(content_elem.textContent, "text/html");
+        const innerHTML = content_tree?.children[0]?.innerHTML; // textContent;
+        if (innerHTML) {
+          const cpcp = Array.from(innerHTML.replace(/<[^>]*>/g, ' ')); // code point sequences
+          const length = ct.getAttribute('data-length');
+          let len = 300;
+          if (length) {
+            const _len = parseInt(length, 10);
+            if (_len) {
+              len = _len;
+            }
+          }
+          const {output: limitedStr, on_break: onBreak} = getFirstNChars(cpcp, len);
+          ct.innerText = limitedStr + (onBreak ? '...' : '');
+          const img_out = entry_output.querySelector('img');
+          if (img_out) {
+            const img_in = content_tree.querySelector('img');
+            if (img_in) {
+              const img_src = img_in.getAttribute('src');
+              if (img_src) {
+                img_out.setAttribute('src', img_src);
+              }
+            }
+          }
         }
       }
+    }
+    const it = entry_output.querySelector('.found-in');
+    if (it) {
+      it.innerText += items[index];
     }
     search_result_entries.append(entry_output);
   }
@@ -139,12 +155,13 @@ function makeSearchResultFromTemplates (entries, items) {
  * 
  * @param {string[]} src 
  * @param {Number} n 
- * @returns {string}
+ * @returns {Object}
  */
 function getFirstNChars(src, n) {
   let lc = '';
   let i = 0;
   let out = '';
+  let on_break = false;
   for (let c of src) {
     if (lc === ' ' && lc === c) {
       continue;
@@ -153,10 +170,12 @@ function getFirstNChars(src, n) {
       lc = c;
     }
     out += c;
-    if(++i >= n)
+    if(++i >= n) {
+      on_break = true;
       break;
+    }
   }
-  return out;
+  return {output: out, on_break: on_break};
 }
 
 /**

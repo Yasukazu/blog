@@ -1,0 +1,167 @@
+:root {
+	--code-color: #ff0;
+	--code-bg-color: #0d0d73;
+	--main-color: #000;
+	--main-bg-color: #eee;
+	--header-bg-color: #ddd;
+	--footer-bg-color: #eb8347;
+	--form-bg-color: #99eb47;
+}
+header {
+	&.included {
+		background-color: var(--header-bg-color);
+		padding: 0.5em;
+	}
+}
+main {
+	color: var(--main-color);
+	background-color: var(--main-bg-color);
+	padding: 0.5em;
+	&.index {
+		article {
+			&.post {
+				border: thin solid var(--main-color);
+				margin-bottom: 1em;
+				padding: 0.5em;
+			}
+		}
+	}
+}
+footer {
+	background-color: var(--footer-bg-color);
+	padding: 0.5em;
+}
+hgroup {
+	&.title-date {
+		& > h2 {
+			&.title {
+				display: inline;
+			}
+		}
+		& > time {
+			&.date {
+				font-size: 1em;
+				margin-left: 1em;
+			}
+		}
+	}
+	&.title-subtitle {
+		& > * {
+			display: inline;
+		}
+		& > p {
+			&::before {
+				content: "-- ";
+			}
+		}
+	}
+}
+ul {
+	&.header {
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+		justify-content: space-evenly;
+		& > li {
+			margin-left: 1em;
+		}
+	}
+}
+section {
+	&.category {
+		& > h3 {
+			&.cat-1 {
+				display: inline;
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+article {
+	&.post {
+		& > ul {
+			&.tags {
+				display: inline;
+				margin-left: 1em;
+				list-style-type: none;
+				& > li {
+					display: inline;
+					margin-left: 1em;
+				}
+			}
+		}
+		& > header {
+			background-color: var(--main-bg-color);
+		}
+	}
+}
+span {
+	&.length {
+		margin-left: 1em;
+	}
+}
+fieldset {
+	&.form {
+		background-color: var(--form-bg-color);
+		& > legend {
+			filter: brightness(70%);
+		}
+	}
+}
+form {
+	&.send-message {
+		display: flex;
+		flex-direction: column;
+		div {
+			&.form-part {
+				display: flex;
+				flex-direction: row;
+				& > label {
+					&::after {
+						content: ": ";
+					}
+				}
+				&.col {
+					flex-direction: column;
+				}
+			}
+			&.submit {
+				flex-direction: row-reverse;
+				& > button {
+					&.submit {
+						border-radius: 0.4em;
+						margin-top: 1em;
+						width: fit-content;
+					}
+				}
+			}
+		}
+	}
+}
+code {
+	font-family: monospace;
+	color: var(--code-color);
+	background-color: var(--code-bg-color);
+	&::before {
+		border-bottom: thin solid #000;
+	}
+	&::after {
+		border-top: thin solid #000;
+	}
+}
+div {
+	&.search-result-container {
+		border: thin solid #000;
+		li {
+			&.search-result-entry {
+				background-color: #fff;
+				.date {
+					margin: 0 1em;
+				}
+				img {
+					width: 20%;
+				}
+			}
+		}
+	}
+}

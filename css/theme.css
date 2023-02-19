@@ -117,3 +117,6 @@ div.search-result-container li.search-result-entry {
 div.search-result-container li.search-result-entry .date {
   margin: 0 1em;
 }
+div.search-result-container li.search-result-entry > img {
+  width: 20%;
+}
