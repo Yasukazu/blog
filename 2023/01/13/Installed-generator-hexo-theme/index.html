@@ -26,18 +26,61 @@
             <li class="archives"><a href="/archives/">Posts</a></li>
             <li class="about"><a href="/about/">About</a></li>
         </ul>
-        <div id="search"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input class="submit" type="submit" onclick="search()"></div>
-        <div id="search-result"></div>
-    </header><template id="search-result-container">
+    </header>
+    <script type="module">
+        import
+        {
+            exec_search,
+            fetchData
+        }
+        from "./js/analyze-data.js";
+
+        function search()
+        {
+            const input = document.getElementById("search-text");
+            if (!input) throw Error(`No ${search_text_id}`);
+            if (input.value)
+            {
+                console.log(`Input text is set as: "${input.value}"`);
+                const ignore_case_element = document.getElementById("ignore-case");
+                if (!ignore_case_element) throw Error(`No ${ignore_case_id} !`);
+                const ignore_case = ignore_case_element.checked ? true : false;
+                console.log(`Ignore case is set as: ${ignore_case}`);
+                const ignore_accents_element = document.getElementById("ignore-accents");
+                if (!ignore_accents_element) throw Error(`No ${ignore_accents_id} !`);
+                const ignore_accents = ignore_accents_element.checked ? true : false;
+                console.log(`Ignore accents is set as: ${ignore_accents}`);
+                exec_search(fetchData(), input.value,
+                {
+                    ignore_case,
+                    ignore_accents
+                });
+            }
+            else console.log(`No input text.`);
+        }
+        const submit_button = document.getElementById("submit-search");
+        if (!submit_button)
+        {
+            Error(`No submit_button`);
+        }
+        else
+        {
+            submit_button.onclick = search;
+            console.log(`submit_button.onclick is set to function search()`)
+        }
+
+    </script>
+    <div id="search-input"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input id="ignore-case" type="checkbox" checked><label for="ignore-case">Ignore case</label><input id="ignore-accents" type="checkbox" checked><label for="ignore-accents">Ignore accents</label><button id="submit-search" onClick="search()">Search</button></div>
+    <div id="search-result-output"></div><template id="search-result-container">
         <div class="search-result-container">
             <h2>Search result</h2>
             <ul class="entries"></ul>
         </div>
     </template><template id="search-result-entry">
-        <li class="search-result-entry"><a class="title"></a><time class="date"></time><small class="found-in">Found in: </small>
+        <li class="search-result-entry"><a class="title"> time.date</a>
             <p class="content" data-length="200"></p><img class="thumbnail">
         </li>
-    </template><!-- /search/?search=--><!--  form.search--><!--    input(type="text" id="search-text")--><!--    button(id="search-submit") In-site Search--><!--  div#google_translate_element-->
+    </template>
     <article id="post">
         <header class="post">
             <h1 class="title">Installed 'generator-hexo-theme'</h1><time class="date">2023-01-13</time>
@@ -61,8 +104,7 @@
         <div><a href="/2023/01/12/Run-Hexo-npx/">Run Hexo 'npx' in Gitpod &rarr;</a></div>
         <div><a href="/2023/01/13/Installed-generator-hexo-theme-1/">&larr; Installed 'generator-hexo-theme'</a></div>
     </div>
-    <footer><small>Theme(<a target="_blank" rel="noopener" href="https://github.com/yasukazu/ym-start"><strong>ym-start</strong> theme</a>) is created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer>
-    <script src="/js/search.js" defer></script>
+    <footer><small>Theme(<a target="_blank" rel="noopener" href="https://github.com/yasukazu/ym-start"><strong>ym-start</strong> theme</a>) is created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer><!-- script(src="/js/search.js" defer)-->
 </body>
 
 </html>
