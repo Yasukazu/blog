@@ -1,5 +1,4 @@
 //@ts-check
-import { startsFromDate, getFirstNChars } from "./search.js";
 import { mark_text } from "./analyze-data.js";
 export { SearchOutput };
 
@@ -128,4 +127,49 @@ class SearchOutput {
     else
       console.error(`No entry output '.content'`);
   }
+}
+
+/**
+ * 
+ * @param {string} src 
+ * @param {Number} n 
+ * @returns {Object}
+ */
+function getFirstNChars(src, n) {
+  const array = Array.from(src); // every code point
+  let lc = '';
+  let i = 0;
+  let out = '';
+  let on_break = false;
+  for (let c of array) {
+    if (lc === ' ' && lc === c) {
+      continue;
+    }
+    else {
+      lc = c;
+    }
+    out += c;
+    if (++i >= n) {
+      on_break = true;
+      break;
+    }
+  }
+  return { output: out, on_break: on_break };
+}
+
+/**
+ * Check url string represents a valid date
+ * @param {string} url 
+ * @returns {string}
+ */
+function startsFromDate(url) {
+  const re = /(\d\d\d\d)\/(\d\d)\/(\d\d)/;
+  const date = re.exec(url);
+  if (date && date.length > 3) {
+    const dt = [date[1], date[2], date[3]].join('-');
+    const dateNum = Date.parse(dt);
+    if (!isNaN(dateNum))
+      return dt;
+  }
+  return '';
 }
