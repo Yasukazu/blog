@@ -27,6 +27,46 @@
             <li class="about"><a href="/about/">About</a></li>
         </ul>
     </header>
+    <div id="search-input"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input id="ignore-case" type="checkbox" checked><label for="ignore-case">Ignore case</label><input id="ignore-accents" type="checkbox" checked><label for="ignore-accents">Ignore accents</label><button id="submit-search" onClick="search()">Search</button></div><!-- div(id=search_result_output_id)--><template id="search-result-container">
+        <div id="search-result-container">
+            <h2 class="heading">
+                <slot name="heading">(Search result)</slot>
+            </h2>
+            <ul class="entries">
+                <slot name="entries"></slot>
+            </ul>
+        </div>
+    </template><template id="search-result-entry">
+        <li class="search-result-entry"><a class="entry-url"><span class="entry-title"></span></a><time class="entry-date"></time>
+            <p class="entry-content" data-length="200"></p><img class="thumbnail">
+        </li>
+    </template>
+    <script type="module">
+        customElements.define("search-result-container", class extends HTMLElement
+        {
+            constructor()
+            {
+                super();
+                const template = document.getElementById("search-result-container");
+                console.assert(template instanceof HTMLElement, `no template!`);
+                const templateContent = template.content;
+                console.assert(`no template content`);
+                const _shadowRoot = this.attachShadow(
+                {
+                    mode: 'open'
+                });
+                console.assert(_shadowRoot, `attach shadow failed!`);
+                const cloned = templateContent.cloneNode(true);
+                console.assert(cloned, `clone node failed!`);
+                const child = _shadowRoot.appendChild(cloned);
+                console.assert(child, `append cloned:${cloned} failed!`)
+                console.debug(`shadow root(${_shadowRoot}) appended a cloned child(${cloned}).`);
+            }
+        });
+
+    </script><search-result-container id="search-result-container" style="color: red;"><span class="heading" slot="heading">Slotted search result:</span>
+        <li class="entries" slot="entries">entry 1</li>
+    </search-result-container>
     <script type="module">
         import
         {
@@ -54,6 +94,17 @@
                 {
                     ignore_case,
                     ignore_accents
+                },
+                {
+                    id: "search-result-container",
+                    heading: "heading",
+                    entries: "entries"
+                },
+                {
+                    id: "search-result-entry",
+                    title: "entry-title",
+                    date: "entry-date",
+                    content: "entry-content"
                 });
             }
             else console.log(`No input text.`);
@@ -70,17 +121,6 @@
         }
 
     </script>
-    <div id="search-input"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input id="ignore-case" type="checkbox" checked><label for="ignore-case">Ignore case</label><input id="ignore-accents" type="checkbox" checked><label for="ignore-accents">Ignore accents</label><button id="submit-search" onClick="search()">Search</button></div>
-    <div id="search-result-output"></div><template id="search-result-container">
-        <div class="search-result-container">
-            <h2>Search result</h2>
-            <ul class="entries"></ul>
-        </div>
-    </template><template id="search-result-entry">
-        <li class="search-result-entry"><a class="title"> time.date</a>
-            <p class="content" data-length="200"></p><img class="thumbnail">
-        </li>
-    </template>
     <article id="post">
         <header class="post">
             <h1 class="title">Installed _hexo-blog_ to my VPS</h1><time class="date">2023-01-22</time>

@@ -1,122 +1,229 @@
 //@ts-check
-import {SearchFilter, walkTextNodes, IndexText, IndicesText} from "./walkTextNodes.js";
+import {SearchFilter} from "./walkTextNodes.js";
+import { SearchResult } from "./search-result.js";
 import { SearchOutput } from "./search-output.js";
-export {exec_search, analyzeData, fetchData, search_input, search_id, mark_text};
+export {exec_search, analyzeData, fetchData, mark_text};
+
+
+class ItemMap {
+  static test_items = ['title:text', 'content:html'];
 
   /**
    * Picks up query-matching entries
-   * @param {Document} document // XML
    * @param {string} query_str // Regex expression
-   * @param {SearchOutput} searchOutput
    * @param {{ignore_case: boolean, ignore_accents: boolean}}
-   * @yields {{entry: Element, itemMap: Map<string, {ii: Array<Array<num>>, nfkcText: string}>}} // IndicesText
    */
-  function* analyzeData(document, query_str, searchOutput, {ignore_case = true, ignore_accents = true}) {
-    const entries = document.getElementsByTagName('entry');
+  constructor(query_str, {ignore_case = true, ignore_accents = true}) {
+    /** @type {Map<string, {ii: number[], nfkcText: string}>} */
+    this.map = new Map();
     let query = query_str.normalize('NFKD');
     const combining_chars_regex = ignore_accents ? /\p{Mark}/gu : '';
     if (ignore_accents) {
       query = query.replace(combining_chars_regex, '');
     }
+    this.query = query;
     const searchFilter = new SearchFilter(query, {ignore_case, ignore_accents});
-    const filter = searchFilter.filter;// IndexText
-    for (const entry of entries) {
-      /** @type {Set<string>} */
-      const validSet = new Set();
-      /** @type {Map<string, { ii: Array<number>, nfkcText: string} >} */
-      const itemMap = new Map(); // IndicesText
-      const test_items = ['title:text', 'content:html'];
-      for (const item_type of test_items) { 
-        const [item, type] = item_type.split(':');
-        const content = entry.querySelector(item)?.textContent;
-        if (content) {
-          if (type == 'html') {
-            const content_tree = new DOMParser().parseFromString(content, "text/html");
-            if (!content_tree) {
-              throw Error(`Failed to parse from string text/html at entry:${entry.TEXT_NODE}`);
-            }
-            const bodyText = content_tree.body.textContent;
-            if (bodyText) {
-              const filter_result = filter(bodyText);
-              if (filter_result) {
-                itemMap.set(item, filter_result);
-              }
-            }
-            else
-              console.error(`content_tree.body.textContent not found!`);
+    this.filter = searchFilter.filter;// IndexText
+  }
+
+  /**
+   * 
+   * @param {Element} entry 
+   */
+  test(entry) {
+    for (const item_type of ItemMap.test_items) { 
+      const [item, type] = item_type.split(':');
+      const content = entry.querySelector(item)?.textContent;
+      if (content) {
+        if (type == 'html') {
+          const content_tree = new DOMParser().parseFromString(content, "text/html");
+          if (!content_tree) {
+            throw Error(`Failed to parse from string text/html at entry:${entry.TEXT_NODE}`);
           }
-          else {
-            const filter_result = filter(content); // indexText 
+          const bodyText = content_tree.body.textContent;
+          if (bodyText) {
+            const filter_result = this.filter(bodyText);
             if (filter_result) {
-                itemMap.set(item, filter_result);
+              this.map.set(item, filter_result);
             }
           }
+          else
+            console.error(`content_tree.body.textContent not found!`);
         }
         else {
-          console.info(`No content in ${item} of ${entry} !`);
+          const filter_result = this.filter(content); // indexText 
+          if (filter_result) {
+              this.map.set(item, filter_result);
+          }
         }
       }
-      if (itemMap.size > 0) {
-        yield {entry, itemMap};
+      else {
+        console.info(`No content in ${item} of ${entry} !`);
       }
     }
   }
+
+  /**
+   * @returns {string|undefined}
+   */
+  get title() {
+      return this.map.get('title')?.nfkcText;
+  }
+
+  /**
+   * @returns {string|undefined}
+   */
+  get content() {
+      return this.map.get('content')?.nfkcText;
+  }
+
+  /**
+   * @returns {boolean}
+   */
+  get isValid() {
+    return this.map.has('title') || this.map.has('content');
+  }
+
+  /**
+   * @returns {number[]|undefined}
+   */
+  get ii() {
+    return this.map.get('content')?.ii;
+  }
+
+}
+
+class FullMap {
+  /**
+   * 
+   * @param {Element} entry 
+   * @param {ItemMap} itemMap 
+   */
+  constructor(entry, itemMap) {
+    this.entry = entry;
+    this.itemMap = itemMap;
+  }
+
+  /**
+   * @returns {string|undefined|null}
+   */
+  get title() {
+    const t = this.itemMap.title;
+    if (!t) {
+      return this.entry.querySelector('title')?.textContent;
+    }
+  }
+
+  /**
+   * @returns {string|undefined|null}
+   */
+  get content() {
+    const c = this.itemMap.content;
+    if (!c) {
+      return this.entry.querySelector('content')?.textContent;
+    }
+  }
+
+  /**
+   * @returns {number[]|undefined}
+   */
+  get ii() {
+    return this.itemMap.ii;
+  }
+
+  /**
+   * @returns {string|null}
+   */
+  get markedContent() {
+    if (this.content && this.ii)
+      return mark_text(this.content, this.ii);
+    else
+      return null;
+  }
+
+  /**
+   * @returns {string|undefined|null}
+   */
+  get url() {
+    return this.entry.querySelector('url')?.textContent;
+  }
+
+}
+
+/**
+ * Picks up query-matching entries
+ * @param {Document} document // XML
+ * @param {string} query_str // Regex expression
+ * @param {{ignore_case: boolean, ignore_accents: boolean}}
+ * @yields {entry: Element, itemMap: ItemMap} >} 
+ */
+function* analyzeData(document, query_str, {ignore_case = true, ignore_accents = true}) {
+  const entries = document.querySelectorAll('entry');
+  if (!entries)
+    throw Error(`No entries!`);
+  for (const entry of entries) {
+    const itemMap = new ItemMap(query_str, {ignore_case, ignore_accents});
+    itemMap.test(entry);
+    if (itemMap.isValid) {
+      yield {entry, itemMap};
+    }
+  }
+}
 
 /**
  * @param {Promise} fetch_data
  * @param {string} query
  * @param {{ignore_case: boolean, ignore_accents: boolean}}
- * @returns {boolean}
+ * @param {{id: string, heading: string, entries: string}}search_result_container_map
+ * @param {{id: string, title: string, date: string, content: string}} search_result_entry_map
  */
-function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }) {
+function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }, search_result_container_map, search_result_entry_map) {
+
+  const search_entries = document.querySelector(`#${search_result_entry_map.id}`);
+  console.assert(search_entries instanceof HTMLElement, "Failed to get search_entries!");
+  const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
   fetch_data.then(xml => {
-    const output = new SearchOutput();
-    /** @type {{entry: Element, itemMap: Map<string, {ii: Array<Array<number>>, nfkcText: string}>}} */
-    for (const {entry, itemMap} of analyzeData(xml, query, output, { ignore_case, ignore_accents })) {
+    /** @type {{entry: Element, itemMap: ItemMap}} */
+    for (const {entry, itemMap} of analyzeData(xml, query, { ignore_case, ignore_accents })) {
+      const output = {url: '', title: '', content: ''};
       const url = entry.querySelector('url')?.textContent; // 2
-      if (!url)
+      if (url)
+        output.url = url;
+      else
         throw Error("No 'url' in entry!");
-      console.debug(`Reached to get analyzeData : Url = ${url}\n`);
       let title = '';
-      const titleMap = itemMap.get('title');
+      const titleMap = itemMap.title;
       if (titleMap) {
-        const {ii, nfkcText} = titleMap; // const {indices, text} = titleIndicesText.join;
-        title = nfkcText;
-        console.debug(` title: ${title}`);
+        output.title = titleMap;
       }
       else {
         console.debug(`No title key.`);
         const _title = entry.querySelector('title')?.textContent;
         if (_title) {
-          title = _title;
+          output.title = _title;
         }
       }
       let content = '';
-      /** @type {Array<number>} */
-      let ii = [];
-      const contentMap = itemMap.get('content');
+      const contentMap = itemMap.content;
       if (contentMap) {
-        content = contentMap.nfkcText;
-        ii = contentMap.ii;
-        const _content = mark_text(content, ii);
-        console.debug(` content: ${_content}`);
+        const ii = itemMap.ii;
+        if (ii) {
+          output.content = mark_text(content, ii);
+        }
+        else
+          output.content = contentMap;
       }
       else {
         console.debug(`No content.`);
-        /* const _content = entry.querySelector('content')?.textContent;
-        if (_content) {
-          content = _content;
-        } */
       }
-      console.assert(title.length > 0 || content.length > 0, `title or content must not empty.`);
-      console.assert((content.length == 0 && ii.length == 0)||(content.length > 0 && ii.length > 0), `content accompanies ii.`);
-      output.addSearchResult({entry, url, title, content, ii});
+      const search_result = search_output.getSearchResult(entry, output);
+      const result = search_output.search_result_container.appendChild(search_result);
+      console.assert(result instanceof Element, `search result`);
     }
-    output.close();
+    // search_output.close();
   }, reason => {
     throw Error(`exec_search failed. reason:${reason}`);
   })
-  return true;
 }
 
 /**
@@ -170,44 +277,4 @@ function fetchData(fetchUrl = fetch_path) {
     }
     xhr.send(null)
   })
-}
-
-/**
- * 
- * @param {Promise} fetch_data 
- * @param {{submit_search_id: string, search_text_id: string, search_result_output_id: string, ignore_case_id: string, ignore_accents_id: string}} 
- */
-function search_input(fetch_data = fetchData(), { submit_search_id, search_text_id, search_result_output_id, ignore_case_id, ignore_accents_id }) {
-  const submit_search_button = document.getElementById(submit_search_id);
-  const search_text_input = document.getElementById(search_text_id);
-  const search_result_output = document.querySelector(search_result_output_id);
-  if (submit_search_button && search_text_input && search_result_output) {
-      let queryWord = search_text_input.value;
-      if (queryWord) {
-        const ignore_case = document.querySelector('#' + ignore_case_id)?.checked ? true : false;
-        const ignore_accents = document.querySelector('#' + ignore_accents_id)?.checked ? true : false;
-        exec_search(fetch_data, queryWord, { ignore_case, ignore_accents });
-      }
-  }
-  else
-    throw Error(`!No ${submit_search_id}, ${search_text_id} and ${search_result_output_id}`);
-}      
-
-/**
- * 
- * @param {{search_text_id: string, ignore_case_id: string, ignore_accents_id: string}} 
- */
-function search_id({search_text_id, ignore_case_id, ignore_accents_id}) {
-  const input = document.getElementById(search_text_id);
-  if (!input)
-    throw Error(`No ${search_text_id}`);
-  if (input.value) {
-    const ignore_case_element = document.getElementById(ignore_case_id);
-    const ignore_case = ignore_case_element?.checked ? true : false;
-    const ignore_accents_element = document.getElementById(ignore_accents_id);
-    const ignore_accents = ignore_accents_element?.checked ? true : false;
-    exec_search(fetchData(), input.value, {ignore_case, ignore_accents});
-  }
-  else
-    console.debug(`No input value.`);
 }
