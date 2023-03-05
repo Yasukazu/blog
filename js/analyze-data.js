@@ -181,7 +181,6 @@ function* analyzeData(document, query_str, {ignore_case = true, ignore_accents =
 function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }, search_result_container_map, search_result_entry_map) {
   fetch_data.then(xml => {
     const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
-
     /** @type {{entry: Element, itemMap: ItemMap}} */
     for (const {entry, itemMap} of analyzeData(xml, query, { ignore_case, ignore_accents })) {
       const output = {url: '', title: '', content: ''};
@@ -207,7 +206,6 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
       if (contentMap) {
         const ii = itemMap.ii;
         if (ii && ii?.length > 0) {
-      debugger;
           output.content = mark_text(content, ii);
         }
         else
@@ -217,9 +215,9 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
         console.debug(`No content.`);
       }
       search_output.addSearchResult(output);
-
     }
-    // search_output.close();
+    const count = search_output.count;
+    search_output.addHeading(`${count} post(s) found:`);
   }, reason => {
     throw Error(`exec_search failed. reason:${reason}`);
   })
@@ -236,23 +234,6 @@ function mark_text(text, start_end, mark_start = "<mark>", mark_end = "</mark>")
   const inside_mark = text.slice(start_end[0], start_end[1]);
   const after_mark = text.slice(start_end[1]);
   return before_mark + mark_start + inside_mark + mark_end + after_mark;
-/*
-  let buffer = '';
-  let pos = 0;
-  for (const index of indices) {
-    buffer += text.slice(pos, index);
-    buffer += mark_start;
-    pos += index;
-    buffer += text.slice(pos, pos + len);
-    pos += len;
-    buffer += mark_end;
-    if (pos >= text.length) 
-      break;
-  }
-  if (pos < text.length - 1) {
-    buffer += text.slice(pos)
-  }
-  return buffer; */
 }
 
 const fetch_path = '/search.xml';

@@ -37,7 +37,7 @@
             </ul>
         </div>
     </template><template id="search-result-entry">
-        <li class="search-result-entry"><a class="entry-url"><span class="entry-title"></span></a><time class="entry-date"></time>
+        <li class="search-result-entry" slot="entries"><a class="entry-url"><span class="entry-title"></span></a><time class="entry-date"></time>
             <p class="entry-content" data-length="200"></p><img class="thumbnail">
         </li>
     </template>
@@ -50,7 +50,7 @@
                 const template = document.getElementById("search-result-container");
                 console.assert(template instanceof HTMLElement, `no template!`);
                 const templateContent = template.content;
-                console.assert(`no template content`);
+                console.assert(templateContent instanceof DocumentFragment, `no template content`);
                 const _shadowRoot = this.attachShadow(
                 {
                     mode: 'open'
@@ -64,9 +64,7 @@
             }
         });
 
-    </script><search-result-container id="search-result-container" style="color: blue;"><span class="heading" slot="heading">Slotted search result:</span>
-        <li class="entries" slot="entries">entry 1</li>
-    </search-result-container>
+    </script><search-result-container id="search-result-container" style="color: blue;"></search-result-container>
     <script type="module">
         import
         {
