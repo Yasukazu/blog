@@ -1,6 +1,5 @@
 //@ts-check
 import {SearchFilter} from "./walkTextNodes.js";
-import { SearchResult } from "./search-result.js";
 import { SearchOutput } from "./search-output.js";
 export {exec_search, analyzeData, fetchData, mark_text};
 
@@ -34,8 +33,8 @@ class ItemMap {
     for (const item_type of ItemMap.test_items) { 
       const [item, type] = item_type.split(':');
       const content = entry.querySelector(item)?.textContent;
-      if (content) {
-        if (type == 'html') {
+      if (content) { 
+        if (type == 'html') { // content
           const content_tree = new DOMParser().parseFromString(content, "text/html");
           if (!content_tree) {
             throw Error(`Failed to parse from string text/html at entry:${entry.TEXT_NODE}`);
@@ -43,18 +42,14 @@ class ItemMap {
           const bodyText = content_tree.body.textContent;
           if (bodyText) {
             const filter_result = this.filter(bodyText);
-            if (filter_result) {
-              this.map.set(item, filter_result);
-            }
+            this.map.set(item, filter_result);
           }
           else
             console.error(`content_tree.body.textContent not found!`);
         }
-        else {
-          const filter_result = this.filter(content); // indexText 
-          if (filter_result) {
-              this.map.set(item, filter_result);
-          }
+        else { // title
+          const filter_result = this.filter(content); 
+          this.map.set(item, filter_result);
         }
       }
       else {
@@ -81,7 +76,13 @@ class ItemMap {
    * @returns {boolean}
    */
   get isValid() {
-    return this.map.has('title') || this.map.has('content');
+    for (const item of ['title', 'content']) {
+      const content = this.map.get(item);
+      if (content && content.ii.length > 0) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
@@ -178,11 +179,9 @@ function* analyzeData(document, query_str, {ignore_case = true, ignore_accents =
  * @param {{id: string, title: string, date: string, content: string}} search_result_entry_map
  */
 function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }, search_result_container_map, search_result_entry_map) {
-
-  const search_entries = document.querySelector(`#${search_result_entry_map.id}`);
-  console.assert(search_entries instanceof HTMLElement, "Failed to get search_entries!");
-  const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
   fetch_data.then(xml => {
+    const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
+
     /** @type {{entry: Element, itemMap: ItemMap}} */
     for (const {entry, itemMap} of analyzeData(xml, query, { ignore_case, ignore_accents })) {
       const output = {url: '', title: '', content: ''};
@@ -207,7 +206,8 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
       const contentMap = itemMap.content;
       if (contentMap) {
         const ii = itemMap.ii;
-        if (ii) {
+        if (ii && ii?.length > 0) {
+      debugger;
           output.content = mark_text(content, ii);
         }
         else
@@ -216,9 +216,8 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
       else {
         console.debug(`No content.`);
       }
-      const search_result = search_output.getSearchResult(entry, output);
-      const result = search_output.search_result_container.appendChild(search_result);
-      console.assert(result instanceof Element, `search result`);
+      search_output.addSearchResult(output);
+
     }
     // search_output.close();
   }, reason => {

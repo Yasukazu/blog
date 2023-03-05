@@ -158,7 +158,7 @@ class SearchFilter {
     this._re = RegExp(query, ignore_case ? 'uid' : 'ud');
     /**
     * @param {string} text 
-    * @returns { {ii: Array<number>, nfkcText: string}|null } // {IndexText}
+    * @returns { {ii: Array<number>, nfkcText: string}} // {IndexText}
     */
     this.filter = (text) => {
       console.assert(text, "filter is called for an empty text!");
@@ -171,7 +171,7 @@ class SearchFilter {
       const nfkcText = org_text.trim().normalize('NFKC').replace(/[\s\n]+/gu, ' ');
       if (!text) {
         console.debug("text became empty after trimming, normalizing and replacing spaces.");
-        return new IndexText(-1, '');
+        return {ii: [], nfkcText: ''}; // new IndexText(-1, '');
       }
       if (this.ignore_accents) {
         text = text.replace(SearchFilter.combining_chars_regex, '');
@@ -180,7 +180,7 @@ class SearchFilter {
       }
       const _ii = text.match(this._re); // text.search(this._re); 
       if (!_ii) {
-        return null;
+        return {ii: [], nfkcText};
       }
       else {
         return {ii: _ii.indices[0], nfkcText};
