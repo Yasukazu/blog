@@ -163,22 +163,26 @@ class SearchFilter {
     this.filter = (text) => {
       console.assert(text, "filter is called for an empty text!");
       const org_text = text.slice().trim();
-      text = text.trim().normalize('NFKD');
-      if (text.length != org_text.length) {
-        console.debug(`text length changed by normalize.`);
+      if (org_text.length == 0) {
+        console.warn("text consists of only spaces!");
+        return {ii: [], nfkcText: ''};
       }
-      text = text.replace(/[\s\n]+/gu, ' ');
-      const nfkcText = org_text.trim().normalize('NFKC').replace(/[\s\n]+/gu, ' ');
+      text = org_text.normalize('NFKD');
+      if (text.length != org_text.length) {
+        console.warn(`text length changed by normalize.`);
+      }
+      text = text.replace(/[\s\n]+/gu, ' '); // compress spaces
+      const nfkcText = org_text.normalize('NFKC').replace(/[\s\n]+/gu, ' ');
       if (!text) {
-        console.debug("text became empty after trimming, normalizing and replacing spaces.");
-        return {ii: [], nfkcText: ''}; // new IndexText(-1, '');
+        console.warn("text became empty after trimming, normalizing and replacing spaces.");
+        return {ii: [], nfkcText: ''};
       }
       if (this.ignore_accents) {
         text = text.replace(SearchFilter.combining_chars_regex, '');
-        console.assert(text, "text became empty after replacing accents!");
+        console.assert(text.length, "text became empty after replacing accents!");
         console.assert(text.length == nfkcText.length, "Search text length changed by normalize and replacing accents.")
       }
-      const _ii = text.match(this._re); // text.search(this._re); 
+      const _ii = text.match(this._re);
       if (!_ii) {
         return {ii: [], nfkcText};
       }

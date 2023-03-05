@@ -195,24 +195,26 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
         output.title = titleMap;
       }
       else {
-        console.debug(`No title key.`);
+        console.warn(`No title key in itemMap.`);
         const _title = entry.querySelector('title')?.textContent;
         if (_title) {
           output.title = _title;
         }
+        else
+          console.error(`Failed to get title from entry!`);
       }
       let content = '';
-      const contentMap = itemMap.content;
-      if (contentMap) {
-        const ii = itemMap.ii;
-        if (ii && ii?.length > 0) {
-          output.content = mark_text(content, ii);
-        }
-        else
-          output.content = contentMap;
+      const _content = itemMap.content;
+      if (typeof(_content) === 'undefined' ) {
+          throw Error(`itemMap.content is undefined!`);
       }
       else {
-        console.debug(`No content.`);
+        const ii = itemMap.ii;
+        if (ii && ii?.length > 0) {
+          output.content = mark_text(_content, ii);
+        }
+        else
+          output.content = content;
       }
       search_output.addSearchResult(output);
     }
