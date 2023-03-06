@@ -37,9 +37,9 @@ class SearchOutput {
   }
 
   /**
-   * @param { {url: string, title: string, content: string} }
+   * @param { {url: string, title: string, content: string, ii: Array<number>} }
    */
-  addSearchResult({ url, title, content }) {
+  addSearchResult({ url, title, content, ii}) {
     /** @type {DocumentFragment} */
     const entry_output = document.importNode(this.search_result_entry.content, true);
     console.assert(entry_output instanceof DocumentFragment);
@@ -60,7 +60,17 @@ class SearchOutput {
           entry.innerHTML = title;
           break;
         case 'content':
-          entry.innerHTML = content;
+          let length = 300;
+          const data_length = entry.getAttribute('data-length');
+          if (data_length) {
+            const _length = parseInt(data_length);
+            if (!isNaN(_length))
+              length = _length;
+            else
+              console.warn('data-length is invalid.');
+          }
+          content = getFirstNChars(content, length);
+          entry.innerHTML = mark_text(content, ii);
           break;
         case 'date':
           const url_date = getDate(url);
@@ -109,9 +119,9 @@ class SearchOutput {
  * 
  * @param {string} src 
  * @param {Number} n 
- * @returns {Object}
+ * @returns {string}
  */
-function getFirstNChars(src, n) {
+function getFirstNChars(src, n, trailing = '...') {
   const array = Array.from(src); // every code point
   let lc = '';
   let i = 0;
@@ -130,7 +140,7 @@ function getFirstNChars(src, n) {
       break;
     }
   }
-  return { output: out, on_break: on_break };
+  return out + (on_break ? trailing : '');
 }
 
 /**
@@ -166,3 +176,17 @@ function getDate(url) {
   }
 }
 
+/**
+ * 
+ * @param {string} text 
+ * @param {Array<number>} start_end 
+ * @returns {string}
+ */
+function mark_text(text, start_end, mark_start = "<mark>", mark_end = "</mark>") {
+  if (start_end.length < 2)
+    return text;
+  const before_mark = text.slice(0, start_end[0]);
+  const inside_mark = text.slice(start_end[0], start_end[1]);
+  const after_mark = text.slice(start_end[1]);
+  return before_mark + mark_start + inside_mark + mark_end + after_mark;
+}

@@ -1,7 +1,7 @@
 //@ts-check
 import {SearchFilter} from "./walkTextNodes.js";
 import { SearchOutput } from "./search-output.js";
-export {exec_search, analyzeData, fetchData, mark_text};
+export {exec_search, analyzeData, fetchData};
 
 
 class ItemMap {
@@ -58,10 +58,10 @@ class ItemMap {
         console.info(`No content in ${item} of ${entry} !`);
       }
     }
-    if (typeof this.map.get('title') === 'undefined') {
+    if (!this.map.has('title')) {
       this.map.set('title', {ii: [], nfkcText: ''});
     }
-    if (typeof this.map.get('content') === 'undefined') {
+    if (!this.map.has('content')) {
       this.map.set('content', {ii: [], nfkcText: ''});
     }
   }
@@ -202,13 +202,7 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
   fetch_data.then(xml => {
     const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
     for (const itemMap of analyzeData(xml, query, { ignore_case, ignore_accents })) {
-      const url = itemMap.url;
-      const title = itemMap.title;
-      const text = itemMap.content;
-      if (typeof(text) === 'undefined')
-        throw Error('content text is undefined!');
-      const content = mark_text(text, itemMap.ii);
-      search_output.addSearchResult({url, title, content});
+      search_output.addSearchResult({url: itemMap.url, title: itemMap.title, content: itemMap.content, ii: itemMap.ii});
     }
     const count = search_output.count;
     search_output.addHeading(`${count} post(s) found:`);
@@ -217,18 +211,6 @@ function exec_search(fetch_data = fetchData(), query, { ignore_case = true, igno
   })
 }
 
-/**
- * 
- * @param {string} text 
- * @param {Array<number>} start_end 
- * @returns {string}
- */
-function mark_text(text, start_end, mark_start = "<mark>", mark_end = "</mark>") {
-  const before_mark = text.slice(0, start_end[0]);
-  const inside_mark = text.slice(start_end[0], start_end[1]);
-  const after_mark = text.slice(start_end[1]);
-  return before_mark + mark_start + inside_mark + mark_end + after_mark;
-}
 
 const fetch_path = '/search.xml';
 /**
