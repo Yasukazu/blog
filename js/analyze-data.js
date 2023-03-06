@@ -9,25 +9,27 @@ class ItemMap {
 
   /**
    * Picks up query-matching entries
+   * @param {Element} entry 
    * @param {string} query_str // Regex expression
    * @param {{ignore_case: boolean, ignore_accents: boolean}}
    */
-  constructor(query_str, {ignore_case = true, ignore_accents = true}) {
+  constructor(entry, query_str, {ignore_case = true, ignore_accents = true}) {
     /** @type {Map<string, {ii: number[], nfkcText: string}>} */
     this.map = new Map();
-    let query = query_str.normalize('NFKD');
+    const query = query_str.normalize('NFKD');
     const combining_chars_regex = ignore_accents ? /\p{Mark}/gu : '';
-    if (ignore_accents) {
-      query = query.replace(combining_chars_regex, '');
-    }
-    this.query = query;
+    this.query = ignore_accents ? query.replace(combining_chars_regex, '') : query;
+    const url = entry.querySelector('url')?.textContent;
+    if (!url)
+      throw Error('Failed to get url from entry!');
+    this.url = url; 
     const searchFilter = new SearchFilter(query, {ignore_case, ignore_accents});
     this.filter = searchFilter.filter;// IndexText
+    this.test(entry);
   }
 
   /**
-   * 
-   * @param {Element} entry 
+   * @param {Element} entry
    */
   test(entry) {
     for (const item_type of ItemMap.test_items) { 
@@ -45,7 +47,7 @@ class ItemMap {
             this.map.set(item, filter_result);
           }
           else
-            console.error(`content_tree.body.textContent not found!`);
+            throw Error(`content_tree.body.textContent not found!`);
         }
         else { // title
           const filter_result = this.filter(content); 
@@ -56,20 +58,36 @@ class ItemMap {
         console.info(`No content in ${item} of ${entry} !`);
       }
     }
+    if (typeof this.map.get('title') === 'undefined') {
+      this.map.set('title', {ii: [], nfkcText: ''});
+    }
+    if (typeof this.map.get('content') === 'undefined') {
+      this.map.set('content', {ii: [], nfkcText: ''});
+    }
   }
 
   /**
-   * @returns {string|undefined}
+   * @returns {string}
    */
   get title() {
-      return this.map.get('title')?.nfkcText;
+    const title = this.map.get('title');
+    if (title) {
+      return title.nfkcText;
+    }
+    else {
+      return '';
+      // throw Error('No title in map!');
+    }
   }
 
   /**
-   * @returns {string|undefined}
+   * @returns {string}
    */
   get content() {
-      return this.map.get('content')?.nfkcText;
+      const text = this.map.get('content')?.nfkcText;
+      if (typeof(text) == 'undefined')
+       throw Error('text is undefined in content of ItemMap!');
+      return text;
   }
 
   /**
@@ -86,10 +104,13 @@ class ItemMap {
   }
 
   /**
-   * @returns {number[]|undefined}
+   * @returns {number[]}
    */
   get ii() {
-    return this.map.get('content')?.ii;
+    const ii = this.map.get('content')?.ii;
+    if (!ii)
+      throw Error('No ii in map!');
+    return ii;
   }
 
 }
@@ -156,17 +177,16 @@ class FullMap {
  * @param {Document} document // XML
  * @param {string} query_str // Regex expression
  * @param {{ignore_case: boolean, ignore_accents: boolean}}
- * @yields {entry: Element, itemMap: ItemMap} >} 
+ * @yields {ItemMap} 
  */
 function* analyzeData(document, query_str, {ignore_case = true, ignore_accents = true}) {
   const entries = document.querySelectorAll('entry');
   if (!entries)
     throw Error(`No entries!`);
   for (const entry of entries) {
-    const itemMap = new ItemMap(query_str, {ignore_case, ignore_accents});
-    itemMap.test(entry);
+    const itemMap = new ItemMap(entry, query_str, {ignore_case, ignore_accents});
     if (itemMap.isValid) {
-      yield {entry, itemMap};
+      yield itemMap;
     }
   }
 }
@@ -181,42 +201,14 @@ function* analyzeData(document, query_str, {ignore_case = true, ignore_accents =
 function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }, search_result_container_map, search_result_entry_map) {
   fetch_data.then(xml => {
     const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
-    /** @type {{entry: Element, itemMap: ItemMap}} */
-    for (const {entry, itemMap} of analyzeData(xml, query, { ignore_case, ignore_accents })) {
-      const output = {url: '', title: '', content: ''};
-      const url = entry.querySelector('url')?.textContent; // 2
-      if (url)
-        output.url = url;
-      else
-        throw Error("No 'url' in entry!");
-      let title = '';
-      const titleMap = itemMap.title;
-      if (titleMap) {
-        output.title = titleMap;
-      }
-      else {
-        console.warn(`No title key in itemMap.`);
-        const _title = entry.querySelector('title')?.textContent;
-        if (_title) {
-          output.title = _title;
-        }
-        else
-          console.error(`Failed to get title from entry!`);
-      }
-      let content = '';
-      const _content = itemMap.content;
-      if (typeof(_content) === 'undefined' ) {
-          throw Error(`itemMap.content is undefined!`);
-      }
-      else {
-        const ii = itemMap.ii;
-        if (ii && ii?.length > 0) {
-          output.content = mark_text(_content, ii);
-        }
-        else
-          output.content = content;
-      }
-      search_output.addSearchResult(output);
+    for (const itemMap of analyzeData(xml, query, { ignore_case, ignore_accents })) {
+      const url = itemMap.url;
+      const title = itemMap.title;
+      const text = itemMap.content;
+      if (typeof(text) === 'undefined')
+        throw Error('content text is undefined!');
+      const content = mark_text(text, itemMap.ii);
+      search_output.addSearchResult({url, title, content});
     }
     const count = search_output.count;
     search_output.addHeading(`${count} post(s) found:`);

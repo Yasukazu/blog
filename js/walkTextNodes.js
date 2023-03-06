@@ -161,17 +161,16 @@ class SearchFilter {
     * @returns { {ii: Array<number>, nfkcText: string}} // {IndexText}
     */
     this.filter = (text) => {
-      console.assert(text, "filter is called for an empty text!");
       const org_text = text.slice().trim();
       if (org_text.length == 0) {
         console.warn("text consists of only spaces!");
         return {ii: [], nfkcText: ''};
       }
-      text = org_text.normalize('NFKD');
-      if (text.length != org_text.length) {
-        console.warn(`text length changed by normalize.`);
+      const nfkd_text = org_text.normalize('NFKD');
+      if (nfkd_text.length != org_text.length) {
+        console.warn(`text length changed by NFKD normalize.`);
       }
-      text = text.replace(/[\s\n]+/gu, ' '); // compress spaces
+      text = nfkd_text.replace(/[\s\n]+/gu, ' '); // compress spaces
       const nfkcText = org_text.normalize('NFKC').replace(/[\s\n]+/gu, ' ');
       if (!text) {
         console.warn("text became empty after trimming, normalizing and replacing spaces.");
