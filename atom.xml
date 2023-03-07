@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-02-18T09:46:58.784Z</updated>
+  <updated>2023-03-07T22:32:46.026Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>botanical trial</title>
+    <link href="https://blog.yskz.dev/2023/03/08/botanical-trial/"/>
+    <id>https://blog.yskz.dev/2023/03/08/botanical-trial/</id>
+    <published>2023-03-07T22:05:09.000Z</published>
+    <updated>2023-03-07T22:32:46.026Z</updated>
+    
+    <content type="html"><![CDATA[<p>Moved seedlings to planting pots.</p><span id="more"></span><p>Pulp planting pots are easy to break when wet.<br><img src="pulp-pot.JPG" alt=""></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Moved seedlings to planting pots.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Agri" scheme="https://blog.yskz.dev/categories/agri/"/>
+    
+    
+    <category term="seedling" scheme="https://blog.yskz.dev/tags/seedling/"/>
+    
+    <category term="turnip" scheme="https://blog.yskz.dev/tags/turnip/"/>
+    
+    <category term="bok-choy" scheme="https://blog.yskz.dev/tags/bok-choy/"/>
+    
+    <category term="salad-green" scheme="https://blog.yskz.dev/tags/salad-green/"/>
+    
+    <category term="carrot" scheme="https://blog.yskz.dev/tags/carrot/"/>
+    
+  </entry>
   
   <entry>
     <title>Subscribed boxy-svg.com for SVG drawing online</title>
@@ -439,31 +468,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Installed &#39;Google Translate&#39; in index.html</title>
-    <link href="https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/"/>
-    <id>https://blog.yskz.dev/2023/01/25/Installed-Google-Translate-in-index-html/</id>
-    <published>2023-01-25T09:11:01.000Z</published>
-    <updated>2023-01-25T09:16:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Changes:</p><ul><li><code>index.pug</code>: Added <code>div#google_translate_element</code> before <code>main</code></li><li><code>scripts.pug</code>: Added <pre class="language-pug" data-language="pug"><code class="language-pug"><span class="token tag">script</span><span class="token punctuation">.</span><span class="token multiline-script">    <span class="token keyword">function</span> <span class="token function">googleTranslateElementInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">new</span> <span class="token class-name">google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">pageLanguage</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">layout</span><span class="token operator">:</span> google<span class="token punctuation">.</span>translate<span class="token punctuation">.</span>TranslateElement<span class="token punctuation">.</span>InlineLayout<span class="token punctuation">.</span><span class="token constant">HORIZONTAL</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token string">'google_translate_element'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span></span><span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"</span></span><span class="token punctuation">)</span></span></span></code></pre></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Changes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;index.pug&lt;/code&gt;: Added &lt;code&gt;div#google_translate_element&lt;/code&gt; before &lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scr</summary>
-      
-    
-    
-    
-    
-    <category term="google-translate" scheme="https://blog.yskz.dev/tags/google-translate/"/>
     
   </entry>
   
