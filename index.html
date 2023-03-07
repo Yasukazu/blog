@@ -21,13 +21,62 @@
             <h1>Hexo development</h1>
             <p>A web log to study about Hexo static website generator</p>
         </hgroup>
-        <ul class="header">
-            <li class="home"><a href="/">Home</a></li>
-            <li class="archives"><a href="/archives/">Posts</a></li>
-            <li class="about"><a href="/about/">About</a></li>
-        </ul>
-    </header>
-    <div id="search-input"><label for="search-text">Enter search text:</label><input id="search-text" type="text" name="search-text"><input id="ignore-case" type="checkbox" checked><label for="ignore-case">Ignore case</label><input id="ignore-accents" type="checkbox" checked><label for="ignore-accents">Ignore accents</label><button id="submit-search" onClick="search()">Search</button></div><!-- div(id=search_result_output_id)--><template id="search-result-container">
+        <nav>
+            <ul class="header">
+                <li class="home"><a href="/">Home</a></li>
+                <li class="archives"><a href="/archives/">Posts</a></li>
+                <li class="about"><a href="/about/">About</a></li>
+            </ul>
+        </nav>
+    </header><datalist id="tags">
+        <option value="Hexo"> </option>
+        <option value="JavaScript"> </option>
+        <option value="HTML"> </option>
+        <option value="Pag"> </option>
+    </datalist>
+    <div id="search_input_id"><label for="search_input-text">Enter search text:<input id="search_input-text" type="search" name="search_input-text" size="20" minlength="1" maxlength="255" placeholder="keyword"></label><input id="search_input-ignore-case" type="checkbox" checked><label for="search_input-ignore-case">Ignore case</label><input id="search_input-ignore-accents" type="checkbox" checked><label for="search_input-ignore-accents">Ignore accents</label><input id="search_input-regex" type="checkbox"><label for="search_input-regex">Regular expression</label><button id="search_input-button" type="button">Search</button></div>
+    <script type="module">
+        import
+        {
+            exec_search,
+            fetchData
+        }
+        from "/js/analyze-data.js";
+
+        function search()
+        {
+            const search_result_container_map = {
+                id: "search-result-container",
+                heading: "heading",
+                entries: "entries"
+            };
+            const search_result_entry_map = {
+                id: "search-result-entry",
+                url: 'entry-url',
+                title: 'entry-title',
+                date: 'entry-date',
+                content: 'entry-content'
+            };
+            const search_input = {
+                id: "search_input_id",
+                text: "search_input-text",
+                ignore_case: 'search_input-ignore-case',
+                ignore_accents: 'search_input-ignore-accents',
+                regex: 'search_input-regex',
+                button: 'search_input-button'
+            };
+            exec_search(fetchData(), search_result_container_map, search_result_entry_map, search_input);
+            return false;
+        }
+        const button = document.getElementById("search_input-button");
+        console.assert(button instanceof Element, 'No button!');
+        button.addEventListener('click', (event) =>
+        {
+            search();
+            event.preventDefault();
+        });
+
+    </script><template id="search-result-container">
         <div id="search-result-container">
             <h2 class="heading">
                 <slot name="heading">(Search result)</slot>
@@ -65,60 +114,6 @@
         });
 
     </script><search-result-container id="search-result-container" style="color: blue;"></search-result-container>
-    <script type="module">
-        import
-        {
-            exec_search,
-            fetchData
-        }
-        from "/js/analyze-data.js";
-
-        function search()
-        {
-            const input = document.getElementById("search-text");
-            if (!input) throw Error(`No ${search_text_id}`);
-            if (input.value)
-            {
-                console.log(`Input text is set as: "${input.value}"`);
-                const ignore_case_element = document.getElementById("ignore-case");
-                if (!ignore_case_element) throw Error(`No ${ignore_case_id} !`);
-                const ignore_case = ignore_case_element.checked ? true : false;
-                console.log(`Ignore case is set as: ${ignore_case}`);
-                const ignore_accents_element = document.getElementById("ignore-accents");
-                if (!ignore_accents_element) throw Error(`No ${ignore_accents_id} !`);
-                const ignore_accents = ignore_accents_element.checked ? true : false;
-                console.log(`Ignore accents is set as: ${ignore_accents}`);
-                exec_search(fetchData(), input.value,
-                {
-                    ignore_case,
-                    ignore_accents
-                },
-                {
-                    id: "search-result-container",
-                    heading: "heading",
-                    entries: "entries"
-                },
-                {
-                    id: "search-result-entry",
-                    title: "entry-title",
-                    date: "entry-date",
-                    content: "entry-content"
-                });
-            }
-            else console.log(`No input text.`);
-        }
-        const submit_button = document.getElementById("submit-search");
-        if (!submit_button)
-        {
-            Error(`No submit_button`);
-        }
-        else
-        {
-            submit_button.onclick = search;
-            console.log(`submit_button.onclick is set to function search()`)
-        }
-
-    </script>
     <main id="index">
         <article class="post"><a href="/2023/02/18/subscribed-boxy-svg-com-for-svg-drawing-online/">
                 <h2 class="title">Subscribed boxy-svg.com for SVG drawing online</h2>

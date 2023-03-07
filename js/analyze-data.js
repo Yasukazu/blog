@@ -11,9 +11,9 @@ class ItemMap {
    * Picks up query-matching entries
    * @param {Element} entry 
    * @param {string} query_str // Regex expression
-   * @param {{ignore_case: boolean, ignore_accents: boolean}}
+   * @param {{ignore_case: boolean, ignore_accents: boolean, regex: boolean}}
    */
-  constructor(entry, query_str, {ignore_case = true, ignore_accents = true}) {
+  constructor(entry, query_str, {ignore_case = true, ignore_accents = true, regex = false}) {
     /** @type {Map<string, {ii: number[], nfkcText: string}>} */
     this.map = new Map();
     const query = query_str.normalize('NFKD');
@@ -23,7 +23,7 @@ class ItemMap {
     if (!url)
       throw Error('Failed to get url from entry!');
     this.url = url; 
-    const searchFilter = new SearchFilter(query, {ignore_case, ignore_accents});
+    const searchFilter = new SearchFilter(query, {ignore_case, ignore_accents, regex});
     this.filter = searchFilter.filter;// IndexText
     this.test(entry);
   }
@@ -176,39 +176,59 @@ class FullMap {
  * Picks up query-matching entries
  * @param {Document} document // XML
  * @param {string} query_str // Regex expression
- * @param {{ignore_case: boolean, ignore_accents: boolean}}
+ * @param {{ignore_case: boolean, ignore_accents: boolean, regex: boolean}}
  * @yields {ItemMap} 
  */
-function* analyzeData(document, query_str, {ignore_case = true, ignore_accents = true}) {
+function* analyzeData(document, query_str, {ignore_case = true, ignore_accents = true, regex = false}) {
   const entries = document.querySelectorAll('entry');
   if (!entries)
     throw Error(`No entries!`);
   for (const entry of entries) {
-    const itemMap = new ItemMap(entry, query_str, {ignore_case, ignore_accents});
+    const itemMap = new ItemMap(entry, query_str, {ignore_case, ignore_accents, regex});
     if (itemMap.isValid) {
       yield itemMap;
     }
   }
 }
 
+
 /**
  * @param {Promise} fetch_data
- * @param {string} query
  * @param {{ignore_case: boolean, ignore_accents: boolean}}
  * @param {{id: string, heading: string, entries: string}}search_result_container_map
  * @param {{id: string, title: string, date: string, content: string}} search_result_entry_map
+ * @param {{id: string, text: string, ignore_case: string, ignore_accents: string, regex: string, button: string}} search_input
  */
-function exec_search(fetch_data = fetchData(), query, { ignore_case = true, ignore_accents = true }, search_result_container_map, search_result_entry_map) {
+function exec_search(fetch_data = fetchData(), search_result_container_map, search_result_entry_map, search_input) {
+  const input_element = document.querySelector(`#${search_input.text}`);
+  if (!(input_element instanceof HTMLInputElement))
+    throw Error(`No ${search_input.text}`);
+  console.debug(`Input text is set as: "${input_element.value}"`);
+  const query = input_element.value;
+  const ignore_case_element = document.getElementById(search_input.ignore_case);
+  if (!(ignore_case_element instanceof HTMLInputElement))
+    throw Error(`No ${search_input.text}`);
+  const ignore_case = ignore_case_element.checked ? true : false;
+  console.debug(`Ignore case is set as: ${ignore_case}`);
+  const ignore_accents_element = document.getElementById(search_input.ignore_accents);
+  if (!(ignore_accents_element instanceof HTMLInputElement))
+    throw Error(`No ${search_input.ignore_accents} !`);
+  const ignore_accents = ignore_accents_element.checked ? true : false;
+  console.debug(`Ignore accents is set as: ${ignore_accents}`);
+  const regex_element = document.getElementById(search_input.regex);
+  if (!(regex_element instanceof HTMLInputElement)) 
+    throw Error(`No ${search_input.regex}`);
+  const regex = regex_element.checked ? true : false;
   fetch_data.then(xml => {
     const search_output = new SearchOutput(search_result_container_map, search_result_entry_map);
-    for (const itemMap of analyzeData(xml, query, { ignore_case, ignore_accents })) {
+    for (const itemMap of analyzeData(xml, query, { ignore_case, ignore_accents, regex})) {
       search_output.addSearchResult({url: itemMap.url, title: itemMap.title, content: itemMap.content, ii: itemMap.ii});
     }
     const count = search_output.count;
     search_output.addHeading(`${count} post(s) found:`);
   }, reason => {
     throw Error(`exec_search failed. reason:${reason}`);
-  })
+  });
 }
 
 
