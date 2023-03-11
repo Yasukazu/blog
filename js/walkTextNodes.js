@@ -185,23 +185,23 @@ class SearchFilter {
         console.assert(text.length == nfkcText.length, "Search text length changed by normalize and replacing accents.")
       }
       if (regex) {
-      const _ii = text.match(this._re);
-      if (!_ii) {
-        return {ii: [], nfkcText};
+        const _ii = text.match(this._re);
+        if (!_ii) {
+          return { ii: [], nfkcText };
+        }
+        else {
+          return { ii: _ii.indices[0], nfkcText };
+        }
       }
       else {
-        return {ii: _ii.indices[0], nfkcText};
+        const _i = text.toLowerCase().indexOf(this._si.toLowerCase());
+        if (_i < 0) {
+          return { ii: [], nfkcText };
+        }
+        else {
+          return { ii: [_i, _i + query.length], nfkcText };
+        }
       }
-    }
-    else {
-      const _i = text.toLowerCase().indexOf(this._si);
-      if (_i < 0) {
-        return {ii: [], nfkcText};
-      }
-      else {
-        return {ii: [_i, _i + query.length], nfkcText};
-      }
-    }
     }
   }
 
