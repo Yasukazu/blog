@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-03-16T05:59:39.795Z</updated>
+  <updated>2023-03-19T02:51:37.788Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dwarf tomato seeding</title>
+    <link href="https://blog.yskz.dev/2023/03/19/dwarf-tomato-seeding/"/>
+    <id>https://blog.yskz.dev/2023/03/19/dwarf-tomato-seeding/</id>
+    <published>2023-03-19T02:39:22.000Z</published>
+    <updated>2023-03-19T02:51:37.788Z</updated>
+    
+    <content type="html"><![CDATA[<p>Seeded Dwarf Tomato in 2 small pulp 3x4 celltrays.</p><span id="more"></span><p>Included 27 seeds in 0.5ml.</p><p><a data-flickr-embed="true" href="https://www.flickr.com/gp/90143794@N08/6G46GY3FS9" title="Dwarf tomato"><img src="https://live.staticflickr.com/65535/52756275306_887d358c89_z.jpg" width="480" height="640" alt="Dwarf tomato"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Seeded Dwarf Tomato in 2 small pulp 3x4 celltrays.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="planting" scheme="https://blog.yskz.dev/categories/planting/"/>
+    
+    
+    <category term="seedling" scheme="https://blog.yskz.dev/tags/seedling/"/>
+    
+  </entry>
   
   <entry>
     <title>Plant seed incubation / germination</title>
@@ -441,26 +462,6 @@
       
       
     <summary type="html">&lt;!-- -----&gt;&lt;!-- -----&gt;&lt;script type=&quot;text/javascript&quot;&gt;&lt;page&gt;= pg;&lt;/page&gt;&lt;/script&gt;&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;&lt;p&gt;According to&lt;a hre</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS: Pad each [header,main,footer], Color brighter &#39;header&#39; background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</title>
-    <link href="https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/"/>
-    <id>https://blog.yskz.dev/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/</id>
-    <published>2023-01-26T06:24:01.000Z</published>
-    <updated>2023-01-26T06:39:01.302Z</updated>
-    
-    <content type="html"><![CDATA[<p>Whole padding as <code>body</code> element made bg-colored header&#x2F;footer L&#x2F;R-side character no margin from borders.<br>So, gave padding each header &#x2F; main &#x2F; footer elements.</p><p>Paginator:<br>Changed “&lt;&#x2F;&gt;” to “&amp;larr;&#x2F;&amp;rarr;” for better understandable.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Whole padding as &lt;code&gt;body&lt;/code&gt; element made bg-colored header&amp;#x2F;footer L&amp;#x2F;R-side character no margin from borders.&lt;br&gt;So, gave</summary>
       
     
     
