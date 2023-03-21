@@ -1,5 +1,5 @@
 //@ts-check
-import {SearchFilter} from "./walkTextNodes.js";
+import {SearchFilter} from "./search-filter.js";
 import { SearchOutput } from "./search-output.js";
 export {exec_search, analyzeData, fetchData};
 
