@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-03-24T10:15:01.444Z</updated>
+  <updated>2023-03-24T10:30:09.194Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.yskz.dev/2023/03/24/disqus-comment/"/>
     <id>https://blog.yskz.dev/2023/03/24/disqus-comment/</id>
     <published>2023-03-24T09:23:36.000Z</published>
-    <updated>2023-03-24T10:15:01.444Z</updated>
+    <updated>2023-03-24T10:30:09.194Z</updated>
     
-    <content type="html"><![CDATA[<p>Tried to have a commenting system.</p><span id="more"></span><h2 id="Disqus-comment-system">Disqus comment system:</h2><pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;&lt;&#x2F;div&gt;&lt;script&gt;    const disqus_config &#x3D; function () &#123;    this.page.url &#x3D; PAGE_URL;  &#x2F;&#x2F; Replace PAGE_URL with your page&#39;s canonical URL variable    this.page.identifier &#x3D; PAGE_IDENTIFIER; &#x2F;&#x2F; Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable    &#125;;    (function() &#123;    const d &#x3D; document, s &#x3D; d.createElement(&#39;script&#39;);    s.src &#x3D; &#39;https:&#x2F;&#x2F;yasukazu-1.disqus.com&#x2F;embed.js&#39;;    s.setAttribute(&#39;data-timestamp&#39;, +new Date());    (d.body).appendChild(s);    &#125;)();&lt;&#x2F;script&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;disqus.com&#x2F;?ref_noscript&quot;&gt;comments powered by Disqus.&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>Tried to have a commenting system.</p><span id="more"></span><h2 id="Disqus-comment-system">Disqus comment system:</h2><ul><li>Changed: <code>(d.head || d.body)</code> to <code>(d.body)</code></li></ul><pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;&lt;&#x2F;div&gt;&lt;script&gt;    const disqus_config &#x3D; function () &#123;    this.page.url &#x3D; PAGE_URL;  &#x2F;&#x2F; Replace PAGE_URL with your page&#39;s canonical URL variable    this.page.identifier &#x3D; PAGE_IDENTIFIER; &#x2F;&#x2F; Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable    &#125;;    (function() &#123;    const d &#x3D; document, s &#x3D; d.createElement(&#39;script&#39;);    s.src &#x3D; &#39;https:&#x2F;&#x2F;yasukazu-1.disqus.com&#x2F;embed.js&#39;;    s.setAttribute(&#39;data-timestamp&#39;, +new Date());    (d.body).appendChild(s);    &#125;)();&lt;&#x2F;script&gt;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;disqus.com&#x2F;?ref_noscript&quot;&gt;comments powered by Disqus.&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;</code></pre>]]></content>
     
     
     <summary type="html">&lt;p&gt;Tried to have a commenting system.&lt;/p&gt;</summary>

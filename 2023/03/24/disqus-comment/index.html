@@ -126,6 +126,9 @@
             <p>Tried to have a commenting system.</p>
             <span id="more"></span>
             <h2 id="Disqus-comment-system">Disqus comment system:</h2>
+            <ul>
+                <li>Changed: <code>(d.head || d.body)</code> to <code>(d.body)</code></li>
+            </ul>
             <pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;&lt;&#x2F;div&gt;
 &lt;script&gt;
     const disqus_config &#x3D; function () &#123;
@@ -170,7 +173,7 @@
                 s = d.createElement('script');
             s.src = 'https://yasukazu-1.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
+            (d.body).appendChild(s);
         })();
 
     </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
