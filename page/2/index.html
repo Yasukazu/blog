@@ -117,6 +117,14 @@
 
     </script><search-result-container id="search-result-container" style="color: blue;"></search-result-container>
     <main id="index">
+        <article class="post"><a href="/2023/02/11/in-site-search-half-success/">
+                <h2 class="title">In-site search half success</h2>
+            </a>
+            <p class="excerpt">
+            <p>It only works when input as <code>URL/search/?search=...</code></p>
+            </p><time class="post date">2023-02-11</time>
+        </article>
+        <hr>
         <article class="post"><a href="/2023/02/09/applied-a-website-e-mail-supporter-job/">
                 <h2 class="title">Applied a website e-mail supporter job</h2>
             </a>
@@ -178,10 +186,6 @@
                 <h2 class="title">Set config to add date before title in file name</h2>
             </a><time class="post date">2023-01-27</time></article>
         <hr>
-        <article class="post"><a href="/2023/01/26/post-in-pug/">
-                <h2>(no title)</h2>
-            </a><time class="post date">2023-01-26</time></article>
-        <hr>
     </main>
     <hr>
     <div class="paginator">
@@ -189,6 +193,25 @@
         <div><a href="/">&larr; Prev.</a></div>
     </div>
     <footer><small>Theme(<a target="_blank" rel="noopener" href="https://github.com/yasukazu/ym-start"><strong>ym-start</strong> theme</a>) is created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer><!-- script(src="/js/search.js" defer)-->
+    <div id="disqus_thread"></div>
+    <script>
+        const page_path = "page/2/index.html";
+        const page_url = "https://blog.yskz.dev/" + page_path ";
+        var disqus_config = function ()
+        {
+            this.page.url = page_url;
+            this.page.identifier = '/' + page_path;
+        };
+        (function ()
+        {
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://yasukazu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+
+    </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
 </body>
 
 </html>

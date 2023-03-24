@@ -1,3 +1,5 @@
+https://blog.yskz.dev/2023/03/24/disqus-comment/
+https://blog.yskz.dev/forum/index.html
 https://blog.yskz.dev/2023/03/19/dwarf-tomato-seeding/
 https://blog.yskz.dev/2023/03/15/plant-seed-incubation/
 https://blog.yskz.dev/2023/03/08/botanical-trial/
@@ -78,6 +80,7 @@ https://blog.yskz.dev/tags/turnip/
 https://blog.yskz.dev/tags/bok-choy/
 https://blog.yskz.dev/tags/salad-green/
 https://blog.yskz.dev/tags/carrot/
+https://blog.yskz.dev/tags/comment/
 https://blog.yskz.dev/categories/job/
 https://blog.yskz.dev/categories/hexo/
 https://blog.yskz.dev/categories/agri/

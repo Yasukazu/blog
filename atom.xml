@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-03-19T02:51:37.788Z</updated>
+  <updated>2023-03-24T09:35:25.793Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Disqus comment</title>
+    <link href="https://blog.yskz.dev/2023/03/24/disqus-comment/"/>
+    <id>https://blog.yskz.dev/2023/03/24/disqus-comment/</id>
+    <published>2023-03-24T09:23:36.000Z</published>
+    <updated>2023-03-24T09:35:25.793Z</updated>
+    
+    <content type="html"><![CDATA[<p>Tried to have a commenting system.</p><span id="more"></span><h2 id="Disqus-comment-system">Disqus comment system:</h2><div id="disqus_thread"></div><script>    const disqus_config = function () {    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable    };    (function() {    const d = document, s = d.createElement('script');    s.src = 'https://yasukazu-1.disqus.com/embed.js';    s.setAttribute('data-timestamp', +new Date());    (d.body).appendChild(s);    })();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Tried to have a commenting system.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.yskz.dev/categories/hexo/"/>
+    
+    
+    <category term="comment" scheme="https://blog.yskz.dev/tags/comment/"/>
+    
+  </entry>
   
   <entry>
     <title>Dwarf tomato seeding</title>
@@ -446,26 +467,6 @@
     
     
     <category term="new_post_name" scheme="https://blog.yskz.dev/tags/new-post-name/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://blog.yskz.dev/2023/01/26/post-in-pug/"/>
-    <id>https://blog.yskz.dev/2023/01/26/post-in-pug/</id>
-    <published>2023-01-26T14:37:51.156Z</published>
-    <updated>2023-02-09T06:14:57.187Z</updated>
-    
-    <content type="html"><![CDATA[<!-- -----><!-- -----><script type="text/javascript"><page>= pg;</page></script><h2>A trial to write a post in pug</h2><p>According to<a href="https://hexo.io/docs/writing.html">Hexo official document <i>writing</i></a>,  Hexo supports <i>pug</i> as a post-formatting language.</p><p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;!-- -----&gt;&lt;!-- -----&gt;&lt;script type=&quot;text/javascript&quot;&gt;&lt;page&gt;= pg;&lt;/page&gt;&lt;/script&gt;&lt;h2&gt;A trial to write a post in pug&lt;/h2&gt;&lt;p&gt;According to&lt;a hre</summary>
-      
-    
-    
-    
     
   </entry>
   
