@@ -132,6 +132,27 @@
             <p>To use pug, change the extension of a post file as &lt;'.pug'&gt; from '.md'.</p>
         </main>
         <hr>
+        <div id="disqus_thread"></div>
+        <script>
+            const page_path = "2023/01/26/post-in-pug/";
+            const page_url = "https://blog.yskz.dev/" + page_path ";
+            var disqus_config = function ()
+            {
+                this.page.url = page_url;
+                this.page.identifier = '/' + page_path;
+            };
+            (function ()
+            {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://yasukazu-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.body).appendChild(s);
+            })();
+
+        </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a>
+        </noscript>
+        <hr>
         <section id="tags">
             <h2>Tags<ul class="tag-box list-unstyled">
                     <p>No other common-tag post.</p>
@@ -145,25 +166,6 @@
             </h2>
         </section>
     </article>
-    <div id="disqus_thread"></div>
-    <script>
-        const page_path = "2023/01/26/post-in-pug/";
-        const page_url = "https://blog.yskz.dev/" + page_path ";
-        var disqus_config = function ()
-        {
-            this.page.url = page_url;
-            this.page.identifier = '/' + page_path;
-        };
-        (function ()
-        {
-            var d = document,
-                s = d.createElement('script');
-            s.src = 'https://yasukazu-1.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.body).appendChild(s);
-        })();
-
-    </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
     <div class="paginator">
         <div><a href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/">CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration &rarr;</a></div>
         <div><a href="/2023/01/27/set-config-to-add-date-before-title-in-file-name/">&larr; Set config to add date before title in file name</a></div>

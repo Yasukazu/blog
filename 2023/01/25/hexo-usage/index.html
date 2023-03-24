@@ -139,6 +139,27 @@
             <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
         </main>
         <hr>
+        <div id="disqus_thread"></div>
+        <script>
+            const page_path = "2023/01/25/hexo-usage/";
+            const page_url = "https://blog.yskz.dev/" + page_path ";
+            var disqus_config = function ()
+            {
+                this.page.url = page_url;
+                this.page.identifier = '/' + page_path;
+            };
+            (function ()
+            {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://yasukazu-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.body).appendChild(s);
+            })();
+
+        </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a>
+        </noscript>
+        <hr>
         <section id="tags">
             <h2>Tags<ul class="tag-box list-unstyled">
                     <p>No other common-tag post.</p>
@@ -152,25 +173,6 @@
             </h2>
         </section>
     </article>
-    <div id="disqus_thread"></div>
-    <script>
-        const page_path = "2023/01/25/hexo-usage/";
-        const page_url = "https://blog.yskz.dev/" + page_path ";
-        var disqus_config = function ()
-        {
-            this.page.url = page_url;
-            this.page.identifier = '/' + page_path;
-        };
-        (function ()
-        {
-            var d = document,
-                s = d.createElement('script');
-            s.src = 'https://yasukazu-1.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.body).appendChild(s);
-        })();
-
-    </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
     <div class="paginator">
         <div><a href="/2023/01/25/Installed-Google-Translate-in-index-html/">Installed 'Google Translate' in index.html &rarr;</a></div>
         <div><a href="/2023/01/26/Style-header-main-footer-each-padding-header-color-brighter-Paginator-lt-gt-to-larr-rarr/">&larr; CSS: Pad each [header,main,footer], Color brighter 'header' background ; HTML design: lt/gt to larr/rarr; Class div.paginator for after CSS decoration</a></div>

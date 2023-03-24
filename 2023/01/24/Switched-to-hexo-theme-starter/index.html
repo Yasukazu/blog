@@ -132,6 +132,27 @@
             </ul>
         </main>
         <hr>
+        <div id="disqus_thread"></div>
+        <script>
+            const page_path = "2023/01/24/Switched-to-hexo-theme-starter/";
+            const page_url = "https://blog.yskz.dev/" + page_path ";
+            var disqus_config = function ()
+            {
+                this.page.url = page_url;
+                this.page.identifier = '/' + page_path;
+            };
+            (function ()
+            {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://yasukazu-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.body).appendChild(s);
+            })();
+
+        </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a>
+        </noscript>
+        <hr>
         <section id="tags">
             <h2>Tags<ul class="tag-box list-unstyled">
                     <p>No other common-tag post.</p>
@@ -145,25 +166,6 @@
             </h2>
         </section>
     </article>
-    <div id="disqus_thread"></div>
-    <script>
-        const page_path = "2023/01/24/Switched-to-hexo-theme-starter/";
-        const page_url = "https://blog.yskz.dev/" + page_path ";
-        var disqus_config = function ()
-        {
-            this.page.url = page_url;
-            this.page.identifier = '/' + page_path;
-        };
-        (function ()
-        {
-            var d = document,
-                s = d.createElement('script');
-            s.src = 'https://yasukazu-1.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.body).appendChild(s);
-        })();
-
-    </script><noscript>- Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
     <div class="paginator">
         <div><a href="/2023/01/22/public-dir-docs-url-hexo-blog/">public_dir:docs;url:.../hexo-blog &rarr;</a></div>
         <div><a href="/2023/01/25/Set-blog-submodule-as-GitHub-Pages/">&larr; Set 'blog' submodule as GitHub Pages</a></div>
