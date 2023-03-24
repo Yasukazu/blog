@@ -130,20 +130,28 @@
                 <li>Changed: <code>(d.head || d.body)</code> to <code>(d.body)</code></li>
                 <li>Disqus in article(post)</li>
             </ul>
-            <pre class="language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;&lt;&#x2F;div&gt;
-&lt;script&gt;
-    const disqus_config &#x3D; function () &#123;
-    this.page.url &#x3D; PAGE_URL;  &#x2F;&#x2F; Replace PAGE_URL with your page&#39;s canonical URL variable
-    this.page.identifier &#x3D; PAGE_IDENTIFIER; &#x2F;&#x2F; Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
-    &#125;;
-    (function() &#123;
-    const d &#x3D; document, s &#x3D; d.createElement(&#39;script&#39;);
-    s.src &#x3D; &#39;https:&#x2F;&#x2F;yasukazu-1.disqus.com&#x2F;embed.js&#39;;
-    s.setAttribute(&#39;data-timestamp&#39;, +new Date());
-    (d.body).appendChild(s);
-    &#125;)();
-&lt;&#x2F;script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;disqus.com&#x2F;?ref_noscript&quot;&gt;comments powered by Disqus.&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;</code></pre>
+            <hr>
+            <div id="disqus_thread"></div>
+            <script>
+                const page_path = "2023/03/24/disqus-comment/";
+                const page_url = "https://blog.yskz.dev/" + page_path ";
+                var disqus_config = function ()
+                {
+                    this.page.url = page_url;
+                    this.page.identifier = '/' + page_path;
+                };
+                (function ()
+                {
+                    var d = document,
+                        s = d.createElement('script');
+                    s.src = 'https://yasukazu-1.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.body).appendChild(s);
+                })();
+                noscript. - Please enable JavaScript to view the #[a(href = "https://disqus.com/?ref_noscript", rel = "nofollow") comments powered by Disqus.]
+
+            </script>
+            <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </main>
         <hr>
         <div id="disqus_thread"></div>
