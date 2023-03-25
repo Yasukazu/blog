@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Commentbox commenting system</title>
+      <link href="/2023/03/25/commentbox-commenting-system/"/>
+      <url>/2023/03/25/commentbox-commenting-system/</url>
+      
+        <content type="html"><![CDATA[<p>Introduced a commenting system using CommentBox</p><span id="more"></span><p>Somehow CommentBox is easy to build in.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> HexoBlog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> commentingSystem </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Disqus comment</title>
       <link href="/2023/03/24/disqus-comment/"/>
       <url>/2023/03/24/disqus-comment/</url>

@@ -6,7 +6,7 @@
   <link href="https://blog.yskz.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.yskz.dev/"/>
-  <updated>2023-03-24T10:45:16.651Z</updated>
+  <updated>2023-03-25T09:55:31.492Z</updated>
   <id>https://blog.yskz.dev/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Commentbox commenting system</title>
+    <link href="https://blog.yskz.dev/2023/03/25/commentbox-commenting-system/"/>
+    <id>https://blog.yskz.dev/2023/03/25/commentbox-commenting-system/</id>
+    <published>2023-03-25T08:15:15.000Z</published>
+    <updated>2023-03-25T09:55:31.492Z</updated>
+    
+    <content type="html"><![CDATA[<p>Introduced a commenting system using CommentBox</p><span id="more"></span><p>Somehow CommentBox is easy to build in.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Introduced a commenting system using CommentBox&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="HexoBlog" scheme="https://blog.yskz.dev/categories/hexoblog/"/>
+    
+    
+    <category term="commentingSystem" scheme="https://blog.yskz.dev/tags/commentingsystem/"/>
+    
+  </entry>
   
   <entry>
     <title>Disqus comment</title>
@@ -444,29 +465,6 @@
     <category term="hgroup" scheme="https://blog.yskz.dev/tags/hgroup/"/>
     
     <category term="date.format" scheme="https://blog.yskz.dev/tags/date-format/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Set config to add date before title in file name</title>
-    <link href="https://blog.yskz.dev/2023/01/27/set-config-to-add-date-before-title-in-file-name/"/>
-    <id>https://blog.yskz.dev/2023/01/27/set-config-to-add-date-before-title-in-file-name/</id>
-    <published>2023-01-27T12:58:58.000Z</published>
-    <updated>2023-01-27T13:07:23.844Z</updated>
-    
-    <content type="html"><![CDATA[<p>Set the main confiuration file of Hexo <code>_config.yml</code> to include newly created date in its file name.</p><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>day<span class="token punctuation">-</span><span class="token punctuation">:</span>month<span class="token punctuation">-</span><span class="token punctuation">:</span>year<span class="token punctuation">-</span><span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span></code></pre><p>Notify:</p><ul><li>This does not affect to create a new draft.</li><li>The configuration file must be the main [ just under Hexo directory ] not in theme configuration directories.</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Set the main confiuration file of Hexo &lt;code&gt;_config.yml&lt;/code&gt; to include newly created date in its file name.&lt;/p&gt;
-&lt;pre class=&quot;language-</summary>
-      
-    
-    
-    
-    
-    <category term="new_post_name" scheme="https://blog.yskz.dev/tags/new-post-name/"/>
     
   </entry>
   
