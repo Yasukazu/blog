@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="A web log to study better ways to utilize Hexo static site generator">
-    <meta name="author" content="Y-M">
-    <title>日付がずれるのでtimezoneを修正してみる | Hexo development</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
-    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="/css/theme.css">
+    <title>日付がずれるのでtimezoneを修正してみる [ Hexo development ]</title>
+    <!-- stylesheets list from _config.yml -->
+    <link rel="stylesheet" href="/css/th.css">
     <meta name="generator" content="Hexo 6.3.0">
-    <link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
 </head>
 
 <body>
-    <header class="included">
-        <hgroup class="title subtitle">
+    <header>
+        <hgroup class="header">
             <h1>Hexo development</h1>
-            <p>A web log to study about Hexo static website generator</p>
+            <dl>
+                <dt>Webpage technical Blog</dt>
+                <dd>A web log to study better ways to utilize Hexo static site generator</dd>
+            </dl>
         </hgroup>
-        <nav>
-            <ul class="header">
-                <li class="home"><a href="/">Home</a></li>
-                <li class="archives"><a href="/archives/">Posts</a></li>
-                <li class="about"><a href="/about/">About</a></li>
-                <li class="comments"><a href="/comments/">Comments</a></li>
-            </ul>
+        <nav id="menu-inner">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/archives">Archives</a>
         </nav>
-    </header><datalist id="search-tags">
-        <option value="Hexo"> </option>
-        <option value="JavaScript"> </option>
-        <option value="Botanical"> </option>
-        <option value="Vocational"> </option>
-        <option value="Cycling"> </option>
-        <option value="Language"> </option>
+    </header>
+    <datalist id="search-tags">
+        <option value="Hexo" )>
+        <option value="JavaScript" )>
+        <option value="Botanical" )>
+        <option value="Vocational" )>
+        <option value="Cycling" )>
+        <option value="Language" )>
     </datalist>
-    <div id="search_input_id"><label for="search_input-text">Enter search text:<input id="search_input-text" type="search" name="search_input-text" size="20" minlength="1" maxlength="255" placeholder="keyword" list="search-tags"></label><input id="search_input-ignore-case" type="checkbox" checked><label for="search_input-ignore-case">Ignore case</label><input id="search_input-ignore-accents" type="checkbox" checked><label for="search_input-ignore-accents">Ignore accents</label><input id="search_input-regex" type="checkbox"><label for="search_input-regex">Regular expression</label><button id="search_input-button" type="button">Search</button></div>
+    <div id="search_input_id">
+        <label for="search_input-text"> Enter search text:</label>
+        <input id="search_input-text" type="search" name="search_input-text" size='20' minlength='1' maxlength='255' placeholder='keyword' list="search-tags">
+        <input id="search_input-ignore-case" type="checkbox" checked>
+        <label for="search_input-ignore-case">Ignore case</label>
+        <input id="search_input-ignore-accents" type="checkbox" checked>
+        <label for="search_input-ignore-accents">Ignore accents</label>
+        <input id="search_input-regex" type="checkbox">
+        <label for="search_input-regex">Regular expression</label>
+        <button id="search_input-button" type='button'>Search</button>
+    </div>
     <script type="module">
         import
         {
@@ -79,7 +85,8 @@
             event.preventDefault();
         });
 
-    </script><template id="search-result-container">
+    </script>
+    <template id="search-result-container">
         <div id="search-result-container">
             <h2 class="heading">
                 <slot name="heading">(Search result)</slot>
@@ -88,13 +95,19 @@
                 <slot name="entries"></slot>
             </ul>
         </div>
-    </template><template id="search-result-entry">
-        <li class="search-result-entry" slot="entries"><a class="entry-url"><span class="entry-title"></span></a><time class="entry-date"></time>
-            <p class="entry-content" data-length="200"></p><img class="thumbnail">
+    </template>
+    <template id="search-result-entry">
+        <li class="search-result-entry" slot="entries">
+            <a class="entry-url">
+                <span class="entry-title"></span>
+            </a>
+            <time class="entry-date"></time>
+            <p class="entry-content" data-length='200'></p>
+            <img class="thumbnail"></img>
         </li>
     </template>
     <script type="module">
-        customElements.define("search-result-container", class extends HTMLElement
+        customElements.define(search_result_container_map.id, class extends HTMLElement
         {
             constructor()
             {
@@ -116,39 +129,20 @@
             }
         });
 
-    </script><search-result-container id="search-result-container" style="color: blue;"></search-result-container>
-    <article id="post">
-        <header class="post">
-            <h1 class="title">日付がずれるのでtimezoneを修正してみる</h1><time class="date">2023-01-17</time>
-        </header><br>
-        <main class="post">
-            <p><code>_config.yml</code> の <code>timezone</code> を <em>Asia&#x2F;Tokyo</em> に変更してみる。<span lang="en">(‘Asia’ seems to need to start with a capital letter)</span></p>
-        </main>
-        <hr>
-        <section id="tags">
-            <h2>Tags<ul class="tag-box list-unstyled">
-                    <p>No other common-tag post.</p>
-                </ul>
-            </h2>
-        </section>
-        <section id="all-categories">
-            <h2>Categories<ul class="tag-box list-unstyled">
-                    <p>No other common-category post.</p>
-                </ul>
-            </h2>
-        </section>
-    </article>
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"> </script>
-    <script>
-        commentBox('5764111233187840-proj')
-
     </script>
-    <div class="paginator">
-        <div><a href="/2023/01/17/rsync-ssh-transfer-blog-zip-file/">rsyncの sshオプションで blogを zip圧縮した ファイルを　ブログ用サーバーに転送した &rarr;</a></div>
-        <div><a href="/2023/01/17/fix-timezone-again/">&larr; fix timezone again</a></div>
-    </div>
-    <footer><small>Theme(<a target="_blank" rel="noopener" href="https://github.com/yasukazu/ym-start"><strong>ym-start</strong> theme</a>) is created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer><!-- script(src="/js/search.js" defer)-->
+    <search-result-container id="search-result-container" style="color: blue;"></search-result-container>
+    <main id="content-inner">
+        <article id="post">
+            <h1>日付がずれるのでtimezoneを修正してみる</h1>
+            <p><code>_config.yml</code> の <code>timezone</code> を <em>Asia/Tokyo</em> に変更してみる。<span lang="en">(‘Asia’ seems to need to start with a capital letter)</span></p>
+        </article>
+        <div id="paginator">
+        </div>
+    </main>
+    <footer id="bottom-inner"> Site by Y-M using <a target="_blank" rel="noopener" href="http://hexo.io">Hexo blog framework</a> with theme of <a target="_blank" rel="noopener" href="https://github.com/Yasukazu/ym-yo-Hexo-theme-generator-theme">ym-yo-Hexo-theme-generator-theme </a>
+    </footer>
+    <!-- scripts list from theme config.yml -->
+    <script src="/js/th.js"></script>
 </body>
 
 </html>

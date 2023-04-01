@@ -1,0 +1,21 @@
+h1 About this blog site
+p This site is a collection of posts about how I tried and somehow succeeded in Hexo static site generator.
+p Each post might be hard to understand because of not having enough time to organize them.
+p A countermeasure is to browse posts of the same tag.
+p If you have something to tell me, please notify me with the following form(powered by #[a(href="https://hyperform.jp") Hyperform]):
+
+fieldset.form
+  legend Please fill in following items then press &apos;Submit&apos; button:
+  form.send-message(method="post", action="https://hyperform.jp/api/CdLHS21L")
+    .form-part
+      label.name(for="name") Your name
+      input#name(type="text", name="name", placeholder="family name, first name", required)
+    .form-part
+      label.e-mail(for="email") Your e-mail address
+      input#email(type="email", name="email", placeholder="example@example.com", required)
+    .form-part.col
+      label.comment Comment about this blog
+      textarea(name="comment", required)
+    .form-part.submit
+      button.submit(type="submit") Submit
+      p After all items are filled in, press this button, please &rarr;

@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="A web log to study better ways to utilize Hexo static site generator">
-    <meta name="author" content="Y-M">
-    <title>Archive(Posts / Categories / Tags)</title><!-- link(rel='icon', href=url_for(theme.favicon))-->
-    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="/css/theme.css">
+    <title>Archives: 2023 [ Hexo development ]</title>
+    <!-- stylesheets list from _config.yml -->
+    <link rel="stylesheet" href="/css/th.css">
     <meta name="generator" content="Hexo 6.3.0">
-    <link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
 </head>
 
 <body>
-    <header class="included">
-        <hgroup class="title subtitle">
+    <header>
+        <hgroup class="header">
             <h1>Hexo development</h1>
-            <p>A web log to study about Hexo static website generator</p>
+            <dl>
+                <dt>Webpage technical Blog</dt>
+                <dd>A web log to study better ways to utilize Hexo static site generator</dd>
+            </dl>
         </hgroup>
-        <nav>
-            <ul class="header">
-                <li class="home"><a href="/">Home</a></li>
-                <li class="archives"><a href="/archives/">Posts</a></li>
-                <li class="about"><a href="/about/">About</a></li>
-                <li class="comments"><a href="/comments/">Comments</a></li>
-            </ul>
+        <nav id="menu-inner">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/archives">Archives</a>
         </nav>
-    </header><datalist id="search-tags">
-        <option value="Hexo"> </option>
-        <option value="JavaScript"> </option>
-        <option value="Botanical"> </option>
-        <option value="Vocational"> </option>
-        <option value="Cycling"> </option>
-        <option value="Language"> </option>
+    </header>
+    <datalist id="search-tags">
+        <option value="Hexo" )>
+        <option value="JavaScript" )>
+        <option value="Botanical" )>
+        <option value="Vocational" )>
+        <option value="Cycling" )>
+        <option value="Language" )>
     </datalist>
-    <div id="search_input_id"><label for="search_input-text">Enter search text:<input id="search_input-text" type="search" name="search_input-text" size="20" minlength="1" maxlength="255" placeholder="keyword" list="search-tags"></label><input id="search_input-ignore-case" type="checkbox" checked><label for="search_input-ignore-case">Ignore case</label><input id="search_input-ignore-accents" type="checkbox" checked><label for="search_input-ignore-accents">Ignore accents</label><input id="search_input-regex" type="checkbox"><label for="search_input-regex">Regular expression</label><button id="search_input-button" type="button">Search</button></div>
+    <div id="search_input_id">
+        <label for="search_input-text"> Enter search text:</label>
+        <input id="search_input-text" type="search" name="search_input-text" size='20' minlength='1' maxlength='255' placeholder='keyword' list="search-tags">
+        <input id="search_input-ignore-case" type="checkbox" checked>
+        <label for="search_input-ignore-case">Ignore case</label>
+        <input id="search_input-ignore-accents" type="checkbox" checked>
+        <label for="search_input-ignore-accents">Ignore accents</label>
+        <input id="search_input-regex" type="checkbox">
+        <label for="search_input-regex">Regular expression</label>
+        <button id="search_input-button" type='button'>Search</button>
+    </div>
     <script type="module">
         import
         {
@@ -79,7 +85,8 @@
             event.preventDefault();
         });
 
-    </script><template id="search-result-container">
+    </script>
+    <template id="search-result-container">
         <div id="search-result-container">
             <h2 class="heading">
                 <slot name="heading">(Search result)</slot>
@@ -88,13 +95,19 @@
                 <slot name="entries"></slot>
             </ul>
         </div>
-    </template><template id="search-result-entry">
-        <li class="search-result-entry" slot="entries"><a class="entry-url"><span class="entry-title"></span></a><time class="entry-date"></time>
-            <p class="entry-content" data-length="200"></p><img class="thumbnail">
+    </template>
+    <template id="search-result-entry">
+        <li class="search-result-entry" slot="entries">
+            <a class="entry-url">
+                <span class="entry-title"></span>
+            </a>
+            <time class="entry-date"></time>
+            <p class="entry-content" data-length='200'></p>
+            <img class="thumbnail"></img>
         </li>
     </template>
     <script type="module">
-        customElements.define("search-result-container", class extends HTMLElement
+        customElements.define(search_result_container_map.id, class extends HTMLElement
         {
             constructor()
             {
@@ -116,111 +129,58 @@
             }
         });
 
-    </script><search-result-container id="search-result-container" style="color: blue;"></search-result-container>
-    <main id="archive">
-        <header>
-            <h1>Archive:<a href="#all-posts">Posts</a>/ <a href="#all-categories">Categories</a>/ <a href="#all-tags">Tags</a></h1>
-        </header>
-        <section id="all-posts">
-            <h2>Posts</h2>
-            <article class="post"><a href="/2023/02/14/in-site-search-hexo-server-success/">
-                    <h3>In-site search Hexo server success</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/11/in-site-search-half-success/">
-                    <h3>In-site search half success</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/09/applied-a-website-e-mail-supporter-job/">
-                    <h3>Applied a website e-mail supporter job</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/06/added-categories-in-scaffolds-post-md/">
-                    <h3>Added 'categories' in scaffolds/post.md</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/06/agri-coop-job/">
-                    <h3>Visited Japan Agri. Co-op to apply a job</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/05/theme-style-scss-again/">
-                    <h3>Theme style SCSS again</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/04/added-archives-in-menu/">
-                    <h3>Added Archives in menu</h3>
-                </a></article>
-            <article class="post"><a href="/2023/02/01/does-hexo-markdown-escapes-html-special-characters/">
-                    <h3>Does Hexo markdown escapes HTML special characters?</h3>
-                </a></article>
-            <article class="post"><a href="/2023/01/29/form-in-About-page/">
-                    <h3>form in About page</h3>
-                </a></article>
-            <article class="post"><a href="/2023/01/28/added-post-date-after-title/">
-                    <h3>Added post date after title</h3>
-                </a></article>
-        </section>
-        <hr>
-        <section id="all-categories">
-            <h2>Categories<ul class="tag-box list-unstyled">
-                    <li class="category"><a href="/categories/agri/">Agri<span class="length">2</span></a></li>
-                    <li class="category"><a href="/categories/hexo/">Hexo<span class="length">7</span></a></li>
-                    <li class="category"><a href="/categories/hexoblog/">HexoBlog<span class="length">1</span></a></li>
-                    <li class="category"><a href="/categories/job/">job<span class="length">2</span></a></li>
-                    <li class="category"><a href="/categories/planting/">planting<span class="length">1</span></a></li>
-                </ul>
-            </h2>
-        </section>
-        <section id="all-tags">
-            <h2>Tags<ul class="tag-box list-unstyled">
-                    <li class="tag"><a href="/tags/css/">CSS<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/entity/">Entity<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/github-url-public-dir/">GitHub, url, public_dir<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/github-pages/">GitHub-Pages<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/html/">HTML<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/japanese-moutain-yam/">Japanese-moutain-yam<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/layout/">Layout<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/markdown/">Markdown<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/windows-node-install/">Windows, node, install<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/about-page/">about-page<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/bok-choy/">bok-choy<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/carrot/">carrot<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/category/">category<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/comment/">comment<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/comment-form/">comment-form<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/commentingsystem/">commentingSystem<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/config/">config<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/date-format/">date.format<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/e-mail/">e-mail<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/embed/">embed<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/excerpt/">excerpt<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/google-translate/">google-translate<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/harvest/">harvest<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/hgroup/">hgroup<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/js-html-nav/">js HTML nav<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/new-post-name/">new_post_name<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/post/">post<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/salad-green/">salad-green<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/scaffold/">scaffold<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/search/">search<span class="length">2</span></a></li>
-                    <li class="tag"><a href="/tags/seedling/">seedling<span class="length">2</span></a></li>
-                    <li class="tag"><a href="/tags/soybean/">soybean<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/starter-theme/">starter-theme<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/strawberry/">strawberry<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/svg-editor/">svg-editor<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/theme/">theme<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/theme-css/">theme.css<span class="length">2</span></a></li>
-                    <li class="tag"><a href="/tags/turnip/">turnip<span class="length">1</span></a></li>
-                    <li class="tag"><a href="/tags/ym-start/">ym-start<span class="length">1</span></a></li>
-                </ul>
-            </h2>
-        </section>
-    </main>
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"> </script>
-    <script>
-        commentBox('5764111233187840-proj')
-
     </script>
-    <div class="paginator">
-        <div><a href="/archives/2023/page/3/">Next &rarr;</a></div>
-        <div><a href="/archives/2023/">&larr; Prev.</a></div>
-    </div>
-    <footer><small>Theme(<a target="_blank" rel="noopener" href="https://github.com/yasukazu/ym-start"><strong>ym-start</strong> theme</a>) is created at: 2023&nbsp; Author: Y-M. Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a></small></footer><!-- script(src="/js/search.js" defer)-->
+    <search-result-container id="search-result-container" style="color: blue;"></search-result-container>
+    <main id="content-inner">
+        <h1>undefined/2023</h1>
+        <div class="archive-item">
+            <a href="/2023/02/15/added-date-in-search-result-hexo-generate-won-t-update-javascript-files/"> Added date in search result. Hexo generate won&#39;t update javascript files. </a>
+            <time datetime="2023-02-15T06:20:32.000Z"> 2023-02-15 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/14/in-site-search-hexo-server-success/"> In-site search Hexo server success </a>
+            <time datetime="2023-02-14T01:48:46.000Z"> 2023-02-14 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/11/in-site-search-half-success/"> In-site search half success </a>
+            <time datetime="2023-02-10T16:22:15.000Z"> 2023-02-11 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/09/applied-a-website-e-mail-supporter-job/"> Applied a website e-mail supporter job </a>
+            <time datetime="2023-02-09T05:26:40.000Z"> 2023-02-09 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/06/added-categories-in-scaffolds-post-md/"> Added &#39;categories&#39; in scaffolds/post.md </a>
+            <time datetime="2023-02-06T10:26:46.000Z"> 2023-02-06 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/06/agri-coop-job/"> Visited Japan Agri. Co-op to apply a job </a>
+            <time datetime="2023-02-06T10:26:46.000Z"> 2023-02-06 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/05/theme-style-scss-again/"> Theme style SCSS again </a>
+            <time datetime="2023-02-04T23:46:20.000Z"> 2023-02-05 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/04/added-archives-in-menu/"> Added Archives in menu </a>
+            <time datetime="2023-02-04T11:17:49.000Z"> 2023-02-04 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/02/01/does-hexo-markdown-escapes-html-special-characters.2023-02-01/"> Does Hexo markdown escapes HTML special characters? </a>
+            <time datetime="2023-02-01T01:46:35.000Z"> 2023-02-01 </time>
+        </div>
+        <div class="archive-item">
+            <a href="/2023/01/29/form-in-About-page/"> form in About page </a>
+            <time datetime="2023-01-29T12:54:38.000Z"> 2023-01-29 </time>
+        </div>
+        <div id="paginator">
+            <a class="extend prev" rel="prev" href="/archives/2023/">Prev</a><a class="page-number" href="/archives/2023/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2023/page/3/">3</a><a class="page-number" href="/archives/2023/page/4/">4</a><a class="extend next" rel="next" href="/archives/2023/page/3/">Next</a>
+        </div>
+    </main>
+    <footer id="bottom-inner"> Site by Y-M using <a target="_blank" rel="noopener" href="http://hexo.io">Hexo blog framework</a> with theme of <a target="_blank" rel="noopener" href="https://github.com/Yasukazu/ym-yo-Hexo-theme-generator-theme">ym-yo-Hexo-theme-generator-theme </a>
+    </footer>
+    <!-- scripts list from theme config.yml -->
+    <script src="/js/th.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Does Hexo markdown escapes HTML special characters? [ Hexo development ]</title>
+    <!-- stylesheets list from _config.yml -->
+    <link rel="stylesheet" href="/css/th.css">
+    <meta name="generator" content="Hexo 6.3.0">
+<link rel="alternate" href="/atom.xml" title="Hexo development" type="application/atom+xml">
+</head>
+
+<body>
+    <header>
+        <hgroup class="header">
+            <h1>Hexo development</h1>
+            <dl>
+                <dt>Webpage technical Blog</dt>
+                <dd>A web log to study better ways to utilize Hexo static site generator</dd>
+            </dl>
+        </hgroup>
+        <nav id="menu-inner">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/archives">Archives</a>
+        </nav>
+    </header>
+    <datalist id="search-tags">
+        <option value="Hexo" )>
+        <option value="JavaScript" )>
+        <option value="Botanical" )>
+        <option value="Vocational" )>
+        <option value="Cycling" )>
+        <option value="Language" )>
+    </datalist>
+    <div id="search_input_id">
+        <label for="search_input-text"> Enter search text:</label>
+        <input id="search_input-text" type="search" name="search_input-text" size='20' minlength='1' maxlength='255' placeholder='keyword' list="search-tags">
+        <input id="search_input-ignore-case" type="checkbox" checked>
+        <label for="search_input-ignore-case">Ignore case</label>
+        <input id="search_input-ignore-accents" type="checkbox" checked>
+        <label for="search_input-ignore-accents">Ignore accents</label>
+        <input id="search_input-regex" type="checkbox">
+        <label for="search_input-regex">Regular expression</label>
+        <button id="search_input-button" type='button'>Search</button>
+    </div>
+    <script type="module">
+        import
+        {
+            exec_search,
+            fetchData
+        }
+        from "/js/analyze-data.js";
+
+        function search()
+        {
+            const search_result_container_map = {
+                id: "search-result-container",
+                heading: "heading",
+                entries: "entries"
+            };
+            const search_result_entry_map = {
+                id: "search-result-entry",
+                url: 'entry-url',
+                title: 'entry-title',
+                date: 'entry-date',
+                content: 'entry-content'
+            };
+            const search_input = {
+                id: "search_input_id",
+                text: "search_input-text",
+                ignore_case: 'search_input-ignore-case',
+                ignore_accents: 'search_input-ignore-accents',
+                regex: 'search_input-regex',
+                button: 'search_input-button'
+            };
+            exec_search(fetchData(), search_result_container_map, search_result_entry_map, search_input);
+            return false;
+        }
+        const button = document.getElementById("search_input-button");
+        console.assert(button instanceof Element, 'No button!');
+        button.addEventListener('click', (event) =>
+        {
+            search();
+            event.preventDefault();
+        });
+
+    </script>
+    <template id="search-result-container">
+        <div id="search-result-container">
+            <h2 class="heading">
+                <slot name="heading">(Search result)</slot>
+            </h2>
+            <ul class="entries">
+                <slot name="entries"></slot>
+            </ul>
+        </div>
+    </template>
+    <template id="search-result-entry">
+        <li class="search-result-entry" slot="entries">
+            <a class="entry-url">
+                <span class="entry-title"></span>
+            </a>
+            <time class="entry-date"></time>
+            <p class="entry-content" data-length='200'></p>
+            <img class="thumbnail"></img>
+        </li>
+    </template>
+    <script type="module">
+        customElements.define(search_result_container_map.id, class extends HTMLElement
+        {
+            constructor()
+            {
+                super();
+                const template = document.getElementById("search-result-container");
+                console.assert(template instanceof HTMLElement, `no template!`);
+                const templateContent = template.content;
+                console.assert(templateContent instanceof DocumentFragment, `no template content`);
+                const _shadowRoot = this.attachShadow(
+                {
+                    mode: 'open'
+                });
+                console.assert(_shadowRoot, `attach shadow failed!`);
+                const cloned = templateContent.cloneNode(true);
+                console.assert(cloned, `clone node failed!`);
+                const child = _shadowRoot.appendChild(cloned);
+                console.assert(child, `append cloned:${cloned} failed!`)
+                console.debug(`shadow root(${_shadowRoot}) appended a cloned child(${cloned}).`);
+            }
+        });
+
+    </script>
+    <search-result-container id="search-result-container" style="color: blue;"></search-result-container>
+    <main id="content-inner">
+        <article id="post">
+            <h1>Does Hexo markdown escapes HTML special characters?</h1>
+            <p>In Hexo, A markdown-format post is converted to HTML format.</p>
+            <p>HTML documents need to escape special two characters:</p>
+            <ul>
+                <li><em>Less-than</em>(&lt;)</li>
+                <li><em>Greater-than</em>(&gt;)</li>
+            </ul>
+            <p>respectively:</p>
+            <pre class="language-none"><code class="language-none">\&lt;
+\&gt;</code></pre>
+            <p>Markdown is easier than HTML about this escaping.</p>
+            <p>Just put an <em>escape</em> character <strong>backslash</strong> before special characters as:</p>
+            <pre class="language-none"><code class="language-none">\&lt;
+\&gt;</code></pre>
+            <p>But Markdown also needs to escape <strong>Backslash</strong> (\) as:</p>
+            <p><code>\\</code></p>
+            <p>or write its entity as:</p>
+            <p><code>&amp;bsol;</code></p>
+            <p>HTML-Entity backslash appears as: \</p>
+            <p>And also, <strong>Ampersand</strong> (&amp;) might be better to be escaped as:</p>
+            <p><code>\&amp;</code></p>
+            <p>or write its entity as: <code>&amp;amp;</code></p>
+            <p>HTML-Entity ampersand appears as: &amp;</p>
+        </article>
+        <div id="paginator">
+        </div>
+    </main>
+    <footer id="bottom-inner"> Site by Y-M using <a target="_blank" rel="noopener" href="http://hexo.io">Hexo blog framework</a> with theme of <a target="_blank" rel="noopener" href="https://github.com/Yasukazu/ym-yo-Hexo-theme-generator-theme">ym-yo-Hexo-theme-generator-theme </a>
+    </footer>
+    <!-- scripts list from theme config.yml -->
+    <script src="/js/th.js"></script>
+</body>
+
+</html>

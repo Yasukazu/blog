@@ -1,0 +1,30 @@
+:root {
+  --main-bg-color: hsl(180, 50%, 80%);
+  --mid-bg-color: hsl(180, 50%, 65%);
+  --sub-bg-color: hsl(180, 50%, 50%);
+  --search-bg-color: hsl(270, 50%, 70%);
+}
+body {
+  background-color: var(--main-bg-color);
+  margin: 1em;
+}
+body > header, footer {
+  background-color: var(--sub-bg-color);
+} 
+header > hgroup.header > * {
+  display: inline;
+  /* display: flex;
+  flex-direction: row; */
+}
+header > hgroup.header dt {
+  margin-left: 1em;
+}
+#paginator {
+  background-color: var(--mid-bg-color);
+}
+#paginator > * {
+  margin: 0 1em;
+}
+#search_input_id {
+  background-color: var(--search-bg-color);
+}
